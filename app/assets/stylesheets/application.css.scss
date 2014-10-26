@@ -11,5 +11,9 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require rails_bootstrap_forms
  *= require_self
  */
+
+@import "font-awesome-sprockets";
+@import "font-awesome";

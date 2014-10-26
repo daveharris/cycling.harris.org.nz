@@ -1,0 +1,5 @@
+<h1><%= @race.name %></h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Destroy', @race, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>

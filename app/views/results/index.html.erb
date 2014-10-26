@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-10">
+    <h1>All Results</h1>
+  </div>
+  <div class="col-md-2 pull-right">
+    <%= link_to 'Add New Result', new_result_path, class: 'btn btn-primary' %>
+  </div>
+</div>
+
+<% @results.each do |result| %>
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <h4 class="col-md-2"><%= icon(:calendar, result.date_in_words) %></h4>
+          <h4 class="col-md-10"><%= icon(:user, result.user.first_name) %></h4>
+        </div>
+        
+        <div class="row">
+          <h4 class="col-md-2"><%= icon('arrows-h', "#{result.race.distance}km") %></h4>
+          <h4 class="col-md-10"><%= link_to(icon(:bicycle, result.race.name), result.race) %></h4>
+        </div>
+
+        <div class="row">
+          <h4 class="col-md-2"><%= link_to(icon('clock-o', result.duration_in_words), result.timing_url) %></h4>
+          <h4 class="col-md-10"><%= icon('arrow-circle-o-up', '05:07 slower than last year') %></h4>
+        </div>
+
+        <p><%= icon(:comments, result.comment) %></p>
+
+        <% if false %>
+        <span>On <h4><%= result.date_in_words %></h4>, <%= result.user.name %> <h4><%= link_to_if result.timing_url.present?, 'rode', result.timing_url %></h4> <h4><%= result.race.distance %>km</h4> in the <h4><%= link_to result.race.name, result.race %></h4> in <h4><%= result.duration_in_words %></h4>.</span>
+        <p><h5>Comments:</h5> <%= result.comment %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
