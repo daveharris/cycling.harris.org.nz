@@ -17,3 +17,7 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+i.fa {
+  @extend .fa-fw;
+}

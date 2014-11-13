@@ -4,11 +4,19 @@ class Result < ActiveRecord::Base
 
   validates :user_id, :race_id, :duration, :date, presence: true
 
-  def duration_in_words
-    Duration.new(seconds: duration).format("%h:%M:%S")
+  default_scope { order(date: :desc) }
+
+  def find_previous_result
+    Result.where.not(id: self.id)
+          .where(race: self.race)
+          .where('date < ?', self.date)
+          .order(date: :desc)
+          .first
   end
 
-  def date_in_words
-    date.strftime("#{date.day.ordinalize} %b %y")
+  def time_difference_between_previous
+    if previous = find_previous_result
+      previous.duration - self.duration
+    end
   end
 end

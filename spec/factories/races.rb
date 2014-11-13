@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :race do
-    name "MyString"
+    name 'Test Cycle Race'
     distance 1
+    url 'http://example.com'
   end
 end

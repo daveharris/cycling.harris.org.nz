@@ -14,7 +14,7 @@ gem 'bootstrap-sass'
 gem 'bootstrap_form'
 gem 'font-awesome-sass'
 
-gem 'ruby-duration'
+gem 'chronic_duration'
 
 gem 'clearance'
 
@@ -32,6 +32,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'spring-commands-rspec'
   gem 'sqlite3'
 end
 
