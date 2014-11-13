@@ -20,6 +20,8 @@ gem 'clearance'
 
 gem 'thin'
 
+gem 'raygun4ruby'
+
 group :development do
   gem 'spring'
   gem 'better_errors', '~> 2.0.0'
