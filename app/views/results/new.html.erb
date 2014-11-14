@@ -1,5 +1,9 @@
+<h1>Bulk Import CSV Data</h1>
+
+<%= form_tag import_results_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <button type="submit" class="btn btn-default">Import CSV</button>
+<% end %>
+
 <h1>New result</h1>
-
 <%= render 'form' %>
-
-<%= link_to 'Back', results_path %>

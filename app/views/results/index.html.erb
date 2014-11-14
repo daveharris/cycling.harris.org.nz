@@ -26,7 +26,9 @@
           <h4 class="col-md-10"><%= display_time_difference_in_words(result.time_difference_between_previous) %></h4>
         </div>
 
-        <p><%= icon(:comments, result.comment) %></p>
+        <% if result.comment %>
+          <p><%= icon(:comments, result.comment) %></p>
+        <% end %>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-describe "Result" do
+describe Result do
 
   let(:result) { FactoryGirl.build(:result) }
 
@@ -49,6 +49,35 @@ describe "Result" do
       allow(result).to receive(:find_previous_result) { nil }
       
       expect(result.time_difference_between_previous).to be_nil
+    end
+  end
+
+  describe ".import" do
+    let(:user) { FactoryGirl.create(:user) }
+
+    before(:each) do
+      Result.delete_all
+      Result.import(Rails.root.join("spec/support/results.csv"), user)
+    end
+
+    it "creates 2 distinct races" do
+      expect(Race.count).to eq 2
+    end
+
+    it "creates 3 results" do
+      expect(Result.count).to eq 3
+    end
+
+    it "assigns the results to the given user" do
+      expect(user.results.count).to eq 3
+    end
+
+    it "sets the dates correctly" do
+      expect(Result.last.date).to eq Date.parse('10/10/2010')
+    end
+
+    it "sets the duration in seconds" do
+      expect(Result.last.duration).to eq ChronicDuration.parse('2:32:55')
     end
   end
 end

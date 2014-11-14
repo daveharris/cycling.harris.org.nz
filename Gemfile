@@ -15,6 +15,7 @@ gem 'bootstrap_form'
 gem 'font-awesome-sass'
 
 gem 'chronic_duration'
+gem 'smarter_csv'
 
 gem 'clearance'
 

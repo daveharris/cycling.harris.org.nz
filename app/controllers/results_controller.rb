@@ -30,6 +30,15 @@ class ResultsController < ApplicationController
     end
   end
 
+  def import
+    if params.include?(:file) && current_user.present?
+      Result.import(params[:file].tempfile, current_user)
+      redirect_to results_path, notice: 'File successfully imported!'
+    else
+      redirect_to results_path, notice: 'File failed imported. Please check the logs and that you are signed in!'
+    end
+  end
+
   # PATCH/PUT /results/1
   def update
     if @result.update(result_params)
