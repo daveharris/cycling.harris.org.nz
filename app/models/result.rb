@@ -20,7 +20,7 @@ class Result < ActiveRecord::Base
     end
   end
 
-  def self.import(filename, user)
+  def self.from_csv(filename, user)
     SmarterCSV.process(filename) do |row|
       race_details = row.first
       race_details.delete(:difference)
@@ -33,5 +33,21 @@ class Result < ActiveRecord::Base
 
       Result.create!(race_details)
     end
+  end
+
+  def self.from_strava(activity_id, race_id, user)
+    @client ||= Strava::Api::V3::Client.new(access_token: '7360ac33e4acc82eb6a29f79469936eb974a4646')
+
+    activity = @client.retrieve_an_activity(activity_id)
+    
+    result_details = {race_id: race_id, user: user}
+    result_details[:duration] = activity['moving_time']
+    result_details[:date] = Date.parse(activity['start_date'])
+    result_details[:comment] = activity['description']
+    result_details[:strava_url] = "http://www.strava.com/activities/#{activity_id}"
+
+    puts "About to insert Result: #{result_details.inspect}"
+
+    Result.create!(result_details)
   end
 end

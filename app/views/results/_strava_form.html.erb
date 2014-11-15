@@ -1,0 +1,6 @@
+<%= bootstrap_form_tag url: strava_results_path do |f| %>
+  <%= f.collection_select :race_id, Race.all, :id, :name, prompt: 'Select Race...' %>
+  <%= f.text_field :strava_activity_id, label: 'Strava Activity ID' %>
+
+  <%= f.submit 'Create', class: 'btn btn-primary' %>
+<% end %>

@@ -30,12 +30,21 @@ class ResultsController < ApplicationController
     end
   end
 
-  def import
+  def csv
     if params.include?(:file) && current_user.present?
-      Result.import(params[:file].tempfile, current_user)
+      Result.from_csv(params[:file].tempfile, current_user)
       redirect_to results_path, notice: 'File successfully imported!'
     else
       redirect_to results_path, notice: 'File failed imported. Please check the logs and that you are signed in!'
+    end
+  end
+
+  def strava
+    if params.include?(:race_id) && params.include?(:strava_activity_id) && current_user.present?
+      result = Result.from_strava(params[:strava_activity_id], params[:race_id], current_user)
+      redirect_to results_path, notice: "#{view_context.link_to('Strava activity', result)} successfully imported!".html_safe
+    else
+      redirect_to results_path, notice: 'Strava activity failed imported. Please check the logs and that you are signed in!'
     end
   end
 

@@ -2,12 +2,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @result.user %>
+  <%= @result.user.first_name %>
 </p>
 
 <p>
   <strong>Race:</strong>
-  <%= @result.race %>
+  <%= @result.race.name %>
 </p>
 
 <p>
@@ -21,8 +21,13 @@
 </p>
 
 <p>
-  <strong>Url:</strong>
-  <%= @result.url %>
+  <strong>Timing URL:</strong>
+  <%= @result.timing_url %>
+</p>
+
+<p>
+  <strong>Strava URL:</strong>
+  <%= @result.strava_url %>
 </p>
 
 <%= link_to 'Edit', edit_result_path(@result) %> |

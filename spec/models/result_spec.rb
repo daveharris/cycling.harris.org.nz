@@ -67,7 +67,7 @@ describe Result do
     end
   end
 
-  describe ".import" do
+  describe ".from_csv" do
     let(:user) { FactoryGirl.create(:user) }
 
     before(:each) do
