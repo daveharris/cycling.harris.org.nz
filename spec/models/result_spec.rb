@@ -72,7 +72,7 @@ describe Result do
 
     before(:each) do
       Result.delete_all
-      Result.import(Rails.root.join("spec/support/results.csv"), user)
+      Result.from_csv(Rails.root.join("spec/support/results.csv"), user)
     end
 
     it "creates 2 distinct races" do

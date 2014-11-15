@@ -1,9 +1,31 @@
-<h1>Bulk Import CSV Data</h1>
+<h1>Add New Results</h1>
 
-<%= form_tag import_results_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <button type="submit" class="btn btn-default">Import CSV</button>
-<% end %>
+<div role="tabpanel">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active1">
+      <a href="#single" id="single-tab" role="tab" data-toggle="tab" aria-controls="single" aria-expanded="true">Single</a>
+    </li>
+    <li role="presentation" class="">
+      <a href="#csv" role="tab" id="csv-tab" data-toggle="tab" aria-controls="csv" aria-expanded="false">CSV Bulk Import</a>
+    </li>
+    <li role="presentation" class="active">
+      <a href="#strava" role="tab" id="strava-tab" data-toggle="tab" aria-controls="strava" aria-expanded="false">Strava</a>
+    </li>
+  </ul>
 
-<h1>New result</h1>
-<%= render 'form' %>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade active1 in" id="single" aria-labelledby="single-tab">
+      <%= render 'form' %>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="csv" aria-labelledby="csv-tab">
+      <%= bootstrap_form_tag url: csv_results_path, multipart: true do |f| %>
+        <%= file_field_tag :file %>
+        <%= f.submit 'Import CSV', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+    <div role="tabpanel" class="tab-pane fade active in" id="strava" aria-labelledby="strava-tab">
+      <%= render 'strava_form' %>
+    </div>
+  </div>
+
+</div>
