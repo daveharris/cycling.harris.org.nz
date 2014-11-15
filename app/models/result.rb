@@ -3,6 +3,7 @@ class Result < ActiveRecord::Base
   belongs_to :race
 
   validates :user_id, :race_id, :duration, :date, presence: true
+  validates :duration, numericality: { only_integer: true, greater_than: 0 }
 
   default_scope { order(date: :desc) }
 

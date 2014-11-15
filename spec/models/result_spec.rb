@@ -11,6 +11,21 @@ describe Result do
       result.user = nil
       expect(result).not_to be_valid
     end
+
+    it "is not valid with duration in hh:mm:ss format" do
+      result.duration = "5:36:27"
+      expect(result).not_to be_valid
+    end
+
+    it "is not valid with negative duration" do
+      result.duration = "-10"
+      expect(result).not_to be_valid
+    end
+
+    it "is not valid with a non-integer number of seconds" do
+      result.duration = "10.5"
+      expect(result).not_to be_valid
+    end
   end
 
   describe "#find_previous_result" do
