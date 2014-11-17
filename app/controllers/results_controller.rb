@@ -1,5 +1,6 @@
 class ResultsController < ApplicationController
   before_action :set_result, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:edit, :update, :destroy, :create, :csv, :strava]
 
   # GET /results
   def index
