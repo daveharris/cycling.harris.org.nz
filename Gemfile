@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
 gem 'bootstrap_form'
+gem 'bootstrap-datepicker-rails'
 gem 'font-awesome-sass'
 
 gem 'chronic_duration'

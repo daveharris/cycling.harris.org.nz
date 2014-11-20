@@ -1,4 +1,4 @@
-<%= bootstrap_form_for(@result) do |f| %>
+<%= bootstrap_form_for(@result, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-6') do |f| %>
   <% if @result.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@result.errors.count, "error") %> prohibited this result from being saved:</h2>
@@ -10,26 +10,18 @@
       </ul>
     </div>
   <% end %>
+  
+  <%= f.collection_select :user_id, User.all, :id, :collection_select_name, selected: current_user.id %>
+  
+  <%= f.collection_select :race_id, Race.all, :id, :collection_select_name, prompt: 'Select Race...' %>
+  
+  <%= f.text_field :date, 'data-provide' => 'datepicker', 'data-date-autoclose' => true, 'data-date-format' => 'dd M yyyy' %>
+  
+  <%= f.text_area :comment %>
+  
+  <%= f.text_area :timing_url %>
+  
+  <%= f.text_area :strava_url %>
 
-  <div class="field">
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.text_field :race_id %>
-  </div>
-  <div class="field">
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.text_area :comment %>
-  </div>
-  <div class="field">
-    <%= f.text_area :timing_url %>
-  </div>
-  <div class="field">
-    <%= f.text_area :strava_url %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Save', class: "btn btn-primary" %>
-  </div>
+  <%= f.submit 'Create', class: "btn btn-primary" %>
 <% end %>

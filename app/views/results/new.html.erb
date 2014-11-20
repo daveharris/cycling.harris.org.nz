@@ -2,10 +2,10 @@
 
 <div role="tabpanel">
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active1">
-      <a href="#single" id="single-tab" role="tab" data-toggle="tab" aria-controls="single" aria-expanded="true">Single</a>
+    <li role="presentation">
+      <a href="#manual" id="manual-tab" role="tab" data-toggle="tab" aria-controls="manual" aria-expanded="true">Manual</a>
     </li>
-    <li role="presentation" class="">
+    <li role="presentation">
       <a href="#csv" role="tab" id="csv-tab" data-toggle="tab" aria-controls="csv" aria-expanded="false">CSV Bulk Import</a>
     </li>
     <li role="presentation" class="active">
@@ -14,14 +14,11 @@
   </ul>
 
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade active1 in" id="single" aria-labelledby="single-tab">
+    <div role="tabpanel" class="tab-pane fade in" id="manual" aria-labelledby="manual-tab">
       <%= render 'form' %>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="csv" aria-labelledby="csv-tab">
-      <%= bootstrap_form_tag url: csv_results_path, multipart: true do |f| %>
-        <%= file_field_tag :file %>
-        <%= f.submit 'Import CSV', class: 'btn btn-primary' %>
-      <% end %>
+      <%= render 'csv_form' %>
     </div>
     <div role="tabpanel" class="tab-pane fade active in" id="strava" aria-labelledby="strava-tab">
       <%= render 'strava_form' %>
