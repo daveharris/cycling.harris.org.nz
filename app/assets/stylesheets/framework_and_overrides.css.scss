@@ -7,14 +7,3 @@ img {
   @extend .img-responsive;
   margin: 0 auto;
 }
-
-.panel {
-  h1, h2, h3, h4, h5, h6 {
-    display: inline;
-  }
-
-  span {
-    @extend p;
-    display: block;
-  }
-}

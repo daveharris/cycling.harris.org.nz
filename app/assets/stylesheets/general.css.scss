@@ -1,0 +1,18 @@
+.row.title {
+  padding-bottom: 15px;
+  
+  h1 {
+    display: inline;
+  }
+}
+
+.panel {
+  h1, h2, h3, h4, h5, h6 {
+    display: inline;
+  }
+
+  span {
+    @extend p;
+    display: block;
+  }
+}
