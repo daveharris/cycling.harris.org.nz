@@ -7,6 +7,10 @@ class Result < ActiveRecord::Base
 
   default_scope { order(date: :desc) }
 
+  def date_for_form
+    read_attribute(:date).try(:strftime, '%-d %b %Y')
+  end
+
   def find_previous_result
     Result.where(race: self.race)
           .where('date < ?', self.date)

@@ -17,17 +17,15 @@
       <div class="panel-body">
         <div class="row">
           <h4 class="col-md-2"><%= icon(:calendar, date_in_words(result.date)) %></h4>
-          <h4 class="col-md-10"><%= icon(:user, result.user.first_name) %></h4>
-        </div>
-        
-        <div class="row">
+          <h4 class="col-md-2"><%= icon(:user, result.user.first_name) %></h4>
           <h4 class="col-md-2"><%= icon('arrows-h', "#{result.race.distance}km") %></h4>
-          <h4 class="col-md-10"><%= icon(:bicycle) %> <%= link_to(result.race.name, result.race) %></h4>
+          <h4 class="col-md-4"><%= icon(:bicycle) %> <%= link_to(result.race.name, result.race) %></h4>
         </div>
 
         <div class="row">
           <h4 class="col-md-2"><%= icon('clock-o') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h4>
-          <h4 class="col-md-10"><%= display_time_difference_in_words(result.time_difference_between_previous) %></h4>
+          <h4 class="col-md-4"><%= display_time_difference_in_words(result.time_difference_between_previous) %></h4>
+          <h4 class="col-md-4">Faster/slower than Personal Best</h4>
         </div>
 
         <% if result.comment %>

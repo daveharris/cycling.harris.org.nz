@@ -1,27 +1,20 @@
-<%= bootstrap_form_for(@result, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-6') do |f| %>
-  <% if @result.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@result.errors.count, "error") %> prohibited this result from being saved:</h2>
+<%= bootstrap_form_for(@result, layout: :horizontal, label_col: 'col-md-1', control_col: 'col-md-7') do |f| %>
 
-      <ul>
-      <% @result.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class="row">
+    <div class="col-md-8"><%= f.alert_message "Please fix the errors below." %></div>
+  </div>
   
   <%= f.collection_select :user_id, User.all, :id, :collection_select_name, selected: current_user.id %>
   
   <%= f.collection_select :race_id, Race.all, :id, :collection_select_name, prompt: 'Select Race...' %>
   
-  <%= f.text_field :date, 'data-provide' => 'datepicker', 'data-date-autoclose' => true, 'data-date-format' => 'dd M yyyy' %>
+  <%= f.text_field :date, 'data-provide' => 'datepicker', 'data-date-autoclose' => true, 'data-date-format' => 'dd M yyyy', value: @result.date_for_form, append: icon(:calendar) %>
   
-  <%= f.text_area :comment %>
+  <%= f.text_area :comment, append: icon(:comment) %>
   
-  <%= f.text_area :timing_url %>
+  <%= f.text_field :timing_url, append: icon(:link) %>
   
-  <%= f.text_area :strava_url %>
+  <%= f.text_field :strava_url, append: icon(:link) %>
 
-  <%= f.submit 'Create', class: "btn btn-primary" %>
+  <%= f.submit 'Create', class: "btn btn-primary col-md-2" %>
 <% end %>
