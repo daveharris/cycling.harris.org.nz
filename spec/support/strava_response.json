@@ -1,0 +1,465 @@
+{
+  "id": 219712288,
+  "resource_state": 3,
+  "external_id": "C422C7C4-DF24-401E-8EF7-4D2DF3EEFD83",
+  "upload_id": 248364827,
+  "athlete": {
+    "id": 1307167,
+    "resource_state": 1
+  },
+  "name": "Tour of Wairarapa, Masterton",
+  "distance": 112985.0,
+  "moving_time": 13388,
+  "elapsed_time": 13608,
+  "total_elevation_gain": 1386.3,
+  "type": "Ride",
+  "start_date": "2014-11-15T20:01:21Z",
+  "start_date_local": "2014-11-16T09:01:21Z",
+  "timezone": "(GMT+12:00) Pacific/Auckland",
+  "start_latlng": [
+    -40.95,
+    175.68
+  ],
+  "end_latlng": [
+    -40.95,
+    175.7
+  ],
+  "location_city": "Masterton",
+  "location_state": "Wellington",
+  "location_country": "New Zealand",
+  "start_latitude": -40.95,
+  "start_longitude": 175.68,
+  "achievement_count": 5,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 10,
+  "photo_count": 0,
+  "map": {
+    "id": "a219712288",
+    "polyline": "zm|xF_}fo`@r@wC`@mCdAiFhAsGNo@BST{@x@uED]XwARuAn@gDRq@ZyCJcBLu@f@eJTuBJe@Dm@Jg@@OCONgD@mBAuCK}BQmG?{DKaAC_AIk@_@aA[a@kAgAm@c@k@g@{@{@MQm@m@o@g@MIMOuBgBgBeBuBkBKMo@k@MSgAaA{AaBYU_C}Ba@o@Sc@m@iB]yAy@oCKWYcAuCuKSo@u@mCeAeDSs@]gB_BoF}A}FmB{Gi@sB{AeFa@eBKs@Ck@Mu@ImBU{DGWc@aECqAa@oE?WM}@EiAGy@O{@MsB[qCUkDSoAAo@i@qHI}BUiBCo@Gq@G[EeAc@cFcAiNoAmOIkBEUQ}C[gC_AiLKk@?WEWK_CSyA?WGm@YcBm@kC[}@QYMi@[_AMm@_@_AcB}DWy@m@oAg@iBUsBCaAk@wLSgCQaAo@qCY{@CUg@{B}@iDa@sBcA_Ey@sDMw@o@wBKq@]kAEc@g@mBQg@Ms@Eg@Ic@o@mC[mBOo@Qc@Os@MSIa@@Qq@oCOw@Y}@UcAM_@?QGOASYuAOm@WwA]kASMc@a@MOCOMO_BsAyAwCQQKQUk@QWOa@Ye@UQc@_AsAuBMW[a@MWY[_@u@EAa@_@CK_@_@SQYM_@e@AIe@o@a@_@Y]Yc@k@k@_@S_@IOAg@BuC`Ak@\\}@NWT[Lc@HQLQDSNyB`@SI_@]eA{B_@qAMYw@kAeBsAeBeAyAu@mAaAu@}@w@s@SKKK_A_@a@Ew@U[EM?}A_@{@Ra@Vo@VkEbBc@Ly@HiAQgAYWOe@McAOmBi@k@_@eAaAoAuA]Yk@{@a@y@_CyFa@w@e@iA}A{C[Uo@UoBImA?q@KYOe@e@IQSWo@cAKKUOWEIES?WKWO_@_@Uk@Oy@MwAYg@Y[u@k@MSOMe@WsAKQDQCS@gB[e@?u@OwAM[MOKq@Go@Sw@A]Dk@PYDW@UAc@@}@GY?g@GY@KEi@CY?aAOU?KIIAKOcB{AcAgA_AsAK]q@gBg@_Aw@c@{AYc@Mc@SOC_@Aa@IKGm@EOIcAI[KOAURQDO@e@JiAHgAP_@B{@@QEc@?WBy@@QEQAUE]KIUYUIMYWg@_Ao@w@EOIMQOo@s@KGw@u@o@e@YY[y@]_Cq@}Ag@o@a@y@k@c@QEk@Je@Rm@p@Wh@q@dAEPONU`@GVS`@]x@CTYbAGj@@POt@?ZVbC@`@IjACRQb@_@jBQ~AOh@Op@IVKj@]z@q@r@_@RYH]Ba@Ga@OYO}@s@e@Wm@Os@Ck@DUFc@R[Ve@j@_@~@Qx@YhBO~AId@MfBc@zDK`@WpBU|@?FAHEHIDMAIHUFGFSH]?KEm@Bg@C]MO?g@GcAWU@MEO?m@J_@Bg@Pe@ZGJIDo@ZgAn@g@^c@f@Mn@Ol@PxBN~@?XCRDf@D~AAvACRBn@Af@UbCG~@Mf@BPCtBm@zA[b@IZSLc@FWAKBYC_@?WFKFo@l@q@dAIRKLc@p@GRg@j@qBp@g@?s@UEI}AiA_@Ou@GOBWUOEMNiAIYEaAe@k@QYC_@DSLU^Wr@Mr@Ol@G\\_@j@a@RYBa@?k@H_DJOAWGK@[Ei@QcAAc@BeARIDmAZ[Lc@\\cAjAEL[d@e@h@EHm@z@CJOtAWr@_A\\eA?WCi@AOCk@AOCeBA}@BcAGo@?e@Jq@CsADq@CsA[oBk@g@QcASoDcAK@u@WeE_AaAYkAg@e@Ys@k@q@e@u@YY?y@g@KI[MSQy@W]GOK[EiAE]IGFMDk@LKPMBi@Z]JKFm@NYLs@NQGq@Gg@YW[m@Wc@EUFWNq@rAg@lAa@n@UJ[L]De@@mAJu@PoAb@i@BIA_@O]]Q[_BoDSw@]o@KOu@e@MQi@Uo@k@e@o@e@}@]c@SQUWGCe@ASKOAk@Yi@Qw@[OKoAYO?a@G]?e@Iw@i@_@Sm@H[?[Fa@P[D[Lu@Tk@BKEe@CqCg@oBQuAWq@YaAg@o@W_@EyAH}BDkC`@]P_@DkAAQEe@Ui@][Yu@qAo@uAa@w@i@cBUk@IQ_@eAS_@g@aB_AwBOe@m@oAW]o@g@s@]gAc@{@Qe@SyAk@g@KiA_@iASk@Cm@GgAGgAHaAR{Ab@aAl@WX]n@q@fCs@pBY^WTk@T_BR_@JIA_AFMB}@@c@Fo@BkAL_@NQDaBz@mGlDqE~BiAt@_CpA}Ar@kB`AK@aAZM?w@Nk@@[CIBg@@i@F_@FKPs@r@a@j@URu@t@sA\\WB{@`@{AVQDQHe@JUBu@Ek@SsBaBiAw@s@]SCQGSAsADc@Jq@BMG[?OGc@]]Uk@k@c@k@Qo@[eBMa@Wc@Y[WOYGIEU@k@IO?]B_@G{@C[?g@DaA\\SBUJw@Pk@@YIi@Ci@OSQ]q@s@gAm@oASQ[M]A_ALY@GAgARWBW?WF{@H}@Bs@A]I[OOOU]a@gAc@kBAOK[_@w@MO]Og@C_@HwC~@i@FmAE[Iw@_@y@m@YY_@{@g@u@KKa@SOAc@BYTc@T]X{A~@_@NO?OBuBKSG[Qe@Q{@i@QGm@Oe@?]Gc@B[BKJ{DdCi@T]F]Am@IK?qC]kCF{@JkBNUAmALmAZQ@_@Rs@n@UJCDg@Dm@AuAIuHVu@Cc@OqAw@u@_@}Ag@iC[WOMAw@[i@KcAM[@m@Ce@MOAk@Wc@[EKa@e@a@q@c@_@YOkAY{@OEEQEc@GKGa@KWAOII?]Io@Io@UqA[[QYKMK_@KIGIAQOOWw@m@GQII}@c@EKKIOBUMKOICi@a@_@Os@i@k@q@_@k@]u@UYo@wAMSYy@Ug@COmAwBq@{A}@{AaB_DOQaAk@s@KYFc@Ai@KSKc@MYQo@k@g@{@Sk@e@{BYq@SScBaAwAm@{BYm@K[G_@OgAy@yCiCuCkCo@q@e@YcByA_@Wy@e@c@GQI}@Ou@QoAk@sA[[Om@M]MMI{@][SQEk@c@s@a@w@Ys@_@]W]OwBsAOHMGo@k@cBmAuAoAIEi@_@wByBeEyDqC}DUm@sAwB]o@EOW]cAmBiAgBkCoCm@k@_@Sk@q@eAeAiByAKQe@g@q@}@cAaBe@kAY]y@sAs@{@w@u@q@g@q@a@MAyBcAk@_@_@MMC[Qo@UcAe@qBk@m@WIKOGSC_Bw@_@OaLyFeAs@oBcAy@_@YQSIYSYK{@e@e@_@OCi@UMIKI]Mw@e@MMqDkB]UYKm@WYUaBs@uBg@m@Gu@C_@GwAAg@Ew@@]BYCkADQA[I]?IEaASWOOCQ@OGQ@KIa@a@W_@}@_Aa@q@a@eA]yAQgBIyABqCVgBZiA`@mANUdAuCrAiEvAaFp@kDbAuDrAcDFY\\aATkAJmAD{BIiA?_BMyDIgAC_AI}@Ki@Oi@Wa@u@y@y@i@KC]UIUY_@i@aA]mAO_AMwAIwA@aALyAHk@ByAKcAa@eBQe@e@o@iBwAKSe@YOO_@Q{@k@yEmDc@c@k@y@_@s@Yy@_AuBsBqFeBcFOo@c@oAi@iBcAqCm@}@gAgAW_@QOi@o@yAgCMSEUMUg@mAWc@a@gAu@cBWw@kBaEWa@c@c@GQi@{@c@y@g@u@S{@O}AAm@Bw@Fw@T}A`AmDHOZaADYDo@AaASiBc@yAIQUa@s@aAkAgA}AgAMEsAkAcAo@uAiAaC}Ai@g@kDwB_DaBc@AcAH]FKAOBm@ToAt@UTc@Ts@Vi@BULkA@eAC[Gy@]CMmA}@EK[Uc@g@QKMKQ[o@s@WOYYAKs@o@]a@YWU[aAw@SIi@YIOs@g@AKMIe@YYi@UG_@c@}@}@e@{@gAy@g@[cB{@WSkCaBM?OGWCIGyAg@k@Yc@MGIcA[OGQOo@S{C]KM_@@{@Gc@H]Ho@Zw@t@IN_@ZUH]VYVQX_@ZMBIFO?a@L]FaABOA{Ag@_@Q_@KWOeBsAMIKCEQW[_A}@gAi@sAe@]Ee@O_AOuBm@i@Sg@GgAEu@D]Ni@JaBn@g@^kArAc@j@_@j@mAxAuAnAu@ZUH}ALiCAoDDc@AMGm@Go@Qc@Sc@]iBy@I@m@M[FOC_@IaAKIOi@KmAKeA?{@FoAR}@Z}Av@k@LSL}AXW@KDSEk@?o@C_CSi@CeAMK@y@Q]K{Am@UOm@q@y@w@{AaBo@{@o@o@IMs@g@qAa@g@IQEq@A{@D]Bk@PwAj@YRg@h@i@t@Ub@[Zs@fAc@\\SVoAz@yEjCmGpDYFUNu@\\MN_@RORIRAHH`@`@jAz@nBJJF^@NJZBPZl@P|@?NH`@?NDNLvBRxA~AtGXhAN\\L`Ad@nBLt@L|ADnCCVFv@CJA`AHl@E~ABd@A\\I`ABv@E`@?NHl@VdAPb@`@fAXn@Hd@FLBRJ^VtBIXIlA?VGTIhC@TOlAIJY|@ERUf@Sv@S`@ORKf@GJUj@KZWj@Yx@W^E@Wd@WVEJYb@OZI\\Ix@?t@Dj@Jl@Nf@DZ?PFRCXBPTl@Ht@TbA@PTfAJlAGbA?h@JhAFVJ\\Zj@h@t@b@`@x@tA^t@Lh@Th@ZX^TrAtATb@`@|@\\jAP~AJp@z@`Df@~BD\\?ZCXMn@Y~@KPqAtA_ErDsAAkB|A_@bASx@KXOPBHSn@IDANWj@e@r@Sb@Mh@S~D?l@_@nDMrBDx@RjADt@?VEv@M~@WxAMvABbAGzAERYj@[Ru@P}Bx@y@`@UJSRKPGPWzAAb@L`BGzAg@tAGTe@t@MNQLq@z@KPCXm@h@i@ZwAd@a@Ds@BeAGy@Ms@QU?O?k@Hg@TKPOLe@v@a@z@CROh@MnAs@`FUx@CPKNCNKNc@pAeBdEe@t@[Xe@Lk@XWDO?wAOMGKAu@Ci@Dg@JOHaBh@eAHw@?}BO{@?OCMHy@VgAh@]HM@EFKDCFKBmAD{@GYB[GOBw@Gm@HYNa@\\Wr@ATUp@GDDx@I|@@dAQbBBRM~@Ab@Dd@H\\@Pl@`CJ~@P~@Fl@R`ALpADd@C~@Kr@EvAE\\Ab@JlAPn@`@t@t@v@R\\XVn@ZRh@X^`@rADx@Aj@Yd@Ab@CNq@p@Qj@U^M^o@tAETAXa@tAAf@k@xDQd@SXGNMpBAXFl@X`ANx@^xGAd@D|AC\\?h@C|AKrC?`AD|@PzBXbBh@bCJbA@l@[nEKd@QdBG`Ae@nDu@~EQfBMdAOZQtAIN[fAQREX]t@Up@OXKHMTQ~@GFQb@CRYj@ALUh@c@z@w@pBm@nA]|@]n@u@jBcDhJ?TMf@m@n@WNo@NkEj@g@RWPwAzAe@j@c@p@w@tAaAx@k@P]Pq@`@m@d@q@r@m@x@o@L_@f@Q`@K\\AVKb@ARIl@EL[vCI~@Cx@c@vDYjBa@dEYxBEfA@z@XxCDl@DPDhAHT@d@IvBIp@?F[dASVMJE@QVYPe@PQDe@Bc@?aAIi@ImGo@i@KQGi@]e@i@a@Wi@e@o@U{@M[AMD}@@k@F_@Aa@D_BDa@Di@?o@BiCNkAD{AL_@?Q@aAVc@D_@Fc@@ODMNk@VKJQDe@TUFK?W?KE_BiAoAi@o@Mq@EcA@q@D[H[LQNg@XEFQ`@GVG`@Fx@Hb@`@`A|@rAF?T\\\\n@PLTb@THBJRPDHHDPGJAJDTrADHBHh@dAf@t@Xr@hA`BKb@DFNEXb@b@h@ZZ^h@HBb@p@vAfDl@dAt@t@RLZ@APHTDFTh@Pl@TvBLtBC|@QbCEvB@HSjCAvBGp@@bAGzAS|AUpAUt@q@xAOh@EXEp@QrE?|BHjAL~@~AfG@ZXdCHfAAV@tAAp@BpADlAHj@Ll@Pf@fBrDRh@VtAH|@VjFNtB@z@Hz@Bv@DP?dBD^ARBPAJDLBb@Bt@RxCB`AI`AE|@ELm@lAa@d@Yt@MRE@k@\\K@CLQJK?MVIDg@l@O^M@IRO^Ol@g@nAG\\Sh@Sr@qAfDGv@ETIAKXQRANIHK\\GHMJS~@MjADdDFPZjGNhA@b@BJD|BFfADVDx@Af@XzFBbA?h@Hh@?XFn@@f@BRBdAFPDf@?d@PlBBbASLFRLhAARHv@FRJlBDRLtBHd@Bv@Ef@fApUTpDQJYFiF^Mt@DT@XJ~@DNJLJFPALBTOnAKPEh@E^Hr@^ZHdAPRCn@?r@]z@[BNf@WLKP[LI`@SNEpBsAjAa@j@IlAGRCh@CtAOjBYr@St@c@~@}@hA{@NI|Am@POt@_@bAYRE`A]PFn@FhAd@^Dh@TfARh@Rb@?fAJhBd@r@Vd@JZLXTh@Z^FPHlAp@rAj@z@Z^TtBx@HHPB`Bn@b@VjA^PN\\D^Lv@\\l@P^R|@\\XFfAf@NBxAl@r@PZRj@VnA^ZF|Aj@\\HRJ~JfDtA^z@ZxAZh@Pv@^lA^lAf@x@`@vAbAfAdAfBvBv@jA\\r@hA`BLJtAtBFBHNJHlAhBJR^d@vA|B`ArANTHVz@xAb@j@FPTXHFn@|@jCfEjAzAxCzEbB~BPPJTZb@N\\`AxAh@jAZv@Lh@^~@F^Tt@`@z@HV`@pAF`@Zh@H`@^h@p@GfBR\\?LCh@Y~CcCZQ`@Oj@MzBWn@@PB^Ll@`@|@dAlP~UJDp@n@XPb@Pn@f@h@Rx@j@pAd@dBbATHd@HpA\\dATh@DLHj@Pd@RhE|BbAd@l@NtBZVFXNl@d@v@fAh@fAz@bCXb@VPVH\\Dr@DLEb@DLBJHfBRz@RbHfCtGzBx@R`@Bj@@|CMxC@f@Bh@Hf@Pb@TdAz@b@d@RZ`AdBzC|Ff@bAZz@hA~Dx@q@`@o@HUNcAj@uHHa@X{@\\m@x@kAZo@^g@r@eAjAmA`@SD@r@KJ@VJZFlAFf@FhABxBA^Ch@KtBe@~@Ef@K~@Ix@OxAyHCmABmAXeBTw@^s@HEJOh@g@~BoCr@s@z@c@j@StA_@f@UdAw@l@a@LCXOFGRKH?VIVEjAIzASH@L?`@ItCU\\I^ANDh@Bp@`@^`@b@\\\\PVDb@?DBp@k@Zg@f@eAJWDYB[B{B?yBC{@U}A_AqCi@}BG[O{BDy@ZaCB_@?WGq@Me@c@i@_E}B[[]a@Qi@WoAQiBm@iEW_C?mA^mDBgAe@mIkAyPOiDFeDJmBPgGt@}P?w@Is@Ou@Uk@Ye@_@_@w@c@w@]wBmAcBu@_@W]Km@k@s@]o@_@u@gAkAsB]o@cAcCYc@Qe@MOe@aAY_@uB}A[IMK]MQKm@Sk@YKQKGoAsAU]U{@KaADo@Ho@v@mCZuArAiF^aATe@x@aA|@{@f@s@NGzGcHx@k@d@UvAKd@@x@RJ?RDf@@RFd@IhA]bAk@vAcA`Aw@Z_@LYZg@`@c@p@qBLUt@aBVg@b@gAd@}@TUb@s@v@w@nAoBdAmANUlAwAXQVKnAYRBf@Gz@DtAPZC~@LT@VC`AOj@UlA{@n@o@hA{Ab@e@NOnBkA|@Yd@Md@CfAA`@IN@RCN?hB]d@E`@Ib@AjAIPBzAB`@DP?f@Hz@Bd@JNFRDr@Dr@Pb@NdAn@\\X`@TRNpCrAv@Vx@Vv@Pb@LPBRHd@Bb@Hd@PR@p@LvA^NCPDbAb@rEjALJ\\LLJ^LJNLFh@`@ND~@x@h@^nAv@vAhAPJRFn@^lBt@f@X^L^TNLRD\\RxDlAnAh@dAZzAVd@?h@EpBYbAUP?f@Id@Ef@@TGd@Dd@LXCPFd@R\\Zf@r@LXXdAP`@H`@vApB\\NPBl@\\hClAtNtFn@PNCfAIh@K`@Uh@m@b@kAJe@Ra@h@c@`@Oz@Q`@C`BIn@F^RLLn@`@LRZTp@n@NFNLPDv@Fh@BTKTCR?PBrCFjBAf@Bx@G~AF`BA|@IrAE~@If@OhCcAhAWnBKR@dAENCJGDk@Ki@GSMQq@gBU_@KWKe@Q[EYcA}Dy@}@[BWEc@A]SIIMSKk@A]Fs@Fk@JYNaBHW@[Hu@PmCCODq@@cBLk@@c@VuB`@eCTeBX{@v@oAVa@j@q@PUHQFEXc@LGFKRUt@mARc@Lc@d@aD`@eBl@mAV]`BcB`@}@eAyIdBmFlD{DLERSf@Yh@Qd@WLCh@Wh@_@pFiChAq@hBaBJMhAmA|@mAr@sADG`BwDRYDUh@yARy@RmA?QDc@Gg@?g@Ew@AoBMeDEo@eAwDG_@MKAOIOEa@e@kBCWKs@I[Bu@Ao@Ba@XmAVi@h@u@r@m@`@Wf@Q^YHI|@m@dAo@z@o@lBmAl@i@r@iAj@iBt@sBDOPc@Po@BQP_@d@mBZu@h@gBXUHOdAaA^e@j@g@dAeAZa@d@w@r@yA`@m@f@c@~@c@bBo@~@UVCt@AbAJLDx@Lx@BPCj@Q\\S\\a@Zm@Nq@TqB?i@?OESKQk@m@U_@Mi@D_@L]`@YzAq@|@k@TUDMXc@ZgALO`@Qx@RV?b@QbAkAZSTAt@XL?~@kAp@i@f@]f@URERALF^?^ILOHYHo@JWPSv@o@z@{@`@g@N[L[Fe@Dw@?i@Ks@Se@cBqCq@oAOUg@e@iBw@g@a@s@s@oBeCMQa@}@OoAAQBMd@uAjBgDN]VaARcA\\mCVm@NOTKlACb@B^Jl@J|@f@|@VLFRD|@BnAT|Ap@dB|@ZHhFSr@Gf@?`@C`BFx@A~@y@h@Sb@K^M`@Cj@KfDU~@?l@G`@IF@JA`@?l@BjALJFrANl@CvAs@^WxAy@TQd@OTEx@?^F\\Bf@TdBfAf@TPFZDh@AVCl@OtDyB^KBC`A@^b@jAxBv@n@^V^RPD`@FZ?bAMLCXQ~@[NCl@Qb@E^FRFNJ`@`AVt@h@|BJRLd@LVHLNJ`@L`@Bt@?fBKbCa@x@K`@Ad@DPHZXfAtBn@x@d@Zj@Pf@HR@v@Ex@Q~Ag@v@E~AD`ACv@Bf@JTNb@j@Rh@TnA^tAT^^d@l@h@RL\\PZHR@V@p@GPEr@I`@@`@D`A^xDtC\\RNFZDZ?|@KTEbCw@dCo@`@WXUjA}AVYt@YTGd@CjB?h@KfAa@pCqA`FkCf@S\\UnAk@rEiCdCoArAw@pAo@t@Q~@EPGxBWf@Gh@?`BQdAYPONSVg@z@eC`@uATg@Ze@D?n@e@f@Sb@Gf@OTKv@Ch@Gd@B`@An@JN?tBRv@RtAl@l@N~Al@v@b@bAb@l@`@`@d@lAzB`AfCH^LRtAhDdBdFTh@^j@f@p@f@`@nAVZBLA|@KnBi@^ALEl@AhAKvBEt@Lp@^VRx@\\xAXhDd@R@f@JL?XH`@CZ@RCJI\\G`Bi@LC^Ad@H\\JbAf@d@LxAFl@Lh@Zz@\\hAVTNx@Vv@v@r@lAj@r@lBdAr@l@Zb@jAzCt@~Al@|@b@PbCo@v@QlBAd@INGPO\\e@pAkCT[JK^MX@d@LfAr@`@HL@RAZI`EqAb@GdAGd@@lALv@V|An@nCrAdCfBv@`@v@TbDr@nA\\`@Bz@Vh@H|Af@pBb@jAZrBZh@DfFH`ACj@DlA@b@DhEDd@IPELK\\{@\\iBf@gA`CwCNOn@e@~@Yn@MLEdASt@ITBn@NRPl@N|@AxCO\\?PGXUd@q@dAcDHM\\]^Id@@PDZJLJj@Vp@L|@H`A?~@F^PfAbAPDd@^NFh@Ed@MpAu@Xa@`AcBHSJIp@_AZSh@URC\\D\\?ZMF?\\Y~@qBLkA?oANoBHk@F{BAq@FaBAmBImAQyAIcABo@DOXy@^m@JEJCLMfAq@`CqAn@QJA`A?zCh@z@BjAAj@Il@_@Xg@Ls@x@mGb@qFd@yCl@sBLU`@k@f@YHIPIl@K\\FN@\\H^Dh@f@\\NLNt@\\ZJL@\\BXEVK^UVYXi@^yAl@{CRiAPqATkADqACs@SmB@[Jq@Pq@TeAPm@^y@zCwFTU\\UH?b@Bd@N`@Z^d@DLf@r@Pb@JJJd@DHHVRvAVp@`@p@`B|AnAtAh@|@Td@d@p@f@l@\\VZLdBBNB`@Ct@@tAEdBKPEl@IfAEt@AfAJb@HhBd@jB\\|A`@`@`@d@z@t@nBLb@dAbBh@`@PXJDt@l@Z^n@TND\\?^HdERb@E`A?hBYz@LV?fB`@nBRx@Nz@FZHP?RFr@Fj@NP?LD`A^PPXLb@ZDJPPDNP^Hp@LzAH^VXLHND~@N\\L^TLJHRX\\FRLP\\\\\\TVFP@pDF|@Rh@`@^d@^v@l@~Az@nBPf@Tb@n@~Ad@`Al@vAFHPJz@`A`@Th@b@d@h@\\RTRnBh@x@NvA\\|Ad@N@`@?l@InAc@nD}Ax@Uh@KP@NBd@?d@P|Cz@l@Tp@b@n@j@lApA`@Z|BpAbAr@bAh@v@j@\\d@LVv@zBTf@h@z@XVf@C|@QdA[LIv@Sv@]?EJ?JGH@d@KrC}@~@a@\\I~ApBj@h@r@~@hClC`AlAZXn@dA\\x@Vd@V\\Vf@Vp@jArBbBnCfA|Ap@z@hAfAp@|@PZ`@~ANr@HPHh@JXT~@TpAHPLh@Dh@XvA|A|Gp@dCPlA^zA^lBd@hB`@pBbAlEPj@x@rD\\jAd@~Bj@xBLx@x@~CP~@Pl@VhAh@tBLn@L`BD`BHp@DhABn@AbAJ~@D~@AbAP~Ab@fBb@nA^x@v@pBT`@Xt@v@bCp@vAPh@f@lBb@jCPt@NnBNfABh@Hn@Bf@Ff@Bf@DJ@TTpADnBJf@LfB@bADTBh@^pDNtBDJD|ATpCDx@Df@F\\BX?vATz@@z@Jl@Bx@Jh@DxAXrAVvDFjBJ~@Ln@PdC@h@DNBt@VhCb@xG|@rJHxB\\`EJj@T~BRtDJjADZLfDV`BTzCFl@RhCRxAh@zBZx@\\rARh@r@rCjAdEJ`@Vz@h@dCx@fC`B`G\\dAF\\R`@ZbAVhA`AdDZjAP|@tAnE^|AX`APZjAzEp@rBXd@`@b@tGnGnApArDnDZPrAjAd@l@^ZV\\XXXJJR",
+    "resource_state": 3,
+    "summary_polyline": "zm|xF_}fo`@rQklAi@ae@cd@ed@i]mmAaXuaDik@skC}\\}d@iS`EaXwW{_@Eak@yn@kc@yC{Q}PgXKsRuYoHxJ_Ez\\sOO{G~\\sWrEwB`d@wN|IgRoEiD`HcT~@oI`M}bAoRi`@zJoWoWst@gDiOm[}RgGq{Atp@i[mRqg@aEcEeJsSkE_{@pIoe@}Fyd@qUq_@mh@wgAul@yr@_|@s`Bwn@gCsP|Qeo@]sVyHyLiAaVwQoOqg@_gAt@e^q^qXuTjCwq@kg@qWrFq]gNwRjNqq@Ucb@kPud@`ZbRrqA_L~d@~Up}@uTtXsBlf@yI~EsEvRsPlB{Lf^uk@~Gz@bk@|GfMmIb\\fBn{@iYz`Ai_@|WkEzv@iqAvAj_@zt@}E`p@vMpmAeT~g@lI|dBiGhFjy@mRl`Bjj@x}@fwAvUiExSfYfo@`_@pn@rKhN`XxMu\\vZwA|Ki\\dh@kKuByb@mLyXK{pAak@oj@jEsWlc@uU~T}]bn@mN`uAtf@vR[t_@`WzL{Hhw@\\kLuUtDia@fRg_@^gQbe@{d@kBek@lPwLtUgd@xS{DKgNjc@yYgQo]tGmS`VlF`kAqItRzDvEzJdg@fDzFhKbSfFf{Asp@zRhGjOv[ht@xChXvW|a@iJp`AdRjJwMvYqIxQtErNwJpBmc@jW{EzHo]hNx@fEa]nHgKzRvYnU?nU`Rhc@nDnj@lm@n`@d@zVdVbRoFz^rg@~k@bnCrVn|C~]zoAbZzY"
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "flagged": false,
+  "gear_id": "b448509",
+  "average_speed": 8.439,
+  "max_speed": 18.0,
+  "average_watts": 197.8,
+  "kilojoules": 2648.1,
+  "device_watts": false,
+  "truncated": null,
+  "has_kudoed": false,
+  "description": "Windy, partly wet. Stayed with the same bunch all the way around",
+  "calories": 2952.6,
+  "segment_efforts": [
+    {
+      "id": 5192247105,
+      "resource_state": 2,
+      "name": "Tour of Masterton",
+      "activity": {
+        "id": 219712288
+      },
+      "athlete": {
+        "id": 1307167
+      },
+      "elapsed_time": 13337,
+      "moving_time": 13319,
+      "start_date": "2014-11-15T20:01:21Z",
+      "start_date_local": "2014-11-16T09:01:21Z",
+      "distance": 112926.0,
+      "start_index": 0,
+      "end_index": 12517,
+      "average_watts": 198.0,
+      "segment": {
+        "id": 2716795,
+        "resource_state": 2,
+        "name": "Tour of Masterton",
+        "activity_type": "Ride",
+        "distance": 112565.0,
+        "average_grade": 0.0,
+        "maximum_grade": 23.4,
+        "elevation_high": 303.7,
+        "elevation_low": 102.2,
+        "start_latlng": [
+          -40.9470128,
+          175.67707139
+        ],
+        "end_latlng": [
+          -40.94782504,
+          175.69764254
+        ],
+        "start_latitude": -40.9470128,
+        "start_longitude": 175.67707139,
+        "end_latitude": -40.94782504,
+        "end_longitude": 175.69764254,
+        "climb_category": 0,
+        "city": "Masterton",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": null,
+      "achievements": [
+        
+      ],
+      "hidden": false
+    },
+    {
+      "id": 5192247100,
+      "resource_state": 2,
+      "name": "Tour of Wairarapa",
+      "activity": {
+        "id": 219712288
+      },
+      "athlete": {
+        "id": 1307167
+      },
+      "elapsed_time": 13270,
+      "moving_time": 13252,
+      "start_date": "2014-11-15T20:01:40Z",
+      "start_date_local": "2014-11-16T09:01:40Z",
+      "distance": 112588.0,
+      "start_index": 14,
+      "end_index": 12478,
+      "average_watts": 198.6,
+      "segment": {
+        "id": 6043632,
+        "resource_state": 2,
+        "name": "Tour of Wairarapa",
+        "activity_type": "Ride",
+        "distance": 112170.0,
+        "average_grade": 0.0,
+        "maximum_grade": 18.0,
+        "elevation_high": 299.8,
+        "elevation_low": 101.8,
+        "start_latlng": [
+          -40.947243,
+          175.677935
+        ],
+        "end_latlng": [
+          -40.945876,
+          175.69954
+        ],
+        "start_latitude": -40.947243,
+        "start_longitude": 175.677935,
+        "end_latitude": -40.945876,
+        "end_longitude": 175.69954,
+        "climb_category": 0,
+        "city": "Masterton",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": null,
+      "achievements": [
+        
+      ],
+      "hidden": false
+    },
+    {
+      "id": 5192247080,
+      "resource_state": 2,
+      "name": "Whangaehu Valley Rd climb",
+      "activity": {
+        "id": 219712288
+      },
+      "athlete": {
+        "id": 1307167
+      },
+      "elapsed_time": 181,
+      "moving_time": 181,
+      "start_date": "2014-11-15T20:53:18Z",
+      "start_date_local": "2014-11-16T09:53:18Z",
+      "distance": 1081.5,
+      "start_index": 3045,
+      "end_index": 3215,
+      "average_watts": 235.1,
+      "segment": {
+        "id": 6807570,
+        "resource_state": 2,
+        "name": "Whangaehu Valley Rd climb",
+        "activity_type": "Ride",
+        "distance": 1075.0,
+        "average_grade": 3.0,
+        "maximum_grade": 8.2,
+        "elevation_high": 204.0,
+        "elevation_low": 169.6,
+        "start_latlng": [
+          -40.784303,
+          175.774639
+        ],
+        "end_latlng": [
+          -40.776495,
+          175.781431
+        ],
+        "start_latitude": -40.784303,
+        "start_longitude": 175.774639,
+        "end_latitude": -40.776495,
+        "end_longitude": 175.781431,
+        "climb_category": 0,
+        "city": "Whangaehu Valley",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 2,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 2
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 5192247086,
+      "resource_state": 2,
+      "name": "Alfredton Rd Climb",
+      "activity": {
+        "id": 219712288
+      },
+      "athlete": {
+        "id": 1307167
+      },
+      "elapsed_time": 330,
+      "moving_time": 312,
+      "start_date": "2014-11-15T21:29:23Z",
+      "start_date_local": "2014-11-16T10:29:23Z",
+      "distance": 1198.4,
+      "start_index": 5137,
+      "end_index": 5349,
+      "average_watts": 162.0,
+      "segment": {
+        "id": 1448767,
+        "resource_state": 2,
+        "name": "Alfredton Rd Climb",
+        "activity_type": "Ride",
+        "distance": 1191.76,
+        "average_grade": 6.9,
+        "maximum_grade": 18.8,
+        "elevation_high": 247.6,
+        "elevation_low": 165.2,
+        "start_latlng": [
+          -40.68256021477282,
+          175.8324652723968
+        ],
+        "end_latlng": [
+          -40.6814697291702,
+          175.82200163975358
+        ],
+        "start_latitude": -40.68256021477282,
+        "start_longitude": 175.8324652723968,
+        "end_latitude": -40.6814697291702,
+        "end_longitude": 175.82200163975358,
+        "climb_category": 1,
+        "city": "Alfredton",
+        "state": "Manawatu-Wanganui",
+        "country": "New Zealand",
+        "private": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 3,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 3
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 5192247089,
+      "resource_state": 2,
+      "name": "Alfredton Rd Climb",
+      "activity": {
+        "id": 219712288
+      },
+      "athlete": {
+        "id": 1307167
+      },
+      "elapsed_time": 344,
+      "moving_time": 344,
+      "start_date": "2014-11-15T21:40:17Z",
+      "start_date_local": "2014-11-16T10:40:17Z",
+      "distance": 1227.2,
+      "start_index": 5662,
+      "end_index": 5910,
+      "average_watts": 195.7,
+      "segment": {
+        "id": 1448768,
+        "resource_state": 2,
+        "name": "Alfredton Rd Climb",
+        "activity_type": "Ride",
+        "distance": 1200.25,
+        "average_grade": 6.7,
+        "maximum_grade": 18.0,
+        "elevation_high": 266.0,
+        "elevation_low": 185.0,
+        "start_latlng": [
+          -40.666040321812034,
+          175.8016285020858
+        ],
+        "end_latlng": [
+          -40.66646461375058,
+          175.78882472589612
+        ],
+        "start_latitude": -40.666040321812034,
+        "start_longitude": 175.8016285020858,
+        "end_latitude": -40.66646461375058,
+        "end_longitude": 175.78882472589612,
+        "climb_category": 1,
+        "city": "Eketahuna",
+        "state": "Manawatu-Wanganui",
+        "country": "New Zealand",
+        "private": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 3,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 3
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 5192247092,
+      "resource_state": 2,
+      "name": "Dreyers rock climb",
+      "activity": {
+        "id": 219712288
+      },
+      "athlete": {
+        "id": 1307167
+      },
+      "elapsed_time": 625,
+      "moving_time": 625,
+      "start_date": "2014-11-15T22:45:51Z",
+      "start_date_local": "2014-11-16T11:45:51Z",
+      "distance": 4806.2,
+      "start_index": 9260,
+      "end_index": 9796,
+      "average_watts": 213.5,
+      "segment": {
+        "id": 1002803,
+        "resource_state": 2,
+        "name": "Dreyers rock climb",
+        "activity_type": "Ride",
+        "distance": 4743.36,
+        "average_grade": 1.2,
+        "maximum_grade": 3.7,
+        "elevation_high": 275.0,
+        "elevation_low": 216.9,
+        "start_latlng": [
+          -40.76302,
+          175.720716
+        ],
+        "end_latlng": [
+          -40.780531,
+          175.76136
+        ],
+        "start_latitude": -40.76302,
+        "start_longitude": 175.720716,
+        "end_latitude": -40.780531,
+        "end_longitude": 175.76136,
+        "climb_category": 0,
+        "city": "Mauriceville",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 2,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 2
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 5192247096,
+      "resource_state": 2,
+      "name": "Whangaehu Valley Rd",
+      "activity": {
+        "id": 219712288
+      },
+      "athlete": {
+        "id": 1307167
+      },
+      "elapsed_time": 1957,
+      "moving_time": 1957,
+      "start_date": "2014-11-15T22:58:51Z",
+      "start_date_local": "2014-11-16T11:58:51Z",
+      "distance": 18523.8,
+      "start_index": 9940,
+      "end_index": 11826,
+      "average_watts": 223.4,
+      "segment": {
+        "id": 6258253,
+        "resource_state": 2,
+        "name": "Whangaehu Valley Rd",
+        "activity_type": "Ride",
+        "distance": 18469.1,
+        "average_grade": -0.2,
+        "maximum_grade": 34.0,
+        "elevation_high": 204.6,
+        "elevation_low": 128.6,
+        "start_latlng": [
+          -40.784889,
+          175.77458
+        ],
+        "end_latlng": [
+          -40.922906,
+          175.76907
+        ],
+        "start_latitude": -40.784889,
+        "start_longitude": 175.77458,
+        "end_latitude": -40.922906,
+        "end_longitude": 175.76907,
+        "climb_category": 0,
+        "city": "Whangaehu Valley",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 2,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 2
+        }
+      ],
+      "hidden": false
+    }
+  ],
+  "gear": {
+    "id": "b448509",
+    "primary": true,
+    "name": "Argon 18 Plutonium",
+    "resource_state": 2,
+    "distance": 4819200.0
+  }
+}

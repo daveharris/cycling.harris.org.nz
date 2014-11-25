@@ -95,4 +95,43 @@ describe Result do
       expect(Result.last.duration).to eq ChronicDuration.parse('2:32:55')
     end
   end
+
+  describe ".from_strava" do
+    let(:user) { FactoryGirl.build(:user) }
+    let(:client) { double(:client) }
+    let(:json_response) { JSON.parse(File.read('spec/support/strava_response.json')) }
+
+    before(:each) do
+      allow(Strava::Api::V3::Client).to receive(:new) { client }
+      allow(client).to receive(:retrieve_an_activity) { json_response }
+      allow(Result).to receive(:create!)
+    end
+
+    context "activity_id is a full strava url" do
+      it "splits the id from the url" do
+        expect(client).to receive(:retrieve_an_activity).with('123') { json_response }
+        Result.from_strava('http://www.strava.com/activities/123', 456, user)
+      end
+    end
+
+    it "sets the duration" do
+      expect(Result).to receive(:create!).with(hash_including(duration: 13388))
+      Result.from_strava('123', 456, user)
+    end
+
+    it "sets the date" do
+      expect(Result).to receive(:create!).with(hash_including(date: Date.parse("2014-11-16")))
+      Result.from_strava('123', 456, user)
+    end
+
+    it "sets the comment" do
+      expect(Result).to receive(:create!).with(hash_including(comment: 'Windy, partly wet. Stayed with the same bunch all the way around'))
+      Result.from_strava('123', 456, user)
+    end
+
+    it "sets the strava_url" do
+      expect(Result).to receive(:create!).with(hash_including(strava_url: 'http://www.strava.com/activities/123'))
+      Result.from_strava('123', 456, user)
+    end
+  end
 end

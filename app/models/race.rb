@@ -4,6 +4,8 @@ class Race < ActiveRecord::Base
   validates :name, :distance, presence: true
   validates :name, uniqueness: { scope: :distance }
 
+  default_scope { order(distance: :desc) }
+
   def collection_select_name
     "#{name} (#{distance}km)"
   end
