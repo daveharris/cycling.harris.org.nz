@@ -4,8 +4,8 @@
 
 ## TODO
 - [X] Fix date format
-- [ ] Fix wrong date in Strava import
-- [ ] Style login/logout forms
+- [X] Fix wrong date in Strava import
+- [X] Style login/logout forms
 - [ ] Remove un-used views/actions
 - [ ] Compare result with PB
 - [ ] Filter results by user/race/year
