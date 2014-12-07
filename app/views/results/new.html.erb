@@ -1,15 +1,18 @@
 <h1>Add New Results</h1>
 
-<div role="tabpanel">
+<div role="tabpanel" class="add-result-panel">
   <ul class="nav nav-tabs" role="tablist">
     <li role="presentation">
       <a href="#manual" id="manual-tab" role="tab" data-toggle="tab" aria-controls="manual" aria-expanded="true">Manual</a>
     </li>
     <li role="presentation">
-      <a href="#csv" role="tab" id="csv-tab" data-toggle="tab" aria-controls="csv" aria-expanded="false">CSV Bulk Import</a>
+      <a href="#csv" role="tab" id="csv-tab" data-toggle="tab" aria-controls="csv" aria-expanded="false">CSV Bulk Upload</a>
     </li>
     <li role="presentation" class="active">
-      <a href="#strava" role="tab" id="strava-tab" data-toggle="tab" aria-controls="strava" aria-expanded="false">Strava</a>
+      <a href="#strava" role="tab" id="strava-tab" data-toggle="tab" aria-controls="strava" aria-expanded="false">Strava Import</a>
+    </li>
+    <li role="presentation">
+      <a href="#timing-team" role="tab" id="timing-team-tab" data-toggle="tab" aria-controls="timing-team" aria-expanded="false">The Timing Team Import</a>
     </li>
   </ul>
 
@@ -22,6 +25,9 @@
     </div>
     <div role="tabpanel" class="tab-pane fade active in" id="strava" aria-labelledby="strava-tab">
       <%= render 'strava_form' %>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="timing-team" aria-labelledby="timing-team-tab">
+      <%= render 'timing_team_form' %>
     </div>
   </div>
 

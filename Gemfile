@@ -18,6 +18,7 @@ gem 'font-awesome-sass'
 gem 'chronic_duration'
 gem 'smarter_csv'
 gem 'strava-api-v3', '~> 0.0.8'
+gem 'nokogiri', '~> 1.6.5'
 
 gem 'clearance'
 

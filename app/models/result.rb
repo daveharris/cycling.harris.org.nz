@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class Result < ActiveRecord::Base
   belongs_to :user
   belongs_to :race
@@ -58,7 +60,25 @@ class Result < ActiveRecord::Base
     result_details[:comment] = activity['description']
     result_details[:strava_url] = "http://www.strava.com/activities/#{activity_id}"
 
-    # puts "About to insert Result: #{result_details.inspect}"
+    Result.create!(result_details)
+  end
+
+  def self.from_timing_team(url, race_id, user)
+    doc = Nokogiri::HTML(open(url))
+
+    all_results_url = "#{url}&cell=start"
+    all_results_doc = Nokogiri::HTML(open(all_results_url))
+    
+    result_details = {race_id: race_id, user: user}
+    result_details[:duration] = ChronicDuration.parse(doc.css('font.participant_time').text)
+    result_details[:date] = Date.parse(doc.css('font.event_date').children.first.text)
+    result_details[:wind] = doc.css('td[background="dmapps/images/wind.png"]').text.split(' ').last
+    result_details[:position], result_details[:finishers] = doc.css('.participant_details')[2].text.scan(/\d+/)
+    result_details[:timing_url] = url
+
+    fastest, median, slowest = all_results_doc.at_css('.mat_time').text.split('|').map(&:squish)
+    result_details[:fastest_duration] = ChronicDuration.parse(fastest.split('Time:').last)
+    result_details[:mean_duration] = ChronicDuration.parse(median.split('Time:').last)
 
     Result.create!(result_details)
   end
