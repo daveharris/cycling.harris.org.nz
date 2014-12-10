@@ -12,22 +12,51 @@ describe ApplicationHelper do
     end
   end
   
-  describe "#display_time_difference_in_words" do
+  describe "#previous_time_difference" do
+    let(:result) { double(:result, duration: 200, find_previous_result: previous) }
+
     context "when difference is nil" do
+      let(:previous) { nil }
+
       it "returns 'First Result' text" do
-        expect(helper.display_time_difference_in_words(nil)).to match(/First Result/)
+        expect(helper.previous_time_difference(result)).to match(/First Result/)
       end
     end
 
     context "when difference is positive" do
+      let(:previous) { double(:result, duration: 300) }
+
       it "returns 'faster' text" do
-        expect(helper.display_time_difference_in_words(10)).to match(/faster/)
+        expect(helper.previous_time_difference(result)).to match(/faster/)
       end
     end
 
     context "when difference is negative" do
+      let(:previous) { double(:result, duration: 100) }
+
       it "returns 'slower' text" do
-        expect(helper.display_time_difference_in_words(-10)).to match(/slower/)
+        expect(helper.previous_time_difference(result)).to match(/slower/)
+      end
+    end
+    
+  end
+
+  describe "#personal_best_time_difference" do
+    let(:result) { double(:result, duration: 200, find_personal_best: previous) }
+
+    context "when difference is 0" do
+      let(:previous) { double(:result, duration: 200) }
+
+      it "returns 'First Result' text" do
+        expect(helper.personal_best_time_difference(result)).to match(/Personal Best/)
+      end
+    end
+
+    context "when difference is negative" do
+      let(:previous) { double(:result, duration: 100) }
+
+      it "returns 'slower' text" do
+        expect(helper.personal_best_time_difference(result)).to match(/slower/)
       end
     end
     

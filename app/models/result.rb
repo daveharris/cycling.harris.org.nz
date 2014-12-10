@@ -16,14 +16,14 @@ class Result < ActiveRecord::Base
   def find_previous_result
     Result.where(race: self.race)
           .where('date < ?', self.date)
-          .order(date: :desc)
           .first
   end
 
-  def time_difference_between_previous
-    if previous = find_previous_result
-      previous.duration - self.duration
-    end
+  def find_personal_best
+    Result.unscoped
+          .where(race: self.race)
+          .order({duration: :asc, date: :desc})
+          .first
   end
 
   def self.from_csv(filename, user)

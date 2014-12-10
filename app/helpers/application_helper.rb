@@ -5,18 +5,35 @@ module ApplicationHelper
   end
 
   def duration_in_words(duration)
-    ChronicDuration.output(duration, format: :chrono)
+    ChronicDuration.output(duration.abs, format: :chrono)
   end
 
-  def display_time_difference_in_words(difference)
-    time = ChronicDuration.output(difference.abs, format: :chrono) rescue nil
+  def previous_time_difference(result)
+    previous = result.find_previous_result
+    difference = previous.duration - result.duration if previous
 
-    if difference.nil?
+    if previous.nil?
       icon('ban', "First Result")
     elsif difference > 0
-      icon('arrow-circle-o-up', "#{time} faster than last time")
+      icon('arrow-circle-o-up', "#{duration_in_words(difference)} faster than last time")
     else
-      icon('arrow-circle-o-down', "#{time} slower than last time")
+      icon('arrow-circle-o-down', "#{duration_in_words(difference)} slower than last time")
     end
+
+  end
+
+  def personal_best_time_difference(result)
+    pb = result.find_personal_best
+
+    if pb
+      difference = pb.duration - result.duration
+
+      if difference == 0
+        icon('check', "Personal Best")
+      else
+        icon('arrow-circle-o-down', "#{duration_in_words(difference)} slower than Personal Best")
+      end
+    end
+
   end
 end

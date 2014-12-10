@@ -8,7 +8,7 @@
 - [X] Style login/logout forms
 - [X] Import from The Timing Team
 - [ ] Remove un-used views/actions
-- [ ] Compare result with PB
+- [X] Compare result with PB
 - [ ] Filter results by user/race/year
 - [ ] Show all results on race show page
 - [ ] Graph results over the years

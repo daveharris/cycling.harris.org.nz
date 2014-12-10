@@ -1,8 +1,8 @@
 describe Result do
 
-  let(:result) { FactoryGirl.build(:result) }
-  let(:user) { FactoryGirl.build(:user) }
   let(:race) { FactoryGirl.build(:race) }
+  let(:user) { FactoryGirl.build(:user) }
+  let(:result) { FactoryGirl.build(:result) }
 
   describe "validations" do
     it "is valid" do
@@ -42,30 +42,21 @@ describe Result do
       FactoryGirl.create(:result, race: race, date: Date.parse('2012-10-7'))
     }
     
-    it "find last years result" do
+    it "finds last years result" do
       expect(result.find_previous_result).to eq last_year
     end
   end
 
-  describe "#time_difference_between_previous" do
-    let(:result) { FactoryGirl.build(:result, duration: 30) }
-
-    it "returns a postive time difference if faster than last year" do
-      allow(result).to receive_message_chain(:find_previous_result, :duration) { 40 }
-
-      expect(result.time_difference_between_previous).to eq(10)
-    end
-
-    it "returns a negative time difference if slower than last year" do
-      allow(result).to receive_message_chain(:find_previous_result, :duration) { 20 }
-      
-      expect(result.time_difference_between_previous).to eq(-10)
-    end
-
-    it "returns nil if previous result not found" do
-      allow(result).to receive(:find_previous_result) { nil }
-      
-      expect(result.time_difference_between_previous).to be_nil
+  describe "#find_personal_best" do
+    before(:each) {
+      result.save!
+      FactoryGirl.create(:result, race: result.race, duration: 100, date: Date.parse('2013-10-8'))
+      FactoryGirl.create(:result, race: result.race, duration: 100, date: Date.parse('2014-10-8'))
+      @pb = FactoryGirl.create(:result, race: result.race, duration: 80, date: Date.parse('2013-10-8'))
+    }
+    
+    it "finds the personal best result" do
+      expect(result.find_personal_best).to eq @pb
     end
   end
 
