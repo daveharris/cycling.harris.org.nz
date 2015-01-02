@@ -141,11 +141,12 @@ describe Result do
 
     { duration: 18752, 
       date: Date.parse("2014-11-29"), 
-      wind: '24', position: '1070', 
-      finishers: '3612', 
+      wind: '24', 
+      position: '1071', 
+      finishers: '3609', 
       timing_url: 'http://www.thetimingteam.co.nz/results/index.php?thread=2121579998&strand=1187175897&instance=3349', 
       fastest_duration: 14748, 
-      mean_duration: 20824
+      mean_duration: 20815
     }.each do |key, value|
       it "sets the #{key}" do
         expect(Result).to receive(:create!).with(hash_including(key => value))

@@ -1,10 +1,14 @@
 class ResultsController < ApplicationController
   before_action :set_result, only: [:show, :edit, :update, :destroy]
-  before_action :authorize, only: [:edit, :update, :destroy, :create, :csv, :strava]
+  before_action :authorize, except: [:index, :show, :new]
 
   # GET /results
   def index
-    @results = Result.all
+    if params[:result]
+      @results = Result.where(filter_params(params))
+    else
+      @results = Result.all
+    end
   end
 
   # GET /results/1
@@ -73,8 +77,12 @@ class ResultsController < ApplicationController
     redirect_to results_url, notice: 'Result was successfully destroyed.'
   end
 
+  # Remove non-model and empty params
+  def filter_params(params)
+    params[:result].to_h.keep_if{ |k,v| Result.new.attributes.keys.include?(k) && v.present? }.symbolize_keys
+  end
+
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_result
       @result = Result.find(params[:id])
     end

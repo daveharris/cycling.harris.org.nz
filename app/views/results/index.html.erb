@@ -1,8 +1,12 @@
 <div class="row title">
-  <div class="col-md-4">
-    <h1>All Results</h1>
+  <div class="col-md-10">
+    <% if params[:result] %>
+      <h1>Filtering Results</h1>
+    <% else %>
+      <h1>All Results</h1>
+    <% end %>
   </div>
-  <div class="col-md-8">
+  <div class="col-md-2">
     <% if signed_in? %>
       <%= link_to 'Add New Result(s)', new_result_path, class: 'btn btn-primary pull-right' %>
     <% else %>
@@ -10,6 +14,8 @@
     <% end %>
   </div>
 </div>
+
+<%= render 'filter' %>
 
 <% @results.each do |result| %>
   <div class="row">
@@ -19,7 +25,7 @@
           <h4 class="col-md-2"><%= icon(:calendar) %> <%= link_to(date_in_words(result.date), result) %></h4>
           <h4 class="col-md-2"><%= icon(:user, result.user.first_name) %></h4>
           <h4 class="col-md-2"><%= icon('arrows-h', "#{result.race.distance}km") %></h4>
-          <h4 class="col-md-4"><%= icon(:bicycle) %> <%= link_to(result.race.name, result.race) %></h4>
+          <h4 class="col-md-6"><%= icon(:bicycle) %> <%= link_to(result.race.name, result.race) %></h4>
         </div>
 
         <div class="row">
