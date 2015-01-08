@@ -31,10 +31,9 @@ ActiveRecord::Schema.define(version: 20141207020720) do
     t.text     "strava_url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "num_finishers"
     t.string   "wind"
     t.integer  "fastest_duration"
-    t.integer  "mean_duration"
+    t.integer  "median_duration"
     t.string   "position"
     t.string   "finishers"
   end

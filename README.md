@@ -9,6 +9,6 @@
 - [X] Import from The Timing Team
 - [ ] Remove un-used views/actions
 - [X] Compare result with PB
-- [ ] Filter results by user/race/year
+- [X] Filter results by user/race/year
 - [ ] Show all results on race show page
 - [ ] Graph results over the years

@@ -6,7 +6,9 @@ class Race < ActiveRecord::Base
 
   default_scope { order(distance: :desc) }
 
-  def collection_select_name
+
+  def to_s
     "#{name} (#{distance}km)"
   end
+  alias_method :collection_select_name, :to_s
 end

@@ -16,7 +16,7 @@
 
   <%= f.text_field :fastest_duration, label: 'Fastest Duration', append: icon('clock-o') %>
 
-  <%= f.text_field :mean_duration, label: 'Mean Duration', append: icon('clock-o') %>
+  <%= f.text_field :median_duration, label: 'Median Duration', append: icon('clock-o') %>
 
   <%= f.text_field :wind, append: icon(:flag) %>
 
@@ -24,9 +24,9 @@
 
   <%= f.text_field :finishers, append: icon(:link) %>
 
-  <%= f.text_field :timing_url, label: 'Strava URL', append: icon(:link) %>
+  <%= f.text_field :timing_url, label: 'Timing URL', append: icon(:link) %>
   
-  <%= f.text_field :strava_url, label: 'Timing URL', append: icon(:link) %>
+  <%= f.text_field :strava_url, label: 'Strava URL', append: icon(:link) %>
 
   <%= f.submit 'Create', class: "btn btn-primary col-md-2" %>
 <% end %>

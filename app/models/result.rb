@@ -78,7 +78,7 @@ class Result < ActiveRecord::Base
 
     fastest, median, slowest = all_results_doc.at_css('.mat_time').text.split('|').map(&:squish)
     result_details[:fastest_duration] = ChronicDuration.parse(fastest.split('Time:').last)
-    result_details[:mean_duration] = ChronicDuration.parse(median.split('Time:').last)
+    result_details[:median_duration] = ChronicDuration.parse(median.split('Time:').last)
 
     Result.create!(result_details)
   end

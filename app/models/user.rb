@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
 
   has_many :results
 
-  def collection_select_name
+  def to_s
     "#{first_name} #{last_name}"
   end
+  alias_method :collection_select_name, :to_s
 end
