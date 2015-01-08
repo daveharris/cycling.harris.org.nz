@@ -1,31 +1,52 @@
-<p id="notice"><%= notice %></p>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading" role="tab" id="current-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#current" aria-expanded="true" aria-controls="current">
+          Result Details
+        </a>
+      </h4>
+    </div>
+    <div id="current" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="current-heading">
+      <div class="panel-body">
+        <%= render @result %>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @result.user.first_name %>
-</p>
+  <% if @result.find_previous_result %>
+    <div class="panel panel-info">
+      <div class="panel-heading" role="tab" id="previous-heading">
+        <h4 class="panel-title">
+          <a class="collapsed" data-toggle="collapse" href="#previous" aria-expanded="false" aria-controls="previous">
+            Previous Result
+          </a>
+        </h4>
+      </div>
+      <div id="previous" class="panel-collapse collapse" role="tabpanel" aria-labelledby="previous-heading">
+        <div class="panel-body">
+          <%= render @result.find_previous_result %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
-<p>
-  <strong>Race:</strong>
-  <%= @result.race.name %>
-</p>
+  <% if @result.find_personal_best && @result.find_personal_best == @result %>
+    <div class="panel panel-success">
+      <div class="panel-heading" role="tab" id="best-heading">
+        <h4 class="panel-title">
+          <a class="collapsed" data-toggle="collapse" href="#best" aria-expanded="false" aria-controls="best">
+            Personal Best Result
+          </a>
+        </h4>
+      </div>
+      <div id="best" class="panel-collapse collapse" role="tabpanel" aria-labelledby="best-heading">
+        <div class="panel-body">
+          <%= render @result.find_personal_best %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
-<p>
-  <strong>Date:</strong>
-  <%= @result.date %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @result.comment %>
-</p>
-
-<p>
-  <strong>Timing URL:</strong>
-  <%= @result.timing_url %>
-</p>
-
-<p>
-  <strong>Strava URL:</strong>
-  <%= @result.strava_url %>
-</p>
+</div>
