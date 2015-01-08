@@ -32,7 +32,7 @@
     </div>
   <% end %>
 
-  <% if @result.find_personal_best && @result.find_personal_best == @result %>
+  <% if @result.find_personal_best && @result.find_personal_best != @result %>
     <div class="panel panel-success">
       <div class="panel-heading" role="tab" id="best-heading">
         <h4 class="panel-title">
