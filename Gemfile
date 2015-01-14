@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 
-ruby '2.1.4'
+ruby '2.2.0'
 
-gem 'rails', '~> 4.1.7'
+gem 'rails', '~> 4.2'
 
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'bootstrap_form'
 gem 'bootstrap-datepicker-rails'
@@ -17,8 +17,8 @@ gem 'font-awesome-sass'
 
 gem 'chronic_duration'
 gem 'smarter_csv'
-gem 'strava-api-v3', '~> 0.0.8'
-gem 'nokogiri', '~> 1.6.5'
+gem 'strava-api-v3'
+gem 'nokogiri'
 
 gem 'clearance'
 
@@ -28,7 +28,8 @@ gem 'raygun4ruby'
 
 group :development do
   gem 'spring'
-  gem 'better_errors', '~> 2.0.0'
+  gem 'web-console'
+  gem 'better_errors'
   gem 'binding_of_caller', platforms: [:mri_21]
   gem 'quiet_assets'
   gem 'rails_layout'
@@ -39,6 +40,7 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
+  gem 'spring-commands-cucumber'
   gem 'sqlite3'
 end
 
@@ -50,6 +52,7 @@ end
 
 group :test do
   gem 'cucumber-rails', require: false
+  gem 'webmock'
   gem 'database_cleaner'
   gem 'launchy'
 end

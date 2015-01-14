@@ -128,10 +128,12 @@ describe Result do
   end
 
   describe ".from_timing_team" do
-    let(:response) { File.read('spec/support/timing_team.html') }
+    let(:response) { File.read('spec/support/the_timing_team.html') }
+    let(:response_all) { File.read('spec/support/the_timing_team_all.html') }
 
     before(:each) do
-      allow(self).to receive(:open) { response }
+      stub_request(:get, "http://www.thetimingteam.co.nz/results/index.php?instance=3349&strand=1187175897&thread=2121579998").to_return(body: response)
+      stub_request(:get, "http://www.thetimingteam.co.nz/results/index.php?instance=3349&strand=1187175897&thread=2121579998&cell=start").to_return(body: response_all)
       allow(Result).to receive(:create!)
     end
 
@@ -142,8 +144,8 @@ describe Result do
     { duration: 18752, 
       date: Date.parse("2014-11-29"), 
       wind: '24', 
-      position: '1071', 
-      finishers: '3609', 
+      position: '1070', 
+      finishers: '3612', 
       timing_url: 'http://www.thetimingteam.co.nz/results/index.php?thread=2121579998&strand=1187175897&instance=3349', 
       fastest_duration: 14748, 
       median_duration: 20815

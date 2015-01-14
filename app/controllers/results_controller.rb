@@ -79,7 +79,7 @@ class ResultsController < ApplicationController
 
   # Remove non-model and empty params
   def filter_params(params)
-    params[:result].to_h.keep_if{ |k,v| Result.new.attributes.keys.include?(k) && v.present? }.symbolize_keys
+    params[:result].to_hash.keep_if{ |k,v| Result.new.attributes.keys.include?(k) && v.present? }.symbolize_keys
   end
 
   private
