@@ -1,5 +1,7 @@
 # Cycling
 
+![Codeship Badge](https://codeship.com/projects/ca8ed880-2ffc-0132-983c-222a838845b8/status?branch=master)
+
 [A web application](http://cycling.harris.org.nz) for making sense of various cycling results over the years.
 
 ## TODO
