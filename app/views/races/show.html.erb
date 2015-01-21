@@ -1,14 +1,4 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @race.to_s %></h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @race.name %>
-</p>
-
-<p>
-  <strong>Distance:</strong>
-  <%= @race.distance %>
-</p>
-
-<%= link_to 'Edit', edit_race_path(@race) %> |
-<%= link_to 'Back', races_path %>
+<h3>Result Duration Over Time</h3>
+<%= line_chart @race.result_duration_over_time, {min: @race.result_duration_over_time.values.min, library: { backgroundColor: "#eee", vAxis: {title: 'Duration (hours)'} } } %>

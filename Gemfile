@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 gem 'bootstrap_form'
 gem 'bootstrap-datepicker-rails'
 gem 'font-awesome-sass'
+gem 'chartkick'
 
 gem 'chronic_duration'
 gem 'smarter_csv'
