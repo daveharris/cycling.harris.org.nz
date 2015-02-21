@@ -7,7 +7,7 @@ class Result < ActiveRecord::Base
   validates :user_id, :race_id, :duration, :date, presence: true
   validates :duration, numericality: { only_integer: true, greater_than: 0 }
 
-  default_scope { order(date: :desc) }
+  scope :date_desc, -> { order(date: :desc) }
 
   def date_for_form
     read_attribute(:date).try(:strftime, '%-d %b %Y')
@@ -20,8 +20,7 @@ class Result < ActiveRecord::Base
   end
 
   def find_personal_best
-    Result.unscoped
-          .where(race: self.race)
+    Result.where(race: self.race)
           .order({duration: :asc, date: :desc})
           .first
   end
