@@ -1,18 +1,19 @@
 class ResultsController < ApplicationController
   before_action :set_result, only: [:show, :edit, :update, :destroy]
-  before_action :authorize, except: [:index, :show, :new]
+  before_action :require_login, except: [:index, :show, :new]
 
   # GET /results
   def index
     if params[:result]
-      @results = Result.where(filter_params(params))
+      @results = Result.where(filter_params(params)).decorate
     else
-      @results = Result.all
+      @results = Result.date_desc.decorate
     end
   end
 
   # GET /results/1
   def show
+    @previous = @result.find_previous_result.try(:decorate)
   end
 
   # GET /results/new
@@ -84,7 +85,7 @@ class ResultsController < ApplicationController
 
   private
     def set_result
-      @result = Result.find(params[:id])
+      @result = Result.find(params[:id]).decorate
     end
 
     # Only allow a trusted parameter "white list" through.

@@ -30,7 +30,7 @@
 
         <div class="row">
           <h4 class="col-md-2"><%= icon('clock-o') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h4>
-          <h4 class="col-md-4"><%= previous_time_difference(result) %></h4>
+          <h4 class="col-md-4"><%= result.previous_time_difference(:duration) %></h4>
           <h4 class="col-md-4"><%= personal_best_time_difference(result) %></h4>
         </div>
 

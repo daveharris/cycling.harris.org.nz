@@ -91,6 +91,11 @@ GEM
     database_cleaner (1.4.0)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
+    draper (1.4.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     email_validator (1.5.0)
       activemodel
     erubis (2.7.0)
@@ -176,6 +181,7 @@ GEM
       httparty (~> 0.11)
       json
       rack
+    request_store (1.1.0)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -259,6 +265,7 @@ DEPENDENCIES
   coffee-rails
   cucumber-rails
   database_cleaner
+  draper
   factory_girl_rails
   faker
   font-awesome-sass
