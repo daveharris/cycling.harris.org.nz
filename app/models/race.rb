@@ -12,9 +12,6 @@ class Race < ActiveRecord::Base
   alias_method :collection_select_name, :to_s
 
   def result_duration_over_time
-    @chart_data ||= begin
-      hash = self.results.group(:date).sum(:duration)
-      hash.update(hash){|k,v| (v/3600.0).round(2) }
-    end
+    Hash[results.pluck(:date, :duration)]
   end
 end
