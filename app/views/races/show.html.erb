@@ -1,4 +1,6 @@
 <h1><%= @race.to_s %></h1>
 
 <h3>Result Duration Over Time</h3>
-<%= line_chart @race.result_duration_over_time, {min: @race.result_duration_over_time.values.min, library: { backgroundColor: "#eee", vAxis: {title: 'Duration (hours)'} } } %>
+
+<%= graph(@chart_data) %>
+

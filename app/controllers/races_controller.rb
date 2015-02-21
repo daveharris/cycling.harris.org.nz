@@ -8,6 +8,7 @@ class RacesController < ApplicationController
 
   # GET /races/1
   def show
+    @chart_data = @race.result_duration_over_time
   end
 
   # GET /races/new

@@ -36,4 +36,29 @@ module ApplicationHelper
     end
 
   end
+
+  def graph(data)
+    datasets = {
+      labels: data.keys,
+      datasets: [
+        {
+          fillColor:            "rgba(151,187,205,0.2)",
+          strokeColor:          "rgba(151,187,205,1)",
+          pointColor:           "rgba(151,187,205,1)",
+          pointStrokeColor:     "#fff",
+          pointHighlightFill:   "#fff",
+          pointHighlightStroke: "rgba(151,187,205,1)",
+          data:                 data.values
+        }
+      ]
+    }
+
+    options = {
+      width:           '1140px',
+      scaleLabel:      %Q{<%= new Date(value*1000).toISOString().substr(11, 8) %>},
+      tooltipTemplate: %Q{<%= new Date(value*1000).toISOString().substr(11, 8) %>},
+    }
+
+    line_chart(datasets, options)
+  end
 end
