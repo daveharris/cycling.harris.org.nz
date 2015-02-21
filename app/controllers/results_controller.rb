@@ -89,6 +89,6 @@ class ResultsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def result_params
-      params.require(:result).permit(:user_id, :race_id, :date, :comment, :timing_url, :strava_url)
+      params.require(:result).permit(:user_id, :race_id, :duration, :date, :comment, :timing_url, :strava_url, :wind, :fastest_duration, :median_duration, :position, :finishers)
     end
 end
