@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def duration_in_words(duration)
-    ChronicDuration.output(duration.abs, format: :chrono) if duration
+    ChronicDuration.output(duration.abs, format: :chrono) if duration.is_a?(Fixnum)
   end
 
   def personal_best_time_difference(result)

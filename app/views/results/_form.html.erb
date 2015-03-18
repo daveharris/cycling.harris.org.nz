@@ -8,15 +8,15 @@
   
   <%= f.collection_select :race_id, Race.all, :id, :collection_select_name, prompt: 'Select Race...' %>
 
-  <%= f.text_field :duration, append: icon('clock-o') %>
+  <%= f.text_field :duration_s, append: icon('clock-o') %>
   
   <%= f.text_field :date, 'data-provide' => 'datepicker', 'data-date-autoclose' => true, 'data-date-format' => 'dd M yyyy', value: @result.date_for_form, append: icon(:calendar) %>
   
   <%= f.text_area :comment, append: icon(:comment) %>
 
-  <%= f.text_field :fastest_duration, label: 'Fastest Duration', append: icon('clock-o') %>
+  <%= f.text_field :fastest_duration_s, label: 'Fastest Duration', append: icon('clock-o') %>
 
-  <%= f.text_field :median_duration, label: 'Median Duration', append: icon('clock-o') %>
+  <%= f.text_field :median_duration_s, label: 'Median Duration', append: icon('clock-o') %>
 
   <%= f.text_field :wind, append: icon(:flag) %>
 

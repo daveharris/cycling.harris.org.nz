@@ -1,13 +1,30 @@
 require 'open-uri'
 
 class Result < ActiveRecord::Base
+  DURATION_FIELDS = [:duration, :fastest_duration, :median_duration]
+
   belongs_to :user
   belongs_to :race
 
   validates :user_id, :race_id, :duration, :date, presence: true
-  validates :duration, numericality: { only_integer: true, greater_than: 0 }
 
   scope :date_desc, -> { order(date: :desc) }
+
+  DURATION_FIELDS.each do |field|
+    name = "#{field}_s"
+    attr_accessor name
+
+    # validates field, numericality: { only_integer: true, greater_than: 0 }, allow_nil: (field != :duration)
+    validates name, format: { with: /\A\d+:\d+:\d+\z/, message: "is not in the format 'hh:mm:ss'" }, allow_nil: (field != :duration)
+
+    define_method("#{name}=") do |value|
+      self[field] = ChronicDuration.parse(value.to_s)
+    end
+
+    define_method(name) do
+      ChronicDuration.output(self[field].abs, format: :chrono) if self[field].present?
+    end
+  end
 
   def date_for_form
     read_attribute(:date).try(:strftime, '%-d %b %Y')
@@ -75,7 +92,7 @@ class Result < ActiveRecord::Base
     result_details[:position], result_details[:finishers] = doc.css('.participant_details')[2].text.scan(/\d+/)
     result_details[:timing_url] = url
 
-    fastest, median, slowest = all_results_doc.at_css('.mat_time').text.split('|').map(&:squish)
+    fastest, median, _slowest = all_results_doc.at_css('.mat_time').text.split('|').map(&:squish)
     result_details[:fastest_duration] = ChronicDuration.parse(fastest.split('Time:').last)
     result_details[:median_duration] = ChronicDuration.parse(median.split('Time:').last)
 

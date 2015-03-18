@@ -9,7 +9,7 @@
         
         <%= f.collection_select :race_id, Race.all, :id, :collection_select_name, prompt: 'Select Race...', hide_label: true, selected: params.fetch(:result, {})[:race_id] %>
 
-        <%= f.button icon(:filter, 'Apply Filter').html_safe, class: 'btn btn-info' %>
+        <%= f.button icon(:filter, 'Apply Filter').html_safe, class: 'btn btn-default' %>
       <% end %>
     </div>
   </div>
