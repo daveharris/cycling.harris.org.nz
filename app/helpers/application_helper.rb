@@ -40,7 +40,7 @@ module ApplicationHelper
     }
 
     options = {
-      width:           '1140px',
+      # width:           '1140px',
       scaleLabel:      %Q{<%= new Date(value*1000).toISOString().substr(11, 8) %>},
       tooltipTemplate: %Q{<%= new Date(value*1000).toISOString().substr(11, 8) %>},
     }

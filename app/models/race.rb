@@ -12,6 +12,6 @@ class Race < ActiveRecord::Base
   alias_method :collection_select_name, :to_s
 
   def result_duration_over_time
-    Hash[results.pluck(:date, :duration)]
+    Hash[results.order(:date).pluck(:date, :duration)]
   end
 end

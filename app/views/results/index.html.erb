@@ -34,7 +34,7 @@
           <h4 class="col-md-4"><%= personal_best_time_difference(result) %></h4>
         </div>
 
-        <% if result.comment %>
+        <% if result.comment.present? %>
           <p><%= icon(:comments, result.comment) %></p>
         <% end %>
       </div>

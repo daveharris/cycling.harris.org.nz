@@ -2,7 +2,6 @@ class ResultsController < ApplicationController
   before_action :set_result, only: [:show, :edit, :update, :destroy]
   before_action :require_login, except: [:index, :show, :new]
 
-  # GET /results
   def index
     if params[:result]
       @results = Result.where(filter_params(params)).decorate
@@ -11,21 +10,18 @@ class ResultsController < ApplicationController
     end
   end
 
-  # GET /results/1
   def show
     @previous = @result.find_previous_result.try(:decorate)
+    @personal_best = @result.find_personal_best.try(:decorate)
   end
 
-  # GET /results/new
   def new
     @result = Result.new
   end
 
-  # GET /results/1/edit
   def edit
   end
 
-  # POST /results
   def create
     @result = Result.new(result_params)
 
@@ -63,16 +59,14 @@ class ResultsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /results/1
   def update
     if @result.update(result_params)
-      redirect_to @result, notice: 'Result was successfully updated.'
+      redirect_to @result, notice: 'Result was updated.'
     else
       render :edit
     end
   end
 
-  # DELETE /results/1
   def destroy
     @result.destroy
     redirect_to results_url, notice: 'Result was successfully destroyed.'
@@ -90,6 +84,6 @@ class ResultsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def result_params
-      params.require(:result).permit(:user_id, :race_id, :date, :comment, :timing_url, :strava_url, :duration, :fastest_duration, :median_duration, :wind, :position, :finishers)
+      params.require(:result).permit(:user_id, :race_id, :date, :comment, :timing_url, :strava_url, :duration, :fastest_duration, :median_duration, :duration_s, :fastest_duration_s, :median_duration_s, :wind, :position, :finishers)
     end
 end

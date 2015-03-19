@@ -14,7 +14,6 @@ class Result < ActiveRecord::Base
     name = "#{field}_s"
     attr_accessor name
 
-    # validates field, numericality: { only_integer: true, greater_than: 0 }, allow_nil: (field != :duration)
     validates name, format: { with: /\A\d+:\d+:\d+\z/, message: "is not in the format 'hh:mm:ss'" }, allow_nil: (field != :duration)
 
     define_method("#{name}=") do |value|
