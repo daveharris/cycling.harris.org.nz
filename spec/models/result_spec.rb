@@ -48,15 +48,12 @@ describe Result do
   end
 
   describe "#find_personal_best" do
-    before(:each) {
-      result.save!
-      FactoryGirl.create(:result, race: result.race, duration: 100, date: Date.parse('2013-10-8'))
-      FactoryGirl.create(:result, race: result.race, duration: 100, date: Date.parse('2014-10-8'))
-      @pb = FactoryGirl.create(:result, race: result.race, duration: 80, date: Date.parse('2013-10-8'))
-    }
+    let!(:pb) { FactoryGirl.create(:result, race: result.race, duration_s: "1:10:00", date: Date.parse('2013-10-8')) }
+    let!(:r1) { FactoryGirl.create(:result, race: result.race, duration_s: "2:30:00", date: Date.parse('2013-10-8')) }
+    let!(:r2) { FactoryGirl.create(:result, race: result.race, duration_s: "3:30:00", date: Date.parse('2014-10-8')) }
     
     it "finds the personal best result" do
-      expect(result.find_personal_best).to eq @pb
+      expect(r1.find_personal_best).to eq pb
     end
   end
 
@@ -81,11 +78,11 @@ describe Result do
     end
 
     it "sets the dates correctly" do
-      expect(Result.last.date).to eq Date.parse('10/10/2010')
+      expect(Result.first.date).to eq Date.parse('10/10/2010')
     end
 
     it "sets the duration in seconds" do
-      expect(Result.last.duration).to eq ChronicDuration.parse('2:32:55')
+      expect(Result.first.duration).to eq ChronicDuration.parse('2:32:55')
     end
   end
 

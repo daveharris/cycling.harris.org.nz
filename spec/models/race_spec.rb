@@ -43,7 +43,7 @@ describe Race do
     let!(:result2) { FactoryGirl.create(:result, race: race, date: '2014-10-16', duration: 7200) }
 
     it "gathers race results into time and duration" do
-      hash = { Date.parse('2014-10-16') => 2.0, Date.parse('2014-10-15') => 1.0 }
+      hash = { Date.parse('2014-10-16') => 7200, Date.parse('2014-10-15') => 3600 }
       expect(race.result_duration_over_time).to eq hash
     end
   end
