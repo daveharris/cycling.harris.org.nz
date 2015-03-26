@@ -40,11 +40,11 @@ describe Race do
   describe "result_duration_over_time" do
     let(:race) { FactoryGirl.create(:race) }
     let!(:result1) { FactoryGirl.create(:result, race: race) }
-    let!(:result2) { FactoryGirl.create(:result, race: race, date: '2014-10-16', duration: 7200) }
+    let!(:result2) { FactoryGirl.create(:result, race: race, date: '2014-10-16', duration_s: "5:00:00", fastest_duration_s: "4:00:00", median_duration_s: "6:00:00") }
 
     it "gathers race results into time and duration" do
-      hash = { Date.parse('2014-10-16') => 7200, Date.parse('2014-10-15') => 3600 }
-      expect(race.result_duration_over_time).to eq hash
+      results_data = [["15 Oct 2014", 5400, 3600, 7200], ["16 Oct 2014", 18000, 14400, 21600]]
+      expect(race.result_duration_over_time).to eq results_data
     end
   end
 

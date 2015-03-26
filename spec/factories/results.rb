@@ -4,7 +4,9 @@ FactoryGirl.define do
   factory :result do
     user
     race
-    duration 3600
+    duration_s "1:30:00"
+    fastest_duration_s "1:00:00"
+    median_duration_s "2:00:00"
     date '2014-10-15'
     comment 'My comments'
     timing_url 'http://timing.com'

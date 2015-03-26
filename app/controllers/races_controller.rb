@@ -1,49 +1,42 @@
 class RacesController < ApplicationController
   before_action :set_race, only: [:show, :edit, :update, :destroy]
 
-  # GET /races
   def index
     @races = Race.all
   end
 
-  # GET /races/1
   def show
     @chart_data = @race.result_duration_over_time
   end
 
-  # GET /races/new
   def new
     @race = Race.new
   end
 
-  # GET /races/1/edit
   def edit
   end
 
-  # POST /races
   def create
     @race = Race.new(race_params)
 
     if @race.save
-      redirect_to @race, notice: 'Race was successfully created.'
+      redirect_to @race, notice: "Race #{@race.to_s} was successfully created."
     else
       render :new
     end
   end
 
-  # PATCH/PUT /races/1
   def update
     if @race.update(race_params)
-      redirect_to @race, notice: 'Race was successfully updated.'
+      redirect_to @race, notice: 'Race #{@race.to_s} was successfully updated.'
     else
       render :edit
     end
   end
 
-  # DELETE /races/1
   def destroy
     @race.destroy
-    redirect_to races_url, notice: 'Race was successfully destroyed.'
+    redirect_to races_url, notice: 'Race #{@race.to_s} was successfully deleted.'
   end
 
   private

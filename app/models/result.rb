@@ -9,12 +9,16 @@ class Result < ActiveRecord::Base
   validates :user_id, :race_id, :duration, :date, presence: true
 
   scope :date_desc, -> { order(date: :desc) }
+  scope :date_asc,  -> { order(date: :asc) }
 
   DURATION_FIELDS.each do |field|
     name = "#{field}_s"
     attr_accessor name
 
-    validates name, format: { with: /\A\d+:\d+:\d+\z/, message: "is not in the format 'hh:mm:ss'" }, allow_nil: (field != :duration)
+    validates name, 
+              format: { with: /\A\d+:\d+:\d+\z/, message: "is not in the format 'hh:mm:ss'" },
+              allow_nil: true,
+              allow_blank: true
 
     define_method("#{name}=") do |value|
       self[field] = ChronicDuration.parse(value.to_s)
