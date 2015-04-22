@@ -26,7 +26,6 @@ gem 'clearance'
 
 gem 'thin'
 
-gem 'raygun4ruby'
 
 group :development do
   gem 'spring'
@@ -51,6 +50,7 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
   gem 'newrelic_rpm'
+  gem 'raygun4ruby'
 end
 
 group :test do
