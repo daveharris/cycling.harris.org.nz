@@ -36,6 +36,7 @@ class Result < ActiveRecord::Base
   def find_previous_result
     Result.where(race: self.race)
           .where('date < ?', self.date)
+          .date_desc
           .first
   end
 
