@@ -4,7 +4,7 @@ class ResultsController < ApplicationController
 
   def index
     if params[:result]
-      @results = Result.where(filter_params(params)).decorate
+      @results = Result.where(filter_params(params)).date_desc.decorate
     else
       @results = Result.date_desc.decorate
     end
