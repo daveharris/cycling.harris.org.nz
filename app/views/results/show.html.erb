@@ -2,13 +2,9 @@
   
   <div class="panel panel-primary">
     <div class="panel-heading" role="tab" id="current-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" href="#current" aria-expanded="true" aria-controls="current">
-          Result Details
-        </a>
-      </h4>
+      <h4 class="panel-title">Result Details</h4>
     </div>
-    <div id="current" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="current-heading">
+    <div id="current" role="tabpanel" aria-labelledby="current-heading">
       <div class="panel-body">
         <%= render @result %>
       </div>
@@ -17,11 +13,9 @@
 
   <% if @result.find_previous_result %>
     <div class="panel panel-info">
-      <div class="panel-heading" role="tab" id="previous-heading">
+      <div class="panel-heading collapsed" role="tab" id="previous-heading" data-toggle="collapse" data-target="#previous" aria-expanded="false" aria-controls="previous">
         <h4 class="panel-title">
-          <a class="collapsed" data-toggle="collapse" href="#previous" aria-expanded="false" aria-controls="previous">
-            Previous Result
-          </a>
+          <%= icon(:expand, 'Previous Result') %>
         </h4>
       </div>
       <div id="previous" class="panel-collapse collapse" role="tabpanel" aria-labelledby="previous-heading">
@@ -34,11 +28,9 @@
 
   <% if @result.find_personal_best && @result.find_personal_best != @result %>
     <div class="panel panel-success">
-      <div class="panel-heading" role="tab" id="best-heading">
+      <div class="panel-heading collapsed" role="tab" id="best-heading" data-toggle="collapse" data-target="#best" aria-expanded="false" aria-controls="best">
         <h4 class="panel-title">
-          <a class="collapsed" data-toggle="collapse" href="#best" aria-expanded="false" aria-controls="best">
-            Personal Best Result
-          </a>
+          <%= icon(:expand, 'Personal Best Result') %>
         </h4>
       </div>
       <div id="best" class="panel-collapse collapse" role="tabpanel" aria-labelledby="best-heading">

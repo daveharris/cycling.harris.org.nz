@@ -17,7 +17,7 @@ module ApplicationHelper
       if difference == 0
         icon('check', "Personal Best")
       else
-        icon('arrow-circle-o-down', "#{duration_in_words(difference)} slower than Personal Best")
+        "#{duration_in_words(difference)} #{icon('arrow-circle-o-down')} than Personal Best".html_safe
       end
     end
 

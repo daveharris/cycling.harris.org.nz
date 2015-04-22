@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141207020720) do
+ActiveRecord::Schema.define(version: 20150421230023) do
 
   create_table "races", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -27,15 +27,15 @@ ActiveRecord::Schema.define(version: 20141207020720) do
     t.integer  "duration"
     t.date     "date"
     t.text     "comment"
-    t.text     "timing_url"
-    t.text     "strava_url"
+    t.string   "timing_url"
+    t.string   "strava_url"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "wind"
     t.integer  "fastest_duration"
     t.integer  "median_duration"
-    t.string   "position"
-    t.string   "finishers"
+    t.integer  "position"
+    t.integer  "finishers"
   end
 
   add_index "results", ["race_id"], name: "index_results_on_race_id"

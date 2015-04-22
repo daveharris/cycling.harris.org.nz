@@ -15,3 +15,4 @@
 - [ ] Show all results on race show page
 - [X] Graph results over the years
 - [ ] Fix Chartjs with turbolinks
+- [ ] Consider moving to http://ionicons.com/

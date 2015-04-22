@@ -27,7 +27,7 @@ describe ApplicationHelper do
       let(:previous) { double(:result, duration: 100) }
 
       it "returns 'slower' text" do
-        expect(helper.personal_best_time_difference(result)).to match(/slower/)
+        expect(helper.personal_best_time_difference(result)).to match(/down/)
       end
     end
     
