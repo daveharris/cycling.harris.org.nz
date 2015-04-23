@@ -1,3 +1,9 @@
-.legend .label {
-  margin-right: 5px;
+.legend {
+  .labels {
+    line-height: 1.8;
+  }
+
+  .label {
+    margin-right: 5px;
+  }
 }

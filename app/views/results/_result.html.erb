@@ -1,29 +1,28 @@
 <div class="row">
-  <h3 class="col-md-3"><%= icon(:calendar, date_in_words(result.date)) %></h3>
-  <h3 class="col-md-3"><%= icon('clock-o') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h3>
-  <h3 class="col-md-6"><%= icon(:bicycle) %> <%= link_to(result.race.to_s, result.race) %></h3>
+  <h3 class="col-md-3 col-xs-12"><%= icon(:calendar, date_in_words(result.date)) %></h3>
+  <h3 class="col-md-3 col-xs-12"><%= icon('clock-o') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h3>
+  <h3 class="col-md-6 col-xs-12"><%= icon(:bicycle) %> <%= link_to(result.race.to_s, result.race) %></h3>
 </div>
 
 <div class="row">
-  <h3 class="col-md-6"><%= result.previous_time_difference(:duration) %></h3>
-  <h3 class="col-md-6"><%= personal_best_time_difference(result) %></h3>
+  <h3 class="col-md-6 col-xs-12"><%= result.previous_time_difference(:duration) %></h3>
+  <h3 class="col-md-6 col-xs-12"><%= personal_best_time_difference(result) %></h3>
 </div>
 
 <div class="row">
-  <h3 class="col-md-6"><%= result.fastest_duration_icon %></h3>
-  <h3 class="col-md-6"><%= result.median_duration_icon %></h3>
+  <h3 class="col-md-6 col-xs-12"><%= result.fastest_duration_icon %></h3>
+  <h3 class="col-md-6 col-xs-12"><%= result.median_duration_icon %></h3>
 </div>
 
 <div class="row">
-  <h3 class="col-md-3"><%= result.position_icon %></h3>
-  <h3 class="col-md-3"><%= result.wind_speed_icon %></h3>
-  <h3 class="col-md-2"><%= icon(:user, result.user.first_name) %></h3>
-  <h3 class="col-md-2"><%= result.link_icon('Timing', result.timing_url) %></h3>
-  <h3 class="col-md-2"><%= result.link_icon('Strava', result.strava_url) %></h3>
+  <h3 class="col-md-3 col-xs-12"><%= result.position_icon %></h3>
+  <h3 class="col-md-3 col-xs-12"><%= result.wind_speed_icon %></h3>
+  <h3 class="col-md-2 col-xs-12"><%= icon(:user, result.user.first_name) %></h3>
+  <h3 class="col-md-2 col-xs-12"><%= result.link_icon('Strava', result.strava_url) %></h3>
 </div>
 
 <% if result.comment.present? %>
   <div class="row">
-    <h4 class="col-md-12"><%= icon(:comment, result.comment) %></h4>
+    <h4 class="col-md-1 col-xs-122"><%= icon(:comment, result.comment) %></h4>
   </div>
 <% end %>

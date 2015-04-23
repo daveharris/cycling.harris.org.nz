@@ -42,13 +42,13 @@ module RaceHelper
 
       responsive:           true,
       maintainAspectRatio:  false,
-      scaleLabel:           %Q{<%= new Date(value*1000).toISOString().substr(11, 8) %>},
-      multiTooltipTemplate: %Q{<%= datasetLabel %> <%= new Date(value*1000).toISOString().substr(11, 8) %>},
-      tooltipTemplate:      %Q{<%= new Date(value*1000).toISOString().substr(11, 8) %>},
+      scaleLabel:           %Q{<%= new Date(value*1000).toISOString().substr(12, 7) %>},
+      multiTooltipTemplate: %Q{<%= datasetLabel %> <%= new Date(value*1000).toISOString().substr(12, 7) %>},
+      tooltipTemplate:      %Q{<%= new Date(value*1000).toISOString().substr(12, 7) %>},
       generateLegend:       true,
       legendTemplate:       %Q{<div class="legend">
                                  <h4>Legend</h4>
-                                 <h4>
+                                 <h4 class="labels">
                                    <% for (var i=0; i<datasets.length; i++){%>
                                      <span class="label" style="background-color:<%=datasets[i].strokeColor%>"><%=datasets[i].label%></span>
                                    <%}%>

@@ -22,15 +22,15 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="row">
-          <h4 class="col-md-2"><%= icon(:calendar) %> <%= link_to(date_in_words(result.date), result) %></h4>
-          <h4 class="col-md-4"><%= icon(:user, result.user.first_name) %></h4>
-          <h4 class="col-md-6"><%= icon(:bicycle) %> <%= link_to(result.race.to_s, result.race) %></h4>
+          <h4 class="col-md-2 col-xs-7"><%= icon(:calendar) %> <%= link_to(date_in_words(result.date), result) %></h4>
+          <h4 class="col-md-2 col-xs-5"><%= icon('clock-o') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h4>
+          <h4 class="col-md-6 col-xs-12"><%= icon(:bicycle) %> <%= link_to(result.race.to_s, result.race) %></h4>
         </div>
 
         <div class="row">
-          <h4 class="col-md-2"><%= icon('clock-o') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h4>
-          <h4 class="col-md-4"><%= result.previous_time_difference(:duration) %></h4>
-          <h4 class="col-md-4"><%= personal_best_time_difference(result) %></h4>
+          <h4 class="col-md-4 col-xs-12"><%= icon(:user, result.user.first_name) %></h4>
+          <h4 class="col-md-4 col-xs-12"><%= result.previous_time_difference(:duration) %></h4>
+          <h4 class="col-md-4 col-xs-12"><%= personal_best_time_difference(result) %></h4>
         </div>
 
         <% if result.comment.present? %>
