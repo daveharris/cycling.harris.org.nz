@@ -1,6 +1,6 @@
 class ResultsController < ApplicationController
   before_action :set_result, only: [:show, :edit, :update, :destroy]
-  before_action :require_login, except: [:index, :show, :new]
+  before_action :require_login, except: [:index, :show]
 
   def index
     if params[:result]

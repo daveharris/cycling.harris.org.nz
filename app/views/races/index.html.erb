@@ -2,8 +2,13 @@
   <div class="col-md-10">
     <h1>All Races</h1>
   </div>
+
   <div class="col-md-2">
-    <%= link_to 'New Race', new_race_path, class: 'btn btn-primary pull-right' %>
+    <% if signed_in? %>
+      <%= link_to 'Add New Race', new_race_path, class: 'btn btn-primary pull-right' %>
+    <% else %>
+      <%= link_to 'Login to add new Race', nil, class: 'btn btn-primary pull-right disabled' %>
+    <% end %>
   </div>
 </div>
 
@@ -12,14 +17,22 @@
     <tr>
       <th>Name</th>
       <th>Distance</th>
+      <% if signed_in? %><th>Actions</th><% end %>
     </tr>
   </thead>
 
   <tbody>
     <% @races.each do |race| %>
       <tr>
-        <td><%= link_to race.name, edit_race_path(race) %></td>
+        <td><%= link_to race.name, race_path(race) %></td>
         <td><%= race.distance %> km</td>
+        
+        <% if signed_in? %>
+          <td>
+            <%= link_to 'Edit', edit_race_path(race), class: 'btn btn-default btn-xs' %>
+            <%= link_to 'Delete', race, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

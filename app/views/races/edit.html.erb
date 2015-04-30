@@ -2,4 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Destroy', @race, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="row">
+  <%= link_to 'Delete', @race, class: 'btn btn-danger col-md-2', method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
