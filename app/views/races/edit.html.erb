@@ -1,7 +1,3 @@
-<h1><%= @race.name %></h1>
+<h1>Edit Race - <%= @race.name %></h1>
 
 <%= render 'form' %>
-
-<div class="row">
-  <%= link_to 'Delete', @race, class: 'btn btn-danger col-md-2', method: :delete, data: { confirm: 'Are you sure?' } %>
-</div>

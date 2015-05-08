@@ -1,3 +1,11 @@
 <h1><%= @race.to_s %></h1>
 
 <%= race_graph(@chart_data) %>
+
+<h2>Results</h2>
+
+<div class="list-group col-md-4">
+  <% @results.each do |result| %>
+    <%= link_to("#{icon(:calendar)} #{date_in_words(result.date)} #{icon('clock-o')} #{duration_in_words(result.duration)}".html_safe, result, class: "list-group-item") %>
+  <% end %>
+</div>

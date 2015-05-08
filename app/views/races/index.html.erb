@@ -12,28 +12,32 @@
   </div>
 </div>
 
-<table class="table table-striped table-condensed">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Distance</th>
-      <% if signed_in? %><th>Actions</th><% end %>
-    </tr>
-  </thead>
+<div class="row">
+  <div class="col-md-8">
+    <table class="table table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Distance</th>
+          <% if signed_in? %><th>Actions</th><% end %>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @races.each do |race| %>
-      <tr>
-        <td><%= link_to race.name, race_path(race) %></td>
-        <td><%= race.distance %> km</td>
-        
-        <% if signed_in? %>
-          <td>
-            <%= link_to 'Edit', edit_race_path(race), class: 'btn btn-default btn-xs' %>
-            <%= link_to 'Delete', race, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %>
-          </td>
+      <tbody>
+        <% @races.each do |race| %>
+          <tr>
+            <td><%= link_to race.name, race_path(race) %></td>
+            <td><%= race.distance %> km</td>
+            
+            <% if signed_in? %>
+              <td>
+                <%= link_to 'Edit', edit_race_path(race), class: 'btn btn-default btn-xs' %>
+                <%= link_to 'Delete', race, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %>
+              </td>
+            <% end %>
+          </tr>
         <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      </tbody>
+    </table>
+  </div>
+</div>

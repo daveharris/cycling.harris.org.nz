@@ -42,4 +42,8 @@ class ResultDecorator < Draper::Decorator
     icon(:link, link_to(name, location)).html_safe if location.present?
   end
 
+  def year
+    self.date.try(:year)
+  end
+
 end
