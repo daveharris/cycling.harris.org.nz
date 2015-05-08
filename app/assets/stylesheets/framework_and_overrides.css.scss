@@ -1,5 +1,11 @@
 // import the CSS framework
 @import "bootstrap-sprockets";
+
+// @import "bootswatch/cosmo_variables.scss";
+// @import "bootswatch/lumen_variables.scss";
+@import "bootswatch/united_variables.scss";
+// @import "bootswatch/yeti_variables.scss";
+
 @import "bootstrap";
 
 // make all images responsive by default
