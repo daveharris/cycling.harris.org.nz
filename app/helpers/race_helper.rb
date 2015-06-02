@@ -1,6 +1,8 @@
 module RaceHelper
 
   def race_graph(data)
+    return if data.empty?
+
     min, max = data.flatten.keep_if{|v| v.is_a?(Fixnum)}.minmax
     step_width = 1800
     bottom = ((min - step_width) / 3600) * 3600 # To ensure it's a round time (:00)
