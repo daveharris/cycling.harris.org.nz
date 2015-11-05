@@ -12,6 +12,8 @@
 
 # bundler state
 /.bundle
+/.gems
+/.rbenv-*
 /vendor/bundle/
 /vendor/ruby/
 

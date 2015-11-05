@@ -1,18 +1,16 @@
-<%= bootstrap_form_for(@result, layout: :horizontal, label_col: 'col-md-2', control_col: 'col-md-6') do |f| %>
+<%= bootstrap_form_for(@result, layout: :horizontal, label_col: 'col-md-2', control_col: 'col-md-8') do |f| %>
 
   <div class="row">
-    <div class="col-md-8"><%= f.alert_message "Please fix the errors below." %></div>
+    <div class="col-md-10"><%= f.alert_message "Please fix the errors below." %></div>
   </div>
-  
-  <%= f.collection_select :user_id, User.all, :id, :collection_select_name, selected: current_user.id %>
-  
+
+  <%= f.collection_select :user_id, User.all, :id, :collection_select_name, selected: current_user.id, label: 'Rider' %>
+
   <%= f.collection_select :race_id, Race.all, :id, :collection_select_name, prompt: 'Select Race...' %>
 
   <%= f.text_field :duration_s, append: icon('clock-o') %>
-  
-  <%= f.text_field :date, 'data-provide' => 'datepicker', 'data-date-autoclose' => true, 'data-date-format' => 'dd M yyyy', value: @result.date_for_form, append: icon(:calendar) %>
-  
-  <%= f.text_area :comment, append: icon(:comment) %>
+
+  <%= f.text_field :date, 'data-provide' => 'datepicker', 'data-date-autoclose' => true, 'data-date-format' => 'd M yyyy', value: @result.date_for_form, append: icon(:calendar) %>
 
   <%= f.text_field :fastest_duration_s, label: 'Fastest Duration', append: icon('clock-o') %>
 
@@ -22,11 +20,18 @@
 
   <%= f.text_field :position, append: icon('flag-checkered') %>
 
-  <%= f.text_field :finishers, append: icon(:link) %>
+  <%= f.text_field :finishers, append: icon('flag-checkered') %>
 
   <%= f.text_field :timing_url, label: 'Timing URL', append: icon(:link) %>
-  
+
   <%= f.text_field :strava_url, label: 'Strava URL', append: icon(:link) %>
 
-  <%= f.submit 'Save', class: "btn btn-primary col-md-2" %>
+  <%= f.text_area :comment, append: icon(:comment) %>
+
+
+  <%= link_to result_path(@result), method: :delete, class: 'btn btn-danger col-md-2' do %>
+    <%= icon(:trash) %> Delete
+  <% end %>
+
+  <%= f.submit 'Save', class: "btn btn-default col-md-offset-4 col-md-4" %>
 <% end %>

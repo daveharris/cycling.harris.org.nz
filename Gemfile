@@ -24,8 +24,9 @@ gem 'nokogiri'
 
 gem 'clearance'
 
-gem 'thin'
+gem 'friendly_id'
 
+gem 'thin'
 
 group :development do
   gem 'spring'

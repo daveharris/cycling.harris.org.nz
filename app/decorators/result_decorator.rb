@@ -7,14 +7,14 @@ class ResultDecorator < Draper::Decorator
 
     if previous && (previous_attribute = previous.public_send(attribute)) && (current_attribute = result.public_send(attribute))
       difference = previous_attribute - current_attribute
-        
+
       if difference > 0
         "#{duration_in_words(difference)} #{icon('arrow-circle-o-up')} than previous".html_safe
       else
         "#{duration_in_words(difference)} #{icon('arrow-circle-o-down')} than previous".html_safe
       end
     else
-      icon('ban', "1st Result")
+      "1st Result"
     end
   end
 
@@ -35,7 +35,7 @@ class ResultDecorator < Draper::Decorator
   end
 
   def position_icon
-    icon('flag-checkered', "#{position.to_i.ordinalize} / #{finishers}") if position > 0
+    icon('flag-checkered', "#{position.to_i.ordinalize} / #{finishers}") if position.present? && position > 0
   end
 
   def link_icon(name, location)

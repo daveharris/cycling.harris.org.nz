@@ -1,12 +1,16 @@
 require 'open-uri'
 
 class Result < ActiveRecord::Base
+  extend FriendlyId
+
   DURATION_FIELDS = [:duration, :fastest_duration, :median_duration]
 
   belongs_to :user
   belongs_to :race
 
   validates :user_id, :race_id, :duration, :date, presence: true
+
+  friendly_id :race_date
 
   scope :date_desc, -> { order(date: :desc) }
   scope :date_asc,  -> { order(date: :asc) }
@@ -15,7 +19,7 @@ class Result < ActiveRecord::Base
     name = "#{field}_s"
     attr_accessor name
 
-    validates name, 
+    validates name,
               format: { with: /\A\d+:\d+:\d+\z/, message: "is not in the format 'hh:mm:ss'" },
               allow_nil: true,
               allow_blank: true
@@ -27,6 +31,10 @@ class Result < ActiveRecord::Base
     define_method(name) do
       ChronicDuration.output(self[field].abs, format: :chrono) if self[field].present?
     end
+  end
+
+  def race_date
+    "#{self.race.slug}-#{self.date.year}"
   end
 
   def date_for_form
@@ -50,7 +58,7 @@ class Result < ActiveRecord::Base
     SmarterCSV.process(filename) do |row|
       race_details = row.first
       race_details.delete(:difference)
-      
+
       race = Race.find_or_create_by!(name: race_details.delete(:race), distance: race_details.delete(:distance))
       race_details[:race] = race
 
@@ -63,7 +71,7 @@ class Result < ActiveRecord::Base
 
   def self.from_strava(activity_id, race_id, user)
     unless activity_id.match(/^\d+$/)
-      if activity_id.match(/http:\/\/www.strava.com\/activities\/(\d+)/)
+      if activity_id.match(/activities\/(\d+)/)
         activity_id = $1
       else
         return nil
@@ -73,7 +81,7 @@ class Result < ActiveRecord::Base
     client = Strava::Api::V3::Client.new(access_token: '7360ac33e4acc82eb6a29f79469936eb974a4646')
 
     activity = client.retrieve_an_activity(activity_id)
-    
+
     result_details = {race_id: race_id, user: user}
     result_details[:duration] = activity['moving_time']
     result_details[:date] = Date.parse(activity['start_date_local'])
@@ -88,7 +96,7 @@ class Result < ActiveRecord::Base
 
     all_results_url = "#{url}&cell=start"
     all_results_doc = Nokogiri::HTML(open(all_results_url))
-    
+
     result_details = {race_id: race_id, user: user}
     result_details[:duration] = ChronicDuration.parse(doc.css('font.participant_time').text)
     result_details[:date] = Date.parse(doc.css('font.event_date').children.first.text)

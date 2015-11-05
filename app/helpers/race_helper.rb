@@ -1,7 +1,7 @@
 module RaceHelper
 
   def race_graph(data)
-    return if data.empty?
+    return if data.blank? || data.empty?
 
     min, max = data.flatten.keep_if{|v| v.is_a?(Fixnum)}.minmax
     step_width = 1800

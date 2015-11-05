@@ -7,7 +7,7 @@ class RacesController < ApplicationController
   end
 
   def show
-    @chart_data = @race.result_duration_over_time
+    @chart_data = @race.result_duration_over_time if @race.results.any?
     @results = Result.where(race: @race, user: current_user)
   end
 
@@ -42,12 +42,10 @@ class RacesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_race
       @race = Race.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def race_params
       params.require(:race).permit(:name, :distance, :url)
     end
