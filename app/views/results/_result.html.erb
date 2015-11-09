@@ -1,5 +1,5 @@
 <div class="row">
-  <h3 class="col-md-3 col-xs-12"><%= icon(:calendar, date_in_words(result.date)) %></h3>
+  <h3 class="col-md-3 col-xs-12"><%= icon(:calendar) %> <%= link_to(date_in_words(result.date), result) %></h3>
   <h3 class="col-md-3 col-xs-12"><%= icon('clock-o') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h3>
   <h3 class="col-md-6 col-xs-12"><%= icon(:bicycle) %> <%= link_to(result.race.to_s, result.race) %></h3>
 </div>

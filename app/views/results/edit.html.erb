@@ -1,3 +1,14 @@
-<h1>Edit <%= @result.year %> <%= @result.race.to_s %></h1>
+<h1>Edit <%= @result.name %></h1>
 
 <%= render 'form' %>
+
+<div class="row">
+  <%= link_to result_path(@result), method: :delete, class: 'btn btn-danger col-md-offset-2 col-md-3' do %>
+    <%= icon(:trash) %> Delete
+  <% end %>
+
+  <%= bootstrap_form_for(@result, url: timing_team_enrich_result_path(@result), method: :patch) do |f| %>
+    <%= f.hidden_field :race_id %>
+    <%= f.submit 'Enrich from Timing Team...', class: 'btn btn-default col-md-offset-2 col-md-3' %>
+  <% end %>
+</div>

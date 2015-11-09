@@ -1,5 +1,5 @@
 class ResultsController < ApplicationController
-  before_action :set_result, only: [:show, :edit, :update, :destroy]
+  before_action :set_result, only: [:show, :edit, :update, :destroy, :timing_team_enrich]
   before_action :require_login, except: [:index, :show]
 
   def index
@@ -51,11 +51,20 @@ class ResultsController < ApplicationController
   end
 
   def timing_team
-    if params.include?(:race_id) && params.include?(:url)
+    if params.include?(:race_id) && params.include?(:url) && params[:url].include?('thetimingteam.co.nz')
       result = Result.from_timing_team(params[:url], params[:race_id], current_user)
       redirect_to results_path, notice: "#{view_context.link_to('Activity', result)} successfully imported!".html_safe
     else
       redirect_to results_path, notice: 'The Timing Team activity import failed'
+    end
+  end
+
+  def timing_team_enrich
+    if @result.timing_url.present? && @result.timing_url.include?('thetimingteam.co.nz')
+      @result.enrich_from_timing_team
+      redirect_to result_path(@result), notice: "#{view_context.link_to(@result.name, @result)} successfully enriched!".html_safe
+    else
+      redirect_to result_path(@result), notice: 'The Timing Team activity enrich failed'
     end
   end
 

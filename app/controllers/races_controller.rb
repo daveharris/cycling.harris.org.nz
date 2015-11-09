@@ -8,7 +8,7 @@ class RacesController < ApplicationController
 
   def show
     @chart_data = @race.result_duration_over_time if @race.results.any?
-    @results = Result.where(race: @race, user: current_user)
+    @results = Result.where(race: @race, user: current_user).date_desc
   end
 
   def new

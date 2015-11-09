@@ -33,6 +33,10 @@ class Result < ActiveRecord::Base
     end
   end
 
+  def name
+    "#{self.date.year} #{self.race.name}"
+  end
+
   def race_date
     "#{self.race.slug}-#{self.date.year}"
   end
@@ -92,22 +96,28 @@ class Result < ActiveRecord::Base
   end
 
   def self.from_timing_team(url, race_id, user)
-    doc = Nokogiri::HTML(open(url))
+    result = Result.new({timing_url: url, race_id: race_id, user: user})
 
-    all_results_url = "#{url}&cell=start"
+    result.enrich_from_timing_team
+    result
+  end
+
+  def enrich_from_timing_team
+    doc = Nokogiri::HTML(open(self.timing_url))
+
+    all_results_url = "#{self.timing_url}&cell=start"
     all_results_doc = Nokogiri::HTML(open(all_results_url))
 
-    result_details = {race_id: race_id, user: user}
+    result_details = {}
     result_details[:duration] = ChronicDuration.parse(doc.css('font.participant_time').text)
-    result_details[:date] = Date.parse(doc.css('font.event_date').children.first.text)
+    result_details[:date] = Date.parse(doc.css('font.event_date').children.first.text) if doc.css('font.event_date').present?
     result_details[:wind] = doc.css('td[background="dmapps/images/wind.png"]').text.split(' ').last
     result_details[:position], result_details[:finishers] = doc.css('.participant_details')[2].text.scan(/\d+/)
-    result_details[:timing_url] = url
 
     fastest, median, _slowest = all_results_doc.at_css('.mat_time').text.split('|').map(&:squish)
     result_details[:fastest_duration] = ChronicDuration.parse(fastest.split('Time:').last)
     result_details[:median_duration] = ChronicDuration.parse(median.split('Time:').last)
 
-    Result.create!(result_details)
+    self.update!(result_details)
   end
 end
