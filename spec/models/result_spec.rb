@@ -41,7 +41,7 @@ describe Result do
       FactoryGirl.create(:result, race: other_race, date: Date.parse('2013-10-5'))
       FactoryGirl.create(:result, race: race, date: Date.parse('2012-10-7'))
     }
-    
+
     it "finds last years result" do
       expect(result.find_previous_result).to eq last_year
     end
@@ -51,7 +51,7 @@ describe Result do
     let!(:pb) { FactoryGirl.create(:result, race: result.race, duration_s: "1:10:00", date: Date.parse('2013-10-8')) }
     let!(:r1) { FactoryGirl.create(:result, race: result.race, duration_s: "2:30:00", date: Date.parse('2013-10-8')) }
     let!(:r2) { FactoryGirl.create(:result, race: result.race, duration_s: "3:30:00", date: Date.parse('2014-10-8')) }
-    
+
     it "finds the personal best result" do
       expect(r1.find_personal_best).to eq pb
     end
@@ -125,31 +125,37 @@ describe Result do
   end
 
   describe ".from_timing_team" do
+    let(:result) { double(:result) }
+
+    it "calls enrich_from_timing_team" do
+      allow(Result).to receive(:new) { result }
+      expect(result).to receive(:enrich_from_timing_team)
+      Result.from_timing_team(double(:url), double(:race_id), double(:user))
+    end
+  end
+
+  describe ".enrich_from_timing_team" do
     let(:response) { File.read('spec/support/the_timing_team.html') }
     let(:response_all) { File.read('spec/support/the_timing_team_all.html') }
+    let(:result) { create(:result, timing_url: 'http://www.thetimingteam.co.nz/results/index.php?thread=2121579998&strand=1187175897&instance=3349') }
 
     before(:each) do
       stub_request(:get, "http://www.thetimingteam.co.nz/results/index.php?instance=3349&strand=1187175897&thread=2121579998").to_return(body: response)
       stub_request(:get, "http://www.thetimingteam.co.nz/results/index.php?instance=3349&strand=1187175897&thread=2121579998&cell=start").to_return(body: response_all)
-      allow(Result).to receive(:create!)
     end
 
-    after(:each) do
-      Result.from_timing_team('http://www.thetimingteam.co.nz/results/index.php?thread=2121579998&strand=1187175897&instance=3349', race.id, user)
-    end
-
-    { duration: 18752, 
-      date: Date.parse("2014-11-29"), 
-      wind: '24', 
-      position: '1070', 
-      finishers: '3612', 
-      timing_url: 'http://www.thetimingteam.co.nz/results/index.php?thread=2121579998&strand=1187175897&instance=3349', 
-      fastest_duration: 14748, 
+    { duration: 18752,
+      date: Date.parse("2014-11-29"),
+      wind: '24',
+      position: '1070',
+      finishers: '3612',
+      fastest_duration: 14748,
       median_duration: 20815
     }.each do |key, value|
       it "sets the #{key}" do
-        expect(Result).to receive(:create!).with(hash_including(key => value))
-      end    
+        expect(result).to receive(:update!).with(hash_including(key => value))
+        result.enrich_from_timing_team
+      end
     end
   end
 end
