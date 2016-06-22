@@ -15,7 +15,6 @@
 // require turbolinks
 //= require bootstrap-sprockets
 //= require bootstrap-datepicker/core
+//= require Chart.min
 //= require_tree .
 
-//= require Chart
-//= require excanvas

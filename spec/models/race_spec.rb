@@ -43,7 +43,7 @@ describe Race do
     let!(:result2) { FactoryGirl.create(:result, race: race, date: '2014-10-16', duration_s: "5:00:00", fastest_duration_s: "4:00:00", median_duration_s: "6:00:00") }
 
     it "gathers race results into time and duration" do
-      results_data = [["15 Oct 2014", 5400, 3600, 7200], ["16 Oct 2014", 18000, 14400, 21600]]
+      results_data = {:date=>["15 Oct 2014", "16 Oct 2014"], :duration=>[5400, 18000], :fastest_duration=>[3600, 14400], :median_duration=>[7200, 21600]}
       expect(race.result_duration_over_time).to eq results_data
     end
   end

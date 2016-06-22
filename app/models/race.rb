@@ -23,8 +23,19 @@ class Race < ActiveRecord::Base
   alias_method :collection_select_name, :to_s
 
   def result_duration_over_time
-    results.order(:date).pluck(:date, :duration, :fastest_duration, :median_duration).each do |array|
-      array[0] = array[0].strftime('%-d %b %Y')
-    end
+    chartjs_data_helper(results.order(:date), [:date, :duration, :fastest_duration, :median_duration])
+  end
+
+  # Returns structured hash in a format easily readable for Chart.js
+  # Transforms date fields into strings for JSON parsing
+  # chartjs_data_helper(results.order(:date), [:date, :duration])
+  # => { date: ["24 Nov 2012", "30 Nov 2013", "29 Nov 2014"],
+  #      duration: [20047, 20189, 18757]
+  #    }
+  def chartjs_data_helper(relation, keys)
+    transposed_data = relation.pluck(*keys).transpose
+    chart_data = Hash[keys.zip(transposed_data)]
+    chart_data[:date] = chart_data[:date].map{|d| d.strftime('%-d %b %Y')} if keys.include?(:date)
+    chart_data
   end
 end
