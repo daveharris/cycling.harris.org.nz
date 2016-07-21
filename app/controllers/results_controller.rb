@@ -4,7 +4,8 @@ class ResultsController < ApplicationController
 
   def index
     if params[:result]
-      @results = Result.where(filter_params(params)).date_desc.decorate
+      filter_params = result_params.keep_if{|k,v| v.present?}
+      @results = Result.where(filter_params).date_desc.decorate
     else
       @results = Result.date_desc.decorate
     end
@@ -81,18 +82,16 @@ class ResultsController < ApplicationController
     redirect_to results_url, notice: 'Result was successfully destroyed.'
   end
 
-  # Remove non-model and empty params
-  def filter_params(params)
-    params[:result].to_hash.keep_if{ |k,v| Result.new.attributes.keys.include?(k) && v.present? }.symbolize_keys
-  end
 
   private
+
     def set_result
       @result = Result.find(params[:id]).decorate
     end
 
-    # Only allow a trusted parameter "white list" through.
     def result_params
-      params.require(:result).permit(:user_id, :race_id, :date, :comment, :timing_url, :strava_url, :duration, :fastest_duration, :median_duration, :duration_s, :fastest_duration_s, :median_duration_s, :wind, :position, :finishers)
+      params.require(:result).permit(:user_id, :race_id,
+                                     :date, :comment, :timing_url, :strava_url, :wind, :position, :finishers,
+                                     :duration, :duration_s, :fastest_duration, :fastest_duration_s, :median_duration, :median_duration_s)
     end
 end

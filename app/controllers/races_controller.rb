@@ -22,7 +22,7 @@ class RacesController < ApplicationController
     @race = Race.new(race_params)
 
     if @race.save
-      redirect_to @race, notice: "#{@race.to_s} was successfully created."
+      redirect_to @race, notice: "#{@race} was successfully created."
     else
       render :new
     end
@@ -30,7 +30,7 @@ class RacesController < ApplicationController
 
   def update
     if @race.update(race_params)
-      redirect_to @race, notice: "#{@race.to_s} was successfully updated."
+      redirect_to @race, notice: "#{@race} was successfully updated."
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class RacesController < ApplicationController
 
   def destroy
     @race.destroy
-    redirect_to races_url, notice: "#{@race.to_s} was successfully deleted."
+    redirect_to races_url, notice: "#{@race} was successfully deleted."
   end
 
   private
