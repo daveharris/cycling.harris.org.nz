@@ -13,12 +13,6 @@
  *= require_tree .
  *= require rails_bootstrap_forms
  *= require bootstrap-datepicker3
+ *= require ionicons
  *= require_self
  */
-
-@import "font-awesome-sprockets";
-@import "font-awesome";
-
-i.fa {
-  @extend .fa-fw;
-}

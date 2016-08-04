@@ -114,6 +114,8 @@ GEM
       i18n (~> 0.5)
     font-awesome-sass (4.3.2.1)
       sass (~> 3.2)
+    font-ionicons-rails (2.0.1.5)
+      railties (>= 3.2, < 6.0)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     gherkin (2.12.2)
@@ -280,6 +282,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   font-awesome-sass
+  font-ionicons-rails
   friendly_id
   jquery-rails
   launchy

@@ -8,25 +8,25 @@
 
   <%= f.collection_select :race_id, Race.all, :id, :collection_select_name, prompt: 'Select Race...' %>
 
-  <%= f.text_field :duration_s, append: icon('clock-o') %>
+  <%= f.text_field :date, 'data-provide' => 'datepicker', 'data-date-autoclose' => true, 'data-date-format' => 'd M yyyy', value: @result.date_for_form, append: ion_icon(:calendar) %>
 
-  <%= f.text_field :date, 'data-provide' => 'datepicker', 'data-date-autoclose' => true, 'data-date-format' => 'd M yyyy', value: @result.date_for_form, append: icon(:calendar) %>
+  <%= f.text_field :duration_s, append: ion_icon('ios-stopwatch-outline') %>
 
-  <%= f.text_field :fastest_duration_s, label: 'Fastest Duration', append: icon('clock-o') %>
+  <%= f.text_field :fastest_duration_s, label: 'Fastest Duration', append: ion_icon('ios-stopwatch-outline') %>
 
-  <%= f.text_field :median_duration_s, label: 'Median Duration', append: icon('clock-o') %>
+  <%= f.text_field :median_duration_s, label: 'Median Duration', append: ion_icon('ios-stopwatch-outline') %>
 
-  <%= f.text_field :wind, append: icon(:flag) %>
+  <%= f.text_field :wind, append: ion_icon(:flag) %>
 
-  <%= f.text_field :position, append: icon('flag-checkered') %>
+  <%= f.text_field :position, append: ion_icon('ios-people') %>
 
-  <%= f.text_field :finishers, append: icon('flag-checkered') %>
+  <%= f.text_field :finishers, append: ion_icon('ios-people') %>
 
-  <%= f.text_field :timing_url, label: 'Timing URL', append: icon(:link) %>
+  <%= f.text_field :timing_url, label: 'Timing URL', append: ion_icon(:link) %>
 
-  <%= f.text_field :strava_url, label: 'Strava URL', append: icon(:link) %>
+  <%= f.text_field :strava_url, label: 'Strava URL', append: ion_icon(:link) %>
 
-  <%= f.text_area :comment, append: icon(:comment) %>
+  <%= f.text_area :comment, append: ion_icon('chatbubbles') %>
 
   <div class="row push-down">
     <%= f.submit 'Save', class: "btn btn-default col-md-offset-2 col-md-8" %>

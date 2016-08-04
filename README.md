@@ -12,7 +12,8 @@
 - [X] Remove un-used views/actions
 - [X] Compare result with PB
 - [X] Filter results by user/race/year
-- [ ] Show all results on race show page
+- [X] Show all results on race show page
 - [X] Graph results over the years
-- [ ] Fix Chartjs with turbolinks
-- [ ] Consider moving to http://ionicons.com/
+- [X] Upgrade chartjs-ror from v2 -> v3
+- [X] Fix weird chart resizing issue with responsive mobile width
+- [X] Consider moving to http://ionicons.com/

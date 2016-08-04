@@ -39,4 +39,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Enable asset compilation for Capybara's #save_and_open_page
+  config.assets.compress = false
+  config.assets.debug = true
+  config.assets.compile = true
 end

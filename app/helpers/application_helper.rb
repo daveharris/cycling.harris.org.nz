@@ -15,11 +15,11 @@ module ApplicationHelper
       difference = pb.duration - result.duration
 
       if difference == 0
-        icon('check', "Personal Best")
+        ion_icon(:trophy, text: "Personal Best")
       else
-        "#{duration_in_words(difference)} #{icon('arrow-circle-o-down')} than Personal Best".html_safe
+        "#{duration_in_words(difference)} #{ion_icon('arrow-graph-down-right', text: 'than Personal Best')}".html_safe
       end
     end
-
   end
+
 end

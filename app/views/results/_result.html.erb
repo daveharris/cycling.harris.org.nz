@@ -1,7 +1,7 @@
 <div class="row">
-  <h3 class="col-md-3 col-xs-12"><%= icon(:calendar) %> <%= link_to(date_in_words(result.date), result) %></h3>
-  <h3 class="col-md-3 col-xs-12"><%= icon('clock-o') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h3>
-  <h3 class="col-md-6 col-xs-12"><%= icon(:bicycle) %> <%= link_to(result.race.to_s, result.race) %></h3>
+  <h3 class="col-md-3 col-xs-12"><%= ion_icon(:calendar) %> <%= link_to(result.date, result) %></h3>
+  <h3 class="col-md-3 col-xs-12"><%= ion_icon('ios-stopwatch-outline') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h3>
+  <h3 class="col-md-6 col-xs-12"><%= ion_icon('ios-location') %> <%= link_to(result.race.to_s, result.race) %></h3>
 </div>
 
 <div class="row">
@@ -17,12 +17,12 @@
 <div class="row">
   <h3 class="col-md-3 col-xs-12"><%= result.position_icon %></h3>
   <h3 class="col-md-3 col-xs-12"><%= result.wind_speed_icon %></h3>
-  <h3 class="col-md-2 col-xs-12"><%= icon(:user, result.user.first_name) %></h3>
+  <h3 class="col-md-2 col-xs-12"><%= ion_icon('android-bicycle', text: result.user.first_name) %></h3>
   <h3 class="col-md-2 col-xs-12"><%= result.link_icon('Strava', result.strava_url) %></h3>
 </div>
 
 <% if result.comment.present? %>
   <div class="row">
-    <h4 class="col-md-12"><%= icon(:comment, result.comment) %></h4>
+    <h4 class="col-md-12"><%= ion_icon('chatbubbles', text: result.comment) %></h4>
   </div>
 <% end %>
