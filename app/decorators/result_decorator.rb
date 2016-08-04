@@ -21,13 +21,19 @@ class ResultDecorator < Draper::Decorator
 
   def fastest_duration_icon
     if result.fastest_duration
-      "#{ion_icon('ribbon-a')} #{ion_icon('ios-stopwatch-outline', text: duration_in_words(result.fastest_duration))} (#{previous_time_difference(:fastest_duration)})".html_safe
+      [ ion_icon('ribbon-a'),
+        ion_icon('ios-stopwatch-outline', text: duration_in_words(result.fastest_duration)),
+        "(#{previous_time_difference(:fastest_duration)})",
+      ].join(' ').html_safe
     end
   end
 
   def median_duration_icon
     if result.median_duration
-      "σ #{ion_icon('ios-stopwatch-outline', text: duration_in_words(result.median_duration))} (#{previous_time_difference(:median_duration)})".html_safe
+      [ 'σ',
+        ion_icon('ios-stopwatch-outline', text: duration_in_words(result.median_duration)),
+        "(#{previous_time_difference(:median_duration)})"
+      ].join(' ').html_safe
     end
   end
 

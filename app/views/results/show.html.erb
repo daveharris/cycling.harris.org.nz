@@ -1,6 +1,6 @@
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  
-  <div class="panel panel-primary">
+
+  <div class="panel panel-primary result result-<%= @result.id %> result-<%= @result.slug %>">
     <div class="panel-heading" role="tab" id="current-heading">
       <div class="row">
         <div class="col-md-10">
@@ -20,8 +20,8 @@
     </div>
   </div>
 
-  <% if @result.find_previous_result %>
-    <div class="panel panel-info">
+  <% if @previous %>
+    <div class="panel panel-info result result-<%= @previous.id %> result-<%= @previous.slug %>">
       <div class="panel-heading collapsed" role="tab" id="previous-heading" data-toggle="collapse" data-target="#previous" aria-expanded="false" aria-controls="previous">
         <h4 class="panel-title">
           <%= ion_icon(:expand, text: 'Previous Result') %>
@@ -35,8 +35,8 @@
     </div>
   <% end %>
 
-  <% if @result.find_personal_best && @result.find_personal_best != @result %>
-    <div class="panel panel-success">
+  <% if @personal_best %>
+    <div class="panel panel-success result result-<%= @personal_best.id %> result-<%= @personal_best.slug %>">
       <div class="panel-heading collapsed" role="tab" id="best-heading" data-toggle="collapse" data-target="#best" aria-expanded="false" aria-controls="best">
         <h4 class="panel-title">
           <%= ion_icon(:expand, text: 'Personal Best Result') %>

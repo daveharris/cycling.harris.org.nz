@@ -5,7 +5,7 @@
 
   <div class="col-md-2">
     <% if signed_in? %>
-      <%= link_to 'Add New Race', new_race_path, class: 'btn btn-primary pull-right' %>
+      <%= link_to 'Add new Race', new_race_path, class: 'btn btn-primary pull-right' %>
     <% else %>
       <%= link_to 'Login to add new Race', nil, class: 'btn btn-primary pull-right disabled' %>
     <% end %>
@@ -28,7 +28,7 @@
           <tr>
             <td><%= link_to race.name, race_path(race) %></td>
             <td><%= race.distance %> km</td>
-            
+
             <% if signed_in? %>
               <td>
                 <%= link_to 'Edit', edit_race_path(race), class: 'btn btn-default btn-xs' %>

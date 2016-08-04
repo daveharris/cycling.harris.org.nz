@@ -1,4 +1,4 @@
 <%= bootstrap_form_tag(url: csv_results_path, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-6', html: {multipart: true}) do |f| %>
-  <%= f.file_field :file, label: 'CSV File' %>
+  <%= f.file_field :file, label: 'CSV File', id: 'file' %>
   <%= f.submit 'Upload CSV', class: 'btn btn-primary' %>
 <% end %>

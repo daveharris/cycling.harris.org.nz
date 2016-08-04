@@ -38,7 +38,7 @@ class Result < ActiveRecord::Base
   end
 
   def race_date
-    "#{self.race.slug}-#{self.date.year}"
+    "#{self.race.try(:slug)}-#{self.date.try(:year)}"
   end
 
   def date_for_form
@@ -90,7 +90,7 @@ class Result < ActiveRecord::Base
     result_details[:duration] = activity['moving_time']
     result_details[:date] = Date.parse(activity['start_date_local'])
     result_details[:comment] = activity['description']
-    result_details[:strava_url] = "http://www.strava.com/activities/#{activity_id}"
+    result_details[:strava_url] = "https://www.strava.com/activities/#{activity_id}"
 
     Result.create!(result_details)
   end

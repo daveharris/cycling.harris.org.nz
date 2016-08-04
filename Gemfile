@@ -33,16 +33,21 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
-  gem 'pry-rails'
 end
 
 group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'rspec-rails'
   gem 'spring-commands-rspec'
-  gem 'spring-commands-cucumber'
   gem 'sqlite3'
+  gem 'pry-rails'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'webmock'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :production do
@@ -50,11 +55,4 @@ group :production do
   gem 'rails_12factor'
   gem 'newrelic_rpm'
   gem 'raygun4ruby'
-end
-
-group :test do
-  gem 'cucumber-rails', require: false
-  gem 'webmock'
-  gem 'database_cleaner'
-  gem 'launchy'
 end

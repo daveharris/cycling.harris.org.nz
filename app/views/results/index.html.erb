@@ -8,9 +8,9 @@
   </div>
   <div class="col-md-2">
     <% if signed_in? %>
-      <%= link_to 'Add New Result(s)', new_result_path, class: 'btn btn-primary pull-right' %>
+      <%= link_to 'Add new Result(s)', new_result_path, class: 'btn btn-primary pull-right' %>
     <% else %>
-      <%= link_to 'Login to add New Result(s)', nil, class: 'btn btn-primary pull-right disabled' %>
+      <%= link_to 'Login to add new Result(s)', nil, class: 'btn btn-primary pull-right disabled' %>
     <% end %>
   </div>
 </div>
@@ -18,7 +18,7 @@
 <%= render 'filter_panel' %>
 
 <% @results.each do |result| %>
-  <div class="row result result-<%= result.id %> result-<%= result.race_date %>">
+  <div class="row result result-<%= result.id %> result-<%= result.slug %>">
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="row">

@@ -12,7 +12,7 @@ class ResultsController < ApplicationController
 
   def show
     @previous = @result.find_previous_result.try(:decorate)
-    @personal_best = @result.find_personal_best.try(:decorate)
+    @personal_best = @result.find_personal_best.try(:decorate) if @result.find_personal_best != @result
   end
 
   def new
