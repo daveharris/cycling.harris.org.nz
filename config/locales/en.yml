@@ -1,4 +1,11 @@
 en:
+  date:
+    order:
+      - :day
+      - :month
+      - :year
+    formats:
+      default: "%e %b %Y"
   activerecord:
     attributes:
       result:

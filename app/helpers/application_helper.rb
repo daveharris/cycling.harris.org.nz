@@ -1,9 +1,5 @@
 module ApplicationHelper
 
-  def date_in_words(date)
-    date.strftime("#{date.day.ordinalize} %b %y") if date
-  end
-
   def duration_in_words(duration)
     ChronicDuration.output(duration.abs, format: :chrono) if duration.is_a?(Fixnum)
   end
