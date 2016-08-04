@@ -17,19 +17,18 @@ class Result < ActiveRecord::Base
   scope :date_asc,  -> { order(date: :asc) }
 
   DURATION_FIELDS.each do |field|
-    name = "#{field}_s"
-    attr_accessor name
+    field_s = "#{field}_s"
+    attr_accessor field_s
 
-    validates name,
-              format: { with: /\A\d+:\d+:\d+\z/, message: "is not in the format 'hh:mm:ss'" },
-              allow_nil: true,
-              allow_blank: true
+    validates field_s,
+              format: { with: /\A\d{1,2}:\d{2}:\d{2}\z/, message: "is not in the format 'h[h]:mm:ss'" },
+              allow_nil: true, allow_blank: true
 
-    define_method("#{name}=") do |value|
+    define_method("#{field_s}=") do |value|
       self[field] = ChronicDuration.parse(value.to_s)
     end
 
-    define_method(name) do
+    define_method(field_s) do
       ChronicDuration.output(self[field].abs, format: :chrono) if self[field].present?
     end
   end

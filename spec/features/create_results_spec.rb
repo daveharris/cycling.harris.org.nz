@@ -60,9 +60,9 @@ feature 'Create Results', type: :feature do
 
       expect(page).to have_content("Race can't be blank")
       expect(page).to have_content("Date can't be blank")
-      expect(page).to have_content("Duration is not in the format 'hh:mm:ss'")
-      expect(page).to have_content("Fastest Duration is not in the format 'hh:mm:ss'")
-      expect(page).to have_content("Median Duration is not in the format 'hh:mm:ss'")
+      expect(page).to have_content("Duration is not in the format 'h[h]:mm:ss'")
+      expect(page).to have_content("Fastest Duration is not in the format 'h[h]:mm:ss'")
+      expect(page).to have_content("Median Duration is not in the format 'h[h]:mm:ss'")
     end
 
     scenario 'fails when result for that race and year already exists' do
