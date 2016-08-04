@@ -9,6 +9,7 @@ class Result < ActiveRecord::Base
   belongs_to :race
 
   validates :user_id, :race_id, :duration, :date, presence: true
+  validate :unique_within_race_and_year
 
   friendly_id :race_date
 
@@ -56,6 +57,12 @@ class Result < ActiveRecord::Base
     Result.where(race: self.race)
           .order({duration: :asc, date: :desc})
           .first
+  end
+
+  def unique_within_race_and_year
+    if self.race.present? && self.date.present? && Result.where(race: self.race, date: self.date.beginning_of_year..self.date.end_of_year).where.not(id: self.id).exists?
+      errors.add(:base, "A Result for #{self.race.name} in #{self.date.year} already exists")
+    end
   end
 
   def self.from_csv(filename, user)

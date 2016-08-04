@@ -64,6 +64,17 @@ feature 'Create Results', type: :feature do
       expect(page).to have_content("Fastest Duration is not in the format 'hh:mm:ss'")
       expect(page).to have_content("Median Duration is not in the format 'hh:mm:ss'")
     end
+
+    scenario 'fails when result for that race and year already exists' do
+      visit result_path(martinborough_2014)
+      click_link 'Edit'
+
+      fill_in 'Date', with: martinborough_2013.date.to_s
+
+      expect{ click_button 'Save' }.to_not change{martinborough_2014.updated_at}
+
+      expect(page).to have_content('A Result for Martinborough Charity Fun Ride in 2013 already exists')
+    end
   end
 
   context 'Timing Team Import' do
