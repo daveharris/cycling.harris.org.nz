@@ -3,7 +3,7 @@ class ChangeResultPositionDataType < ActiveRecord::Migration
     change_column :results, :timing_url, :string
     change_column :results, :strava_url, :string
 
-    if ActiveRecord::Base.retrieve_connection.kind_of?(ActiveRecord::ConnectionAdapters::PostgreSQLAdapter)
+    if defined?(ActiveRecord::ConnectionAdapters::PostgreSQLAdapter) && ActiveRecord::Base.retrieve_connection.kind_of?(ActiveRecord::ConnectionAdapters::PostgreSQLAdapter)
       execute 'ALTER TABLE results ALTER COLUMN position TYPE integer USING CAST(position as INTEGER);'
       execute 'ALTER TABLE results ALTER COLUMN finishers TYPE integer USING CAST(finishers as INTEGER);'
     else

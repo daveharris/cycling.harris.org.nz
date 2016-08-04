@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+ruby '2.3.1'
 
 gem 'rails', '~> 4.2'
 
@@ -31,9 +31,8 @@ group :development do
   gem 'spring'
   gem 'web-console'
   gem 'better_errors'
-  gem 'binding_of_caller', platforms: [:mri_21]
+  gem 'binding_of_caller'
   gem 'quiet_assets'
-  gem 'rails_layout'
   gem 'pry-rails'
 end
 
