@@ -1,6 +1,6 @@
 <h1><%= @race.to_s %></h1>
 
-<%= content_tag(:canvas, nil, id: 'result_duration_over_time_chart', width: 300, height: 100, data: @chart_data) %>
+<%= content_tag(:canvas, nil, id: 'result_duration_over_time_chart', data: @chart_data) %>
 
 <% if @results.any? %>
   <div id="your-results" class="list-group col-md-4">

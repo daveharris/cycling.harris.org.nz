@@ -37,7 +37,7 @@ $(document).on('ready page:load', function () {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
       scales: {
         yAxes: [{
           ticks: {
@@ -47,6 +47,7 @@ $(document).on('ready page:load', function () {
         }]
       },
       tooltips: {
+        mode: 'label',
         callbacks: {
           label: function(tooltipItem, data) {
             return data.datasets[tooltipItem.datasetIndex].label + ': ' + epoch_to_hh_mm_ss(tooltipItem.yLabel)
