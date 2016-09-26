@@ -6,5 +6,11 @@ FactoryGirl.define do
     last_name 'Harris'
     email 'dave@harris.org.nz'
     password 'password'
+
+    factory :ian do
+      first_name 'Ian'
+      last_name 'Harris'
+      email 'ian@harris.org.nz'
+    end
   end
 end

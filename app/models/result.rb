@@ -15,6 +15,8 @@ class Result < ActiveRecord::Base
 
   scope :date_desc, -> { order(date: :desc) }
   scope :date_asc,  -> { order(date: :asc) }
+  scope :in_year,   ->(date) { where(date: date.beginning_of_year..date.end_of_year) }
+  scope :for_user,  ->(user) { where(user: user) }
 
   DURATION_FIELDS.each do |field|
     field_s = "#{field}_s"
@@ -60,12 +62,6 @@ class Result < ActiveRecord::Base
     Result.where(race: self.race)
           .order({duration: :asc, date: :desc})
           .first
-  end
-
-  def unique_within_race_and_year
-    if self.race.present? && self.date.present? && Result.where(race: self.race, date: self.date.beginning_of_year..self.date.end_of_year).where.not(id: self.id).exists?
-      errors.add(:base, "A Result for #{self.race.name} in #{self.date.year} already exists")
-    end
   end
 
   def self.from_csv(filename, user)
@@ -130,4 +126,17 @@ class Result < ActiveRecord::Base
 
     self.update!(result_details)
   end
+
+  private
+
+  def unique_within_race_and_year
+    if self.race.present? &&
+       self.date.present? &&
+       self.user.present? &&
+       Result.for_user(self.user).in_year(self.date).where(race: self.race).where.not(id: self.id).exists?
+
+      errors.add(:base, "A Result by #{self.user.to_s} for #{self.race.name} in #{self.date.year} already exists")
+    end
+  end
+
 end
