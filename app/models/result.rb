@@ -41,6 +41,10 @@ class Result < ActiveRecord::Base
     "#{self.race.try(:slug)}-#{self.date.try(:year)}"
   end
 
+  def should_generate_new_friendly_id?
+    true
+  end
+
   def date_for_form
     read_attribute(:date).try(:strftime, '%-d %b %Y')
   end
