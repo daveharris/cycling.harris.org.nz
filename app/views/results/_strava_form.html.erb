@@ -1,6 +1,6 @@
 <%= bootstrap_form_tag(url: strava_results_path, layout: :horizontal, label_col: 'col-sm-2', control_col: 'col-sm-6') do |f| %>
   <%= f.collection_select :race_id, Race.all, :id, :collection_select_name, {prompt: 'Select Race...'}, {id: 'race_id'} %>
-  <%= f.text_field :strava_activity_id, label: 'Strava Activity ID/URL', append: ion_icon(:link) %>
+  <%= f.text_field :strava_activity_id, label: 'Strava Activity ID/URL', append: icon(:link) %>
 
   <%= f.submit 'Import', class: 'btn btn-primary' %>
 <% end %>

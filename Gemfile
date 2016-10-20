@@ -10,9 +10,9 @@ gem 'jquery-rails'
 
 gem 'sass-rails'
 gem 'bootstrap-sass'
-gem 'font-ionicons-rails'
 gem 'bootstrap_form'
 gem 'bootstrap-datepicker-rails'
+gem 'font-awesome-sass'
 gem 'chartjs-ror'
 
 gem 'draper'

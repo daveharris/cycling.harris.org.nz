@@ -1,10 +1,10 @@
 <%= bootstrap_form_for :session, url: session_path, layout: :horizontal, label_col: 'col-md-0', control_col: 'col-md-4' do |form| %>
   <div class="text-field">
-    <%= form.text_field :email, type: 'email', hide_label: true, prepend: ion_icon(:email), placeholder: 'Email Address' %>
+    <%= form.text_field :email, type: 'email', hide_label: true, prepend: icon(:envelope), placeholder: 'Email Address' %>
   </div>
 
   <div class="password-field">
-    <%= form.password_field :password, hide_label: true, prepend: ion_icon(:key), placeholder: 'Password' %>
+    <%= form.password_field :password, hide_label: true, prepend: icon(:key, nil, class: 'fa-flip-vertical'), placeholder: 'Password' %>
   </div>
 
   <div class="submit-field">

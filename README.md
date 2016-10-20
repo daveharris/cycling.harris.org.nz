@@ -16,4 +16,4 @@
 - [X] Graph results over the years
 - [X] Upgrade chartjs-ror from v2 -> v3
 - [X] Fix weird chart resizing issue with responsive mobile width
-- [X] Consider moving to http://ionicons.com/
+- [ ] Consider moving to http://ionicons.com/

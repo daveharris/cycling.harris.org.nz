@@ -6,7 +6,7 @@
   <div id="your-results" class="list-group col-md-4">
     <h2>Your Results</h2>
     <% @results.each do |result| %>
-      <%= link_to("#{ion_icon(:calendar)} #{result.date} #{ion_icon('ios-stopwatch-outline')} #{duration_in_words(result.duration)}".html_safe, result, class: "list-group-item") %>
+      <%= link_to("#{icon(:calendar)} #{result.date} #{icon('clock-o')} #{duration_in_words(result.duration)}".html_safe, result, class: "list-group-item") %>
     <% end %>
   </div>
 <% end %>

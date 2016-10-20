@@ -4,7 +4,7 @@
 
 <div class="row">
   <%= link_to result_path(@result), method: :delete, class: 'btn btn-danger col-md-offset-2 col-md-3' do %>
-    <%= ion_icon(:trash) %> Delete
+    <%= icon(:trash) %> Delete
   <% end %>
 
   <%= bootstrap_form_for(@result, url: timing_team_enrich_result_path(@result), method: :patch) do |f| %>

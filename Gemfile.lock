@@ -99,8 +99,8 @@ GEM
     factory_girl_rails (4.7.0)
       factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
-    font-ionicons-rails (2.0.1.5)
-      railties (>= 3.2, < 6.0)
+    font-awesome-sass (4.3.2.1)
+      sass (~> 3.2)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.3.6)
@@ -268,7 +268,7 @@ DEPENDENCIES
   database_cleaner
   draper
   factory_girl_rails
-  font-ionicons-rails
+  font-awesome-sass
   friendly_id
   jquery-rails
   launchy
