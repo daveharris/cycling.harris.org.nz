@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Strava';
+  src:  url('strava.eot?');
+  src:  url('strava.eot?#iefix')  format('embedded-opentype'),
+        url('strava.ttf?')        format('truetype'),
+        url('strava.woff?')       format('woff'),
+        url('strava.svg?#strava') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa-strava:before {
+  font-family: 'Strava' !important;
+  content: "\e900";
+}
