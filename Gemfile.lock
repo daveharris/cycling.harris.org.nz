@@ -215,6 +215,8 @@ GEM
       tilt (>= 1.1, < 3)
     slop (3.6.0)
     smarter_csv (1.1.0)
+    source-sans-pro-rails (0.7.0)
+      railties (>= 3.2)
     spring (1.7.2)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -283,6 +285,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   smarter_csv
+  source-sans-pro-rails
   spring
   spring-commands-rspec
   sqlite3

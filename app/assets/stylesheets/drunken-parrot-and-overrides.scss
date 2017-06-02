@@ -1,0 +1,69 @@
+@import "drunken-parrot";
+
+// from vendor/assets/stylesheets/drunken-parrot.css:1470
+// .navbar {
+//   min-height: 76px;
+//   border-radius: 4px;
+// }
+
+// Push body down by navbar min-height
+body {
+  padding-top: 76px+20px;
+}
+
+// Override border-radius on fixed/static navbar
+.navbar-fixed-top, .navbar-static-top {
+  border-radius: 0px;
+}
+
+// Override select box appearance back to default
+select.form-control {
+  -webkit-appearance: menulist;
+}
+
+// Remove border-bottom of expanded collapsable panels
+.panel > .panel-heading + .panel-collapse .panel-body {
+  border-top: none;
+}
+
+// override Source Sans Pro font paths to come from asset pipeline
+@font-face {
+  font-family: 'SourceSansPro';
+  src: font-url('sourcesanspro-regular.eot');
+  src: font-url('sourcesanspro-regular.eot?#iefix')                format('embedded-opentype'),
+       font-url('sourcesanspro-regular.woff')                      format('woff'),
+       font-url('sourcesanspro-regular.ttf')                       format('truetype'),
+       font-url('sourcesanspro-regular.svg#sourcesanspro-regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SourceSansProExtraLight';
+  src: font-url('sourcesanspro-extralight.eot');
+  src: font-url('sourcesanspro-extralight.eot?#iefix')                   format('embedded-opentype'),
+       font-url('sourcesanspro-extralight.woff')                         format('woff'),
+       font-url('sourcesanspro-extralight.ttf')                          format('truetype'),
+       font-url('sourcesanspro-extralight.svg#sourcesanspro-extralight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SourceSansProBold';
+  src: font-url('sourcesanspro-bold.eot');
+  src: font-url('sourcesanspro-bold.eot?#iefix')             format('embedded-opentype'),
+       font-url('sourcesanspro-bold.woff')                   format('woff'),
+       font-url('sourcesanspro-bold.ttf')                    format('truetype'),
+       font-url('sourcesanspro-bold.svg#sourcesanspro-bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SourceSansProSemiBold';
+  src: font-url('sourcesanspro-semibold.eot');
+  src: font-url('sourcesanspro-semibold.eot?#iefix')                 format('embedded-opentype'),
+       font-url('sourcesanspro-semibold.woff')                       format('woff'),
+       font-url('sourcesanspro-semibold.ttf')                        format('truetype'),
+       font-url('sourcesanspro-semibold.svg#sourcesanspro-semibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

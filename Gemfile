@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'bootstrap_form'
 gem 'bootstrap-datepicker-rails'
 gem 'font-awesome-sass'
+gem 'source-sans-pro-rails'
 gem 'chartjs-ror'
 
 gem 'draper'

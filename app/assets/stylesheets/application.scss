@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require rails_bootstrap_forms
  *= require bootstrap-datepicker3
  *= require_self
@@ -19,6 +18,12 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "strava-font";
+
+@import "bootstrap-and-overrides";
+@import "drunken-parrot-and-overrides";
+
+@import "general";
+@import "results";
 
 i.fa {
   @extend .fa-fw;
