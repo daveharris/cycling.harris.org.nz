@@ -10,7 +10,7 @@
 
   <%= f.text_field :duration_s, append: icon('clock-o') %>
 
-  <%= f.text_field :date, 'data-provide' => 'datepicker', 'data-date-autoclose' => true, 'data-date-format' => 'd M yyyy', value: @result.date_for_form, append: icon(:calendar) %>
+  <%= f.text_field :date, data: {'provide' => 'datepicker', 'date-autoclose' => true, 'date-format' => 'd M yyyy'}, value: @result.date_for_form, append: icon(:calendar) %>
 
   <%= f.text_field :fastest_duration_s, label: 'Fastest Duration', append: icon('clock-o') %>
 
@@ -29,6 +29,8 @@
   <%= f.text_area :comment, append: icon(:comment) %>
 
   <div class="row push-down">
-    <%= f.submit 'Save', class: "btn btn-default col-md-offset-2 col-md-8" %>
+    <div class="col-md-offset-2 col-md-8">
+      <%= f.submit 'Save', class: "btn btn-success btn-block" %>
+    </div>
   </div>
 <% end %>

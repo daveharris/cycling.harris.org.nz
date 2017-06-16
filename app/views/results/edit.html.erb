@@ -3,12 +3,16 @@
 <%= render 'form' %>
 
 <div class="row">
-  <%= link_to result_path(@result), method: :delete, class: 'btn btn-danger col-md-offset-2 col-md-3' do %>
-    <%= icon(:trash) %> Delete
-  <% end %>
+  <div class="col-md-offset-2 col-md-4">
+    <%= link_to result_path(@result), method: :delete, class: 'btn btn-danger btn-block' do %>
+      <%= icon(:trash) %> Delete
+    <% end %>
+  </div>
 
-  <%= bootstrap_form_for(@result, url: timing_team_enrich_result_path(@result), method: :patch) do |f| %>
-    <%= f.hidden_field :race_id %>
-    <%= f.submit 'Enrich from The Timing Team...', class: 'btn btn-default col-md-offset-2 col-md-3' %>
-  <% end %>
+  <div class="col-md-4">
+    <%= bootstrap_form_for(@result, url: timing_team_enrich_result_path(@result), method: :patch) do |f| %>
+      <%= f.hidden_field :race_id %>
+      <%= f.submit 'Enrich from The Timing Team...', class: 'btn btn-default btn-block' %>
+    <% end %>
+  </div>
 </div>
