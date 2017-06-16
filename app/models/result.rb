@@ -8,8 +8,8 @@ class Result < ActiveRecord::Base
   belongs_to :user
   belongs_to :race
 
-  validates :user_id, :race_id, :duration, :date, presence: true
-  validate :unique_within_race_and_year
+  validates :user_id, :race_id, :date, :duration_s, presence: true
+  validate  :unique_within_race_and_year
 
   friendly_id :race_date
 
@@ -34,7 +34,7 @@ class Result < ActiveRecord::Base
   end
 
   def name
-    "#{self.date.year} #{self.race.name}"
+    "#{self.date.try(:year)} #{self.race.try(:name)}"
   end
 
   def race_date
