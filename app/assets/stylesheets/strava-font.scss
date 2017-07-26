@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Strava';
-  src:  url('strava.eot?');
-  src:  url('strava.eot?#iefix')  format('embedded-opentype'),
-        url('strava.ttf?')        format('truetype'),
-        url('strava.woff?')       format('woff'),
-        url('strava.svg?#strava') format('svg');
+  src:  font-url('strava.eot?');
+  src:  font-url('strava.eot?#iefix')  format('embedded-opentype'),
+        font-url('strava.ttf?')        format('truetype'),
+        font-url('strava.woff?')       format('woff'),
+        font-url('strava.svg?#strava') format('svg');
   font-weight: normal;
   font-style: normal;
 }
