@@ -10,16 +10,61 @@
   </head>
 
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main" class="container">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
-    
-    <footer>
-    </footer>
+
+    <div id="page-wrapper">
+
+      <header id="header">
+        <h1><%= link_to icon(:home, 'Home'), root_path %></h1>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <nav id="menu">
+        <div class="inner">
+          <h2>Menu</h2>
+          <ul class="links">
+            <li><%= link_to 'Results', results_path %></li>
+            <li><%= link_to 'Races', races_path %></li>
+
+            <% if signed_in? %>
+              <li><%= icon(:user, "Logged in as #{current_user.first_name}") %></li>
+              <li><%= link_to 'Logout', sign_out_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to 'Login', sign_in_path %></li>
+            <% end %>
+          </ul>
+          <a href="#" class="close">Close</a>
+        </div>
+      </nav>
+
+      <section id="banner">
+        <div class="inner">
+          <div class="logo"><span class="icon fa-bicycle"></span></div>
+          <h2>Cycling</h2>
+          <p>The cycling record of the Harris family</p>
+        </div>
+      </section>
+      <%# render 'layouts/messages' %>
+
+      <section id="wrapper">
+        <section id="one" class="wrapper spotlight style1">
+          <div class="inner">
+            <%= yield %>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="footer">
+        <div class="inner">
+          <ul class="copyright">
+            <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
 
   </body>
 </html>
