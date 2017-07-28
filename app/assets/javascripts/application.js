@@ -12,8 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
-//= require bootstrap-datepicker/core
 //= require Chart.min
+//= require solid-state/skel.min.js
+//= require solid-state/jquery.scrollex.min.js
+//= require solid-state/util.js
+//= require solid-state/main.js
 //= require_tree .
 

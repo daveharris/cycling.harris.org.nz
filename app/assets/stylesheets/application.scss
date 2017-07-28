@@ -11,14 +11,13 @@
  * file per style scope.
  *
  *= require_tree .
- *= require rails_bootstrap_forms
- *= require bootstrap-datepicker3
  *= require_self
  */
 
+@import "solid-state/main";
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "strava-font";
 
 i.fa {
   @extend .fa-fw;
