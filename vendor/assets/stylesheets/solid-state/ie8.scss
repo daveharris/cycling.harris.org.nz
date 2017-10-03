@@ -12,7 +12,7 @@
 /* Basic */
 
 	body {
-		-ms-behavior: url('assets/js/backgroundsize.min.htc');
+		-ms-behavior: url('solid-state/backgroundsize.min.htc');
 	}
 
 /* Type */
@@ -43,7 +43,7 @@
 	button,
 	.button {
 		position: relative;
-		-ms-behavior: url('assets/js/ie/PIE.htc');
+		-ms-behavior: url('solid-state/ie/PIE.htc');
 		border: solid 2px _palette(fg-bold);
 
 		&.special {
@@ -60,7 +60,7 @@
 	select,
 	textarea {
 		position: relative;
-		-ms-behavior: url('assets/js/ie/PIE.htc');
+		-ms-behavior: url('solid-state/ie/PIE.htc');
 		background: transparent;
 		border: solid 2px _palette(fg-bold);
 	}
@@ -111,7 +111,7 @@
 
 	.features {
 		article {
-			-ms-behavior: url('assets/js/ie/PIE.htc');
+			-ms-behavior: url('solid-state/ie/PIE.htc');
 			position: relative;
 			width: 44%;
 
@@ -150,11 +150,11 @@
 
 		&.spotlight {
 			.image {
-				-ms-behavior: url('assets/js/ie/PIE.htc');
+				-ms-behavior: url('solid-state/ie/PIE.htc');
 
 				img {
 					position: relative;
-					-ms-behavior: url('assets/js/ie/PIE.htc');
+					-ms-behavior: url('solid-state/ie/PIE.htc');
 				}
 			}
 		}
@@ -166,7 +166,7 @@
 		.logo {
 			.icon {
 				border: solid 2px _palette(fg-bold);
-				-ms-behavior: url('assets/js/ie/PIE.htc');
+				-ms-behavior: url('solid-state/ie/PIE.htc');
 			}
 		}
 
