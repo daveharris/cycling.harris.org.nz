@@ -6,6 +6,8 @@ class ResultsController < ApplicationController
     if params[:result]
       filter_params = result_params.keep_if{|k,v| v.present?}
       @results = Result.where(filter_params)
+    elsif current_user
+      @results = Result.rider(current_user)
     else
       @results = Result
     end

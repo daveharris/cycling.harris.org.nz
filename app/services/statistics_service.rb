@@ -10,7 +10,7 @@ class StatisticsService
     @statistics.each do |label, variables|
       results = Result.joins(:race)
       results = results.in_year(variables[:scope]) if variables[:scope].present?
-      results = results.for_user(user) if user.present?
+      results = results.rider(user) if user.present?
 
       @statistics[label][:results],
       @statistics[label][:distance],
