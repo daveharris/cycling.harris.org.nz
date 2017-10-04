@@ -5,10 +5,12 @@ class ResultsController < ApplicationController
   def index
     if params[:result]
       filter_params = result_params.keep_if{|k,v| v.present?}
-      @results = Result.where(filter_params).date_desc.decorate
+      @results = Result.where(filter_params)
     else
-      @results = Result.date_desc.decorate
+      @results = Result
     end
+
+    @results = @results.includes(:race, :user).date_desc.decorate
   end
 
   def show

@@ -3,7 +3,7 @@ class RacesController < ApplicationController
   before_action :require_login, except: [:index, :show]
 
   def index
-    @races = Race.all
+    @races = Race.alphabetical
   end
 
   def show

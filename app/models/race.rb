@@ -8,7 +8,7 @@ class Race < ActiveRecord::Base
 
   friendly_id :slug_candidates
 
-  default_scope { order(distance: :desc) }
+  scope :alphabetical, -> { order(name: :asc, distance: :asc) }
 
   def slug_candidates
     [
