@@ -73,7 +73,7 @@ feature 'Create Results', type: :feature do
 
       expect{ click_button 'Save' }.to_not change{martinborough_2014.updated_at}
 
-      expect(page).to have_content('A Result for Martinborough Charity Fun Ride in 2013 already exists')
+      expect(page).to have_content('A Result by Dave Harris for Martinborough Charity Fun Ride in 2013 already exists')
     end
   end
 

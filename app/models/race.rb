@@ -17,6 +17,10 @@ class Race < ActiveRecord::Base
     ]
   end
 
+  def should_generate_new_friendly_id?
+    true
+  end
+
   def to_s
     "#{name} (#{distance}km)"
   end
