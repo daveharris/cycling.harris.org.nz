@@ -49,10 +49,6 @@ class Result < ActiveRecord::Base
     true
   end
 
-  def date_for_form
-    read_attribute(:date).try(:strftime, '%-d %b %Y')
-  end
-
   def find_previous_result
     Result.rider(self.user)
           .where(race: self.race)

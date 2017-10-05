@@ -52,4 +52,8 @@ class ResultDecorator < Draper::Decorator
     self.date.try(:year)
   end
 
+  def date_for_form
+    read_attribute(:date).try(:strftime, '%-d %b %Y')
+  end
+
 end

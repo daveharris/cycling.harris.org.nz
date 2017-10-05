@@ -21,14 +21,14 @@ class ResultsController < ApplicationController
   end
 
   def new
-    @result = Result.new
+    @result = Result.new.decorate
   end
 
   def edit
   end
 
   def create
-    @result = Result.new(result_params)
+    @result = Result.new(result_params).decorate
 
     if @result.save
       redirect_to @result, notice: 'Result was successfully created.'
