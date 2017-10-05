@@ -11,12 +11,12 @@ class Result < ActiveRecord::Base
   validates :user_id, :race_id, :date, :duration_s, presence: true
   validate  :unique_within_race_and_year
 
-  friendly_id :race_date
+  friendly_id :slug_candidates
 
   scope :date_desc, -> { order(date: :desc) }
   scope :date_asc,  -> { order(date: :asc) }
   scope :in_year,   ->(date) { where(date: date.beginning_of_year..date.end_of_year) }
-  scope :for_user,  ->(user) { where(user: user) }
+  scope :rider,     ->(user) { where(user: user) }
 
   DURATION_FIELDS.each do |field|
     field_s = "#{field}_s"
@@ -39,27 +39,27 @@ class Result < ActiveRecord::Base
     "#{self.date.try(:year)} #{self.race.try(:name)}"
   end
 
-  def race_date
-    "#{self.race.try(:slug)}-#{self.date.try(:year)}"
+  def slug_candidates
+    [
+      [:user, self.race.try(:slug), self.date.try(:year)]
+    ]
   end
 
   def should_generate_new_friendly_id?
     true
   end
 
-  def date_for_form
-    read_attribute(:date).try(:strftime, '%-d %b %Y')
-  end
-
   def find_previous_result
-    Result.where(race: self.race)
+    Result.rider(self.user)
+          .where(race: self.race)
           .where('date < ?', self.date)
           .date_desc
           .first
   end
 
   def find_personal_best
-    Result.where(race: self.race)
+    Result.rider(self.user)
+          .where(race: self.race)
           .order({duration: :asc, date: :desc})
           .first
   end
@@ -133,7 +133,11 @@ class Result < ActiveRecord::Base
     if self.race.present? &&
        self.date.present? &&
        self.user.present? &&
-       Result.for_user(self.user).in_year(self.date).where(race: self.race).where.not(id: self.id).exists?
+       Result.rider(self.user)
+             .in_year(self.date)
+             .where(race: self.race)
+             .where.not(id: self.id)
+             .exists?
 
       errors.add(:base, "A Result by #{self.user.to_s} for #{self.race.name} in #{self.date.year} already exists")
     end

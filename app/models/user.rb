@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
 
   has_many :results
 
+  scope :alphabetical, -> { order(first_name: :asc, last_name: :asc) }
+
   def to_s
     "#{first_name} #{last_name}"
   end

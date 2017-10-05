@@ -4,9 +4,9 @@
     <div class="col-md-10"><%= f.alert_message "Please fix the errors below." %></div>
   </div>
 
-  <%= f.collection_select :user_id, User.all, :id, :collection_select_name, selected: current_user.id, label: 'Rider' %>
+  <%= f.collection_select :user_id, User.alphabetical, :id, :collection_select_name, selected: current_user.id, label: 'Rider' %>
 
-  <%= f.collection_select :race_id, Race.all, :id, :collection_select_name, prompt: 'Select Race...' %>
+  <%= f.collection_select :race_id, Race.alphabetical, :id, :collection_select_name, prompt: 'Select Race...' %>
 
   <%= f.text_field :duration_s, append: icon('clock-o') %>
 

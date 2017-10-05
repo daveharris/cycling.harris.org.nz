@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
 
   def index
-    @analytics = StatisticsService.generate(current_user)
+    @statistics = StatisticsService.generate(current_user)
   end
 
 end

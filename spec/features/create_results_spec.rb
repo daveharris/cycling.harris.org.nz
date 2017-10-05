@@ -1,11 +1,14 @@
 feature 'Create Results', type: :feature do
   let!(:martinborough_2014) { FactoryGirl.create(:martinborough_2014_result) }
   let(:martinborough_race) { martinborough_2014.race }
-  let(:user) { martinborough_2014.user }
-  let!(:martinborough_2013) { FactoryGirl.create(:result_2013, race: martinborough_race, user: user) }
+  let(:dave) { martinborough_2014.user }
+  let!(:martinborough_2013) { FactoryGirl.create(:result_2013, race: martinborough_race, user: dave) }
+
+  let(:ian) { FactoryGirl.create(:ian) }
+  let!(:martinborough_ian_2013) { FactoryGirl.create(:result_2013, race: martinborough_race, user: ian) }
 
   before(:each) do
-    login_as(user)
+    login_as(dave)
   end
 
   context 'Manual Form Entry' do
@@ -14,7 +17,7 @@ feature 'Create Results', type: :feature do
       click_link 'Add new Result'
 
       within('#manual') do
-        select user.to_s, from: 'Rider'
+        select dave.to_s, from: 'Rider'
         select martinborough_race.to_s, from: 'Race'
 
         fill_in 'Duration', with: '3:20:10'
@@ -36,7 +39,7 @@ feature 'Create Results', type: :feature do
       click_link 'Results'
       click_link martinborough_2016.date.to_s
 
-      within '.result-martinborough-charity-fun-ride-2016' do
+      within '.result-dave-harris-martinborough-charity-fun-ride-2016' do
         expect(page).to have_content('16 Jun 2016')
         expect(page).to have_content('3:20:10')
       end
@@ -101,8 +104,8 @@ feature 'Create Results', type: :feature do
         end
 
         imported_race = Result.last
-        expect(imported_race.race_id).to eq martinborough_race.id
-        expect(imported_race.user_id).to eq user.id
+        expect(imported_race.race).to eq martinborough_race
+        expect(imported_race.user).to eq dave
         expect(imported_race.date).to eq Date.parse('1st Nov 15')
         expect(imported_race.wind).to eq '10'
         expect(imported_race.position).to eq 73
@@ -110,13 +113,15 @@ feature 'Create Results', type: :feature do
         expect(imported_race.duration).to eq 12442
         expect(imported_race.fastest_duration).to eq 10272
         expect(imported_race.median_duration).to eq 12447
-        expect(imported_race.slug).to eq 'martinborough-charity-fun-ride-2015'
+        expect(imported_race.slug).to eq 'dave-harris-martinborough-charity-fun-ride-2015'
         expect(imported_race.timing_url).to eq timing_url
       end
     end
 
     context 'enrichment' do
-      let!(:minimal_result) { FactoryGirl.create(:minimal_result, date: '1 Nov 2015', race: martinborough_race, user: user, timing_url: timing_url) }
+      let!(:minimal_result) { FactoryGirl.create(:minimal_result, date: '1 Nov 2015', timing_url: timing_url,
+                                                  race: martinborough_race, user: dave)
+                            }
 
       scenario 'enriches the result' do
         visit result_path(minimal_result)
@@ -129,7 +134,7 @@ feature 'Create Results', type: :feature do
         expect(minimal_result.finishers).to eq 156
         expect(minimal_result.fastest_duration).to eq 10272
         expect(minimal_result.median_duration).to eq 12447
-        expect(minimal_result.slug).to eq 'martinborough-charity-fun-ride-2015'
+        expect(minimal_result.slug).to eq 'dave-harris-martinborough-charity-fun-ride-2015'
         expect(minimal_result.timing_url).to eq timing_url
       end
     end
@@ -158,10 +163,10 @@ feature 'Create Results', type: :feature do
       end
 
       imported_race = Result.last
-      expect(imported_race.race_id).to eq martinborough_race.id
-      expect(imported_race.user_id).to eq user.id
+      expect(imported_race.race).to eq martinborough_race
+      expect(imported_race.user).to eq dave
       expect(imported_race.date).to eq Date.parse('1st Nov 15')
-      expect(imported_race.slug).to eq 'martinborough-charity-fun-ride-2015'
+      expect(imported_race.slug).to eq 'dave-harris-martinborough-charity-fun-ride-2015'
       expect(imported_race.strava_url).to eq strava_url
     end
 
@@ -197,9 +202,9 @@ feature 'Create Results', type: :feature do
 
       imported_race = Result.last
       expect(imported_race.race.to_s).to eq "Tour of Waikanae (100km)"
-      expect(imported_race.user_id).to eq user.id
+      expect(imported_race.user).to eq dave
       expect(imported_race.date).to eq Date.parse('12th Oct 14')
-      expect(imported_race.slug).to eq 'tour-of-waikanae-100-2014'
+      expect(imported_race.slug).to eq 'dave-harris-tour-of-waikanae-100-2014'
     end
   end
 

@@ -3,12 +3,13 @@ class RacesController < ApplicationController
   before_action :require_login, except: [:index, :show]
 
   def index
-    @races = Race.all
+    @races = Race.alphabetical
   end
 
   def show
-    @chart_data = @race.result_duration_over_time if @race.results.any?
-    @results = Result.where(race: @race, user: current_user).date_desc
+    @results = @race.results.rider(current_user).date_desc
+    @results.load # Explicit loading to reduce DB queries in controller and view
+    @chart_data = @race.result_duration_over_time(current_user) if @results.size > 1
   end
 
   def new

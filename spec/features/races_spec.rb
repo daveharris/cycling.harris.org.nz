@@ -1,9 +1,12 @@
 feature 'Races', type: :feature do
   let!(:martinborough_2014) { FactoryGirl.create(:martinborough_2014_result) }
   let(:martinborough_race) { martinborough_2014.race }
-  let(:user) { martinborough_2014.user }
-  let!(:martinborough_2015) { FactoryGirl.create(:result_2015, race: martinborough_race, user: user) }
-  let!(:martinborough_2013) { FactoryGirl.create(:result_2013, race: martinborough_race, user: user) }
+  let(:dave) { martinborough_2014.user }
+  let!(:martinborough_2015) { FactoryGirl.create(:result_2015, race: martinborough_race, user: dave) }
+  let!(:martinborough_2013) { FactoryGirl.create(:result_2013, race: martinborough_race, user: dave) }
+
+  let(:ian) { FactoryGirl.create(:ian) }
+  let!(:martinborough_ian_2013) { FactoryGirl.create(:result_2013, race: martinborough_race, user: ian) }
 
   context 'as unauthenticated user' do
     scenario 'can view all races' do
@@ -31,11 +34,11 @@ feature 'Races', type: :feature do
 
   context 'as authenticated user' do
     before(:each) do
-      login_as(user)
+      login_as(dave)
     end
 
     scenario 'is logged in' do
-      expect(page).to have_content("Logged in as #{user.first_name}")
+      expect(page).to have_content("Logged in as #{dave.first_name}")
     end
 
     scenario 'can view all my results of a race' do

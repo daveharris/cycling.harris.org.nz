@@ -5,10 +5,14 @@ class ResultsController < ApplicationController
   def index
     if params[:result]
       filter_params = result_params.keep_if{|k,v| v.present?}
-      @results = Result.where(filter_params).date_desc.decorate
+      @results = Result.where(filter_params)
+    elsif current_user
+      @results = Result.rider(current_user)
     else
-      @results = Result.date_desc.decorate
+      @results = Result
     end
+
+    @results = @results.includes(:race, :user).date_desc.decorate
   end
 
   def show
@@ -17,14 +21,14 @@ class ResultsController < ApplicationController
   end
 
   def new
-    @result = Result.new
+    @result = Result.new.decorate
   end
 
   def edit
   end
 
   def create
-    @result = Result.new(result_params)
+    @result = Result.new(result_params).decorate
 
     if @result.save
       redirect_to @result, notice: 'Result was successfully created.'

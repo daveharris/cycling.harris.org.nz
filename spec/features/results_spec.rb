@@ -1,9 +1,12 @@
 feature 'Results', type: :feature do
   let!(:martinborough_2014) { FactoryGirl.create(:martinborough_2014_result) }
   let(:martinborough_race) { martinborough_2014.race }
-  let(:user) { martinborough_2014.user }
-  let!(:martinborough_2015) { FactoryGirl.create(:result_2015, race: martinborough_race, user: user) }
-  let!(:martinborough_2013) { FactoryGirl.create(:result_2013, race: martinborough_race, user: user) }
+  let(:dave) { martinborough_2014.user }
+  let!(:martinborough_2015) { FactoryGirl.create(:result_2015, race: martinborough_race, user: dave) }
+  let!(:martinborough_2013) { FactoryGirl.create(:result_2013, race: martinborough_race, user: dave) }
+
+  let(:ian) { FactoryGirl.create(:ian) }
+  let!(:martinborough_ian_2013) { FactoryGirl.create(:result_2013, race: martinborough_race, user: ian) }
 
   context 'as unauthenticated user' do
     scenario 'can view all results' do
@@ -19,7 +22,7 @@ feature 'Results', type: :feature do
       click_button 'Apply Filter'
       expect(page).to have_css('.row.result', count: Result.count)
 
-      select user.to_s, from: 'result_user_id'
+      select dave.to_s, from: 'result_user_id'
       select taupo_race.to_s, from: 'result_race_id'
       click_button 'Apply Filter'
       expect(page).to have_css('row.result', count: taupo_race.results.count)
@@ -44,22 +47,22 @@ feature 'Results', type: :feature do
 
   context 'as authenticated user' do
     before(:each) do
-      login_as(user)
+      login_as(dave)
     end
 
     scenario 'is logged in' do
-      expect(page).to have_content("Logged in as #{user.first_name}")
+      expect(page).to have_content("Logged in as #{dave.first_name}")
     end
 
     scenario 'can view the previous result' do
       visit result_path(martinborough_2014)
 
-      within '.result-martinborough-charity-fun-ride-2014' do
+      within '.result-dave-harris-martinborough-charity-fun-ride-2014' do
         expect(page).to have_content('24:05 than previous') # duration
         expect(page).to have_content('2:36 than previous')  # fastest
         expect(page).to have_content('17:37 than previous') # median
       end
-      within '.result-martinborough-charity-fun-ride-2013' do
+      within '.result-dave-harris-martinborough-charity-fun-ride-2013' do
         expect(page).to have_content('Previous Result')
         within '.panel-body' do
           expect(page).to have_content('1st Result')
@@ -70,10 +73,10 @@ feature 'Results', type: :feature do
     scenario 'can view your personal best result' do
       visit result_path(martinborough_2014)
 
-      within '.result-martinborough-charity-fun-ride-2014' do
+      within '.result-dave-harris-martinborough-charity-fun-ride-2014' do
         expect(page).to have_content('24:48 than Personal Best') # duration
       end
-      within '.result-martinborough-charity-fun-ride-2015' do
+      within '.result-dave-harris-martinborough-charity-fun-ride-2015' do
         expect(page).to have_content('Personal Best')
       end
     end
