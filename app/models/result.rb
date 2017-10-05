@@ -11,7 +11,7 @@ class Result < ActiveRecord::Base
   validates :user_id, :race_id, :date, :duration_s, presence: true
   validate  :unique_within_race_and_year
 
-  friendly_id :race_date
+  friendly_id :slug_candidates
 
   scope :date_desc, -> { order(date: :desc) }
   scope :date_asc,  -> { order(date: :asc) }
@@ -39,8 +39,10 @@ class Result < ActiveRecord::Base
     "#{self.date.try(:year)} #{self.race.try(:name)}"
   end
 
-  def race_date
-    "#{self.race.try(:slug)}-#{self.date.try(:year)}"
+  def slug_candidates
+    [
+      [:user, self.race.try(:slug), self.date.try(:year)]
+    ]
   end
 
   def should_generate_new_friendly_id?

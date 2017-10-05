@@ -57,12 +57,12 @@ feature 'Results', type: :feature do
     scenario 'can view the previous result' do
       visit result_path(martinborough_2014)
 
-      within '.result-martinborough-charity-fun-ride-2014' do
+      within '.result-dave-harris-martinborough-charity-fun-ride-2014' do
         expect(page).to have_content('24:05 than previous') # duration
         expect(page).to have_content('2:36 than previous')  # fastest
         expect(page).to have_content('17:37 than previous') # median
       end
-      within '.result-martinborough-charity-fun-ride-2013' do
+      within '.result-dave-harris-martinborough-charity-fun-ride-2013' do
         expect(page).to have_content('Previous Result')
         within '.panel-body' do
           expect(page).to have_content('1st Result')
@@ -73,10 +73,10 @@ feature 'Results', type: :feature do
     scenario 'can view your personal best result' do
       visit result_path(martinborough_2014)
 
-      within '.result-martinborough-charity-fun-ride-2014' do
+      within '.result-dave-harris-martinborough-charity-fun-ride-2014' do
         expect(page).to have_content('24:48 than Personal Best') # duration
       end
-      within '.result-martinborough-charity-fun-ride-2015' do
+      within '.result-dave-harris-martinborough-charity-fun-ride-2015' do
         expect(page).to have_content('Personal Best')
       end
     end
