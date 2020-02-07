@@ -1,0 +1,36 @@
+<%= bootstrap_form_for(@result, layout: :horizontal, label_col: 'col-md-2', control_col: 'col-md-8') do |f| %>
+
+  <div class="row">
+    <div class="col-md-10"><%= f.alert_message "Please fix the errors below." %></div>
+  </div>
+
+  <%= f.collection_select :user_id, User.alphabetical, :id, :collection_select_name, selected: current_user.id, label: 'Rider' %>
+
+  <%= f.collection_select :race_id, Race.alphabetical, :id, :collection_select_name, prompt: 'Select Race...' %>
+
+  <%= f.text_field :duration_s, append: icon(:fas, 'clock') %>
+
+  <%= f.text_field :date, data: {'provide' => 'datepicker', 'date-autoclose' => true, 'date-format' => 'd M yyyy'}, value: @result.date_for_form, append: icon('far', :calendar) %>
+
+  <%= f.text_field :fastest_duration_s, label: 'Fastest Duration', append: icon(:fas, 'clock') %>
+
+  <%= f.text_field :median_duration_s, label: 'Median Duration', append: icon(:fas, 'clock') %>
+
+  <%= f.text_field :wind, append: icon(:fas, :flag) %>
+
+  <%= f.text_field :position, append: icon(:fas, 'flag-checkered') %>
+
+  <%= f.text_field :finishers, append: icon(:fas, 'flag-checkered') %>
+
+  <%= f.text_field :timing_url, label: 'Timing URL', append: icon(:fas, :link) %>
+
+  <%= f.text_field :strava_url, label: 'Strava URL', append: icon(:fab, :strava) %>
+
+  <%= f.text_area :comment, append: icon(:fas, :comment) %>
+
+  <div class="row push-down">
+    <div class="col-md-offset-2 col-md-8">
+      <%= f.submit 'Save', class: "btn btn-success btn-block" %>
+    </div>
+  </div>
+<% end %>

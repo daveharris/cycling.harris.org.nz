@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="panel panel-info panel-filter">
+    <div class="panel-heading">
+      <h3 class="panel-title">Filter</h3>
+    </div>
+    <div class="panel-body">
+      <%= bootstrap_form_for(Result.new, method: 'get', layout: :inline) do |f| %>
+        <%= f.collection_select :user_id, User.alphabetical, :id, :collection_select_name, include_blank: 'Select Rider...', hide_label: true, selected: params.dig(:result, :user_id) || current_user.try(:id) %>
+
+        <%= f.collection_select :race_id, Race.alphabetical, :id, :collection_select_name, include_blank: 'Select Race...', hide_label: true, selected: params.dig(:result, :race_id) %>
+
+        <%= f.button icon(:fas, :filter, 'Apply Filter').html_safe, class: 'btn btn-default' %>
+      <% end %>
+    </div>
+  </div>
+</div>

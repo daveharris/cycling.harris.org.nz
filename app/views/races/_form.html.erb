@@ -1,0 +1,12 @@
+<%= bootstrap_form_for(@race, layout: :horizontal, label_col: 'col-md-2', control_col: 'col-md-6') do |f| %>
+  <div class="row">
+    <div class="col-md-8"><%= f.alert_message "Please fix the errors below." %></div>
+  </div>
+
+  <%= f.text_field :name %>
+  <%= f.number_field :distance, append: 'km' %>
+
+  <div class="row">
+    <%= f.submit 'Save', class: "btn btn-primary col-md-2" %>
+  </div>
+<% end %>

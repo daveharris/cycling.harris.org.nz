@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :races
+  resources :results do
+    post :csv, :strava, :timing_team, on: :collection
+    patch :timing_team_enrich, on: :member
+  end
+
+  root to: 'dashboard#index'
 end

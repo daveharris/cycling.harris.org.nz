@@ -1,0 +1,28 @@
+<div class="row">
+  <h3 class="col-md-3 col-xs-12"><%= icon('far', :calendar) %> <%= link_to(result.date, result) %></h3>
+  <h3 class="col-md-3 col-xs-12"><%= icon('clock-o') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h3>
+  <h3 class="col-md-6 col-xs-12"><%= icon('map-marker') %> <%= link_to(result.race.to_s, result.race) %></h3>
+</div>
+
+<div class="row">
+  <h3 class="col-md-6 col-xs-12"><%= result.previous_time_difference(:duration) %></h3>
+  <h3 class="col-md-6 col-xs-12"><%= personal_best_time_difference(result) %></h3>
+</div>
+
+<div class="row">
+  <h3 class="col-md-6 col-xs-12"><%= result.fastest_duration_icon %></h3>
+  <h3 class="col-md-6 col-xs-12"><%= result.median_duration_icon %></h3>
+</div>
+
+<div class="row">
+  <h3 class="col-md-3 col-xs-12"><%= result.position_icon %></h3>
+  <h3 class="col-md-3 col-xs-12"><%= result.wind_speed_icon %></h3>
+  <h3 class="col-md-2 col-xs-12"><%= icon('fas', :bicycle) %> <%= link_to(result.user.first_name, results_path(result: {user_id: result.user_id})) %></h3>
+  <h3 class="col-md-2 col-xs-12"><%= result.link_icon('Strava', result.strava_url) %></h3>
+</div>
+
+<% if result.comment.present? %>
+  <div class="row">
+    <h4 class="col-md-12"><%= icon(:fas, :comment, result.comment) %></h4>
+  </div>
+<% end %>

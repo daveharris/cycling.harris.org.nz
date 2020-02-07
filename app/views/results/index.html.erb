@@ -1,0 +1,38 @@
+<div class="row title">
+  <div class="col-md-10">
+    <% if params[:result] %>
+      <h1>Filtering Results</h1>
+    <% else %>
+      <h1>All Results</h1>
+    <% end %>
+  </div>
+  <div class="col-md-2">
+    <% if signed_in? %>
+      <%= link_to 'Add new Result(s)', new_result_path, class: 'btn btn-primary pull-right' %>
+    <% else %>
+      <%= link_to 'Login to add new Result(s)', nil, class: 'btn btn-primary pull-right disabled' %>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'filter' %>
+
+<% @results.each do |result| %>
+  <div class="row result result-<%= result.id %> result-<%= result.slug %>">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <h4 class="col-md-2 col-xs-7"><%= icon('far', :calendar) %> <%= link_to(result.date, result) %></h4>
+          <h4 class="col-md-2 col-xs-5"><%= icon('clock-o') %> <%= link_to(duration_in_words(result.duration), result.timing_url) %></h4>
+          <h4 class="col-md-6 col-xs-12"><%= icon('map-marker') %> <%= link_to(result.race.to_s, result.race) %></h4>
+        </div>
+
+        <div class="row">
+          <h4 class="col-md-4 col-xs-12"><%= result.previous_time_difference(:duration) %></h4>
+          <h4 class="col-md-4 col-xs-12"><%= personal_best_time_difference(result) %></h4>
+          <h4 class="col-md-4 col-xs-12"><%= icon('fas', :bicycle) %> <%= link_to(result.user.first_name, results_path(result: {user_id: result.user_id})) %></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

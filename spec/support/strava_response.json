@@ -1,0 +1,792 @@
+{
+  "id": 424029948,
+  "resource_state": 3,
+  "external_id": "F8D1BBF5-85A2-461F-A713-B437F5688AA3",
+  "upload_id": 474095754,
+  "athlete": {
+    "id": 1307167,
+    "resource_state": 1
+  },
+  "name": "Martinborough Charity Fun Ride",
+  "distance": 113564,
+  "moving_time": 12471,
+  "elapsed_time": 13042,
+  "total_elevation_gain": 1068.3,
+  "type": "Ride",
+  "start_date": "2015-10-31T20:56:30Z",
+  "start_date_local": "2015-11-01T09:56:30Z",
+  "timezone": "(GMT+12:00) Pacific/Auckland",
+  "start_latlng": [
+    -41.22,
+    175.46
+  ],
+  "end_latlng": [
+    -41.22,
+    175.46
+  ],
+  "location_city": "Martinborough",
+  "location_state": "Wellington",
+  "location_country": "New Zealand",
+  "start_latitude": -41.22,
+  "start_longitude": 175.46,
+  "achievement_count": 7,
+  "kudos_count": 1,
+  "comment_count": 0,
+  "athlete_count": 13,
+  "photo_count": 0,
+  "map": {
+    "id": "a424029948",
+    "polyline": "hhqzFoi}m`@WDLUbBwAxC}ClBeB`CcCx@q@~@gAvAoA~B_C|EcFlBkBLSnEaEt@w@t@m@n@o@NYF_@EOo@qAMQo@yAUa@?UCUXiAlAsCjCkFRg@f@eAXw@bAsBDQdAaCjDuHx@qBx@_CVcAXuAjA}GdAkFPuAXoAPsATgA`@cCl@{CpAuDjEiKt@sBtAgDj@k@NKd@MREh@?j@Fj@Nh@Rn@HpCEt@EVGj@]NYJ[H]JyAZkGLaBNeAj@_Cj@gBDUb@cAd@w@h@q@h@m@j@e@|@i@xAgAnA}@t@o@r@a@lEaD`BuAdBeAxAy@pDyAlBo@`AUh@Eh@?TDl@JdBh@vCb@bAEj@OFGv@QbAg@lCaBdAy@v@{@`@w@h@mAZ{@Lq@Hi@L_BBgA?kDEsAKgB@mAGO?sDB}AHg@`@}Az@oB`@w@n@uAvBmE~@oC~AaIPgA|AmHReB?g@EkBCSIWSuAQo@cAgCe@m@YS_@Kc@a@a@o@g@cA_@_AW]I]u@}As@mBm@qAq@mBWk@{AoCMi@Ui@MS[}@e@eAU[K]eA{AK[q@q@IQAI]c@S_@EWKUQGQc@GYIMWuAAQB[C_@@OGo@?s@OeAE{@EOE_@GOCwAMo@Uq@AOm@aBa@i@O_@]_@g@{@m@i@}A_BMGQY_@]s@e@IOk@k@sAcDe@eBSgAGi@Ae@CoCImDOkBO{@Ei@Kg@]cBy@yCKUy@wCE[Me@Yi@k@mCW{@ES_BwF_@iBa@qA]iBASO_AAWK_A?s@Ki@CU?k@G}@@WCyAJwCFi@DoAXiDF[NaB^gC^eB^eCHgAPmATkA`@iA\\o@xAwBr@u@x@mAFSDe@AQI]WAOSSEMFQ@OVQLW`@IVsBlCKDkBHy@KS@[PKBQPILCVa@p@M\\SNQf@Mv@IJGRk@t@m@l@WNWL[JgALm@C_AOO?QM]QKQc@]o@s@m@_AaC_D_AcBCQGOUgAKaAEK@g@Kc@WmC?eAEQMy@WiCA_@U_B?UMiAIkBAaAFc@Ja@COAe@Qi@Yg@CUUU]g@MWQu@q@wDA[[kBYgAQe@MMS]u@s@o@IU?a@MOHMEYBkCBeBRq@@q@CUEWBo@AQ@i@T}@d@u@h@q@ZSTmAD]G_Ai@[Wg@m@]s@c@s@iAmA_Am@a@QgAWcAe@s@a@iBq@SEi@?a@Hq@FSDw@Gw@HQFUJMJOVI`@]z@YZ[RUBy@KKEaAq@i@Wg@[MOe@UYSKWo@Mo@CUBKAIEE?GCOAWWEUIQSq@kAoAYe@Ys@s@wCOiAEy@BgCDUAIFiB?y@Ek@UqBW}Da@iBa@kA_@g@{@s@e@[i@U_AQk@EUDcAC{BBi@OSAWImCeCaAw@cAo@q@UgB]m@Im@EUESAY@GNm@Bs@Rm@FGDOBM?_@Lc@JsAJc@@s@?i@GuAUiAMeAWyEw@WIk@Gk@MM@o@I_Bg@iAQQQu@a@a@e@y@e@OIOAm@Ok@[iB{Am@q@IKOc@BaCCs@YO}@w@UA{Aa@SIwAeA_@c@I[O[EOAQ[y@@[USSYo@Qa@WS?SUe@]U_@EQIMCS@SCO@OASF]EaAGQOCCOMSKCYQc@K[Qm@SSKg@_@MOa@Ok@i@]e@o@m@c@i@}@o@eBs@cB_@aAOw@DME_@BMCOHSAQz@KPCVOLSZEHOPKR]NCBu@BEMIDq@_@aA[m@c@}A}@uB}AkAs@{M{JwCaCKM]UgA}@kBmA{CkAk@Qi@MqAm@[KOAoAo@iBq@_Be@{@a@kAc@GKiAc@UAi@Wq@OeA@_@Cq@?}@F]AMBiDBMAk@Am@IM@MAKBKF]?WIKDi@e@YI]We@UMM_@Og@a@c@WgBu@cAQ[FaAAeALs@BUASDY?oAPcAXy@`@g@`@cCzAs@f@]J_@DeAIOGs@i@a@e@uAkCe@o@uAaAwC_CmDcCqCuBc@i@aBkCe@c@QIaASa@GO?a@KgAOa@McAKcFgAwASwAYcAYeAc@gAm@qAm@k@Y{@a@w@e@_DwAmAm@{Ag@mB{@q@UmAq@o@{@[m@g@k@Wa@_@a@m@w@uAuB{@eAi@w@u@s@]k@Oc@Mi@Gi@?wEEs@AgAMeBk@oBq@yAkAsCUa@Y]OIEQY[g@w@Ue@mAeB_@q@Y_@CMQMsD}F][o@w@m@_AOMo@{@{@i@s@Sq@IiA@iAJa@FQF]Ti@Rk@n@[Fk@^I?c@LYBs@?UCg@I[KgAQQIyAg@iBe@KDOIOAOCMIK?[QKC}B{AuAy@uDaC{@c@[Mo@Oy@MQ?oBMoA?eEJu@AcAJe@?cBPs@Le@@{@Ac@Ee@Q}ASmA[q@YcBeAy@q@OI_AiAm@g@eAuAm@k@kB{BcDaDYa@QO]e@m@o@{A}AqBgBaAeA_BqA}@{@sAw@_Cm@m@Uw@OOI}@_@s@a@sAcAcA{@q@q@kDuCqAmA_AcA{CkCmAmAcBwAg@k@gAcAmBoBQMIOy@g@i@i@{@s@]S}AkAuBoAaAu@a@SmA}@oAq@YYk@]_BiA]Oi@]y@c@cCyA}BaBgBeAo@e@yA_A[YsCoB}@c@aA[sEeA{Bm@aBa@sC{@_@GSIwEgAw@McCs@oAUeIkBoBi@k@WgA[WE{A_@uAa@cAKSKm@IgA]wAWa@SiAWYEqBg@g@Oi@Ie@Oc@IuAc@uAYgBo@u@QOAsA]SCqCq@i@QMGsAYiA]{Bc@gDiAmAUw@WUAQGQCeBk@gBa@[Oa@KkAOmBg@a@EyAc@}A[QMeA]_@EKIo@KmCy@}@UO@aAa@SC{@W_@SeCm@g@Ou@YsEaAOIw@M[JEPe@rDGTC\\a@jD[vAa@v@c@n@i@n@q@b@m@Lu@XgATe@FO?y@J_@@u@LqALODm@DiANiB`@i@HMHc@JoC\\QBKFu@LU@eANuBf@QHQB{@HaBXk@Fy@NgAJa@LaAJ_AXe@FOHkATsA^w@LQ@mAVUPU@i@Rg@`@u@fAOVg@xA]vB_@pCCX_@`CMn@SzBc@hDM~AM~@ATc@`DEbAy@`Gi@vEQx@Gj@I`@UtB@N[bAAL]rAINc@nA[h@c@h@U^m@p@e@|@c@b@SZsAxAGL[V}AnBa@l@cAfAo@z@[^aBtBoArA{BvCaBlBY\\OJW^GNu@~@KRs@bAUb@mAnBmAfBUf@iAxAiAlBcAvAUh@o@dAcEpGeBtCaBdCUb@i@p@ER{AnBOHm@j@IXWd@_@hAc@z@]~@Y`@k@rAg@p@yAbDGPuA`C[`@k@|@iAvAy@pAwAlB_DtEgAzA{@z@Y^k@b@y@~@i@d@QPkAx@a@TwAj@{@Lm@Vc@BeB\\q@RwAt@QRUNa@f@a@`@OFYVo@v@UNo@x@a@^sAdBgBrBsFbG{@jA_@`@SNMTk@l@aE|EyA|AQNg@n@SLi@n@[XKNo@r@Yb@g@h@y@x@{@hA]ZW\\uAzAIPwArAg@l@S\\c@h@oFvFU\\u@x@a@p@YZw@v@INQLe@l@gAdAg@j@IP]\\OHk@n@KROHy@hAU^G\\?TBRFTZt@~BvEnDhGtCtFtA|Bp@pAv@pAzH|NzAlCxCvFVj@n@fAzFvKnFpJlAhCfAjB`@z@RLPd@Zf@hBjD`@l@f@jAjCrE`EvHdBzCrAjCt@jAFRNNz@~APNd@v@~A`DxAlCHVhAjBzAxCnAzBZ`@bArBvGpLpAnBl@l@^VbATb@Bb@?r@Gp@WNGjAcAh@u@X[f@y@bC_CzE}FfBcB~@mA`BgBd@c@JGn@aANKj@{@Vg@`@mAVgAHi@@w@Ju@L{A`@iCb@qA`@s@NOPGVYt@]dAa@nAYTI|@Qp@Ch@@~@RhA\\nCpAzBrAj@VpAv@VJh@b@`Al@VJzBf@XBV?VFdAJf@BjA@d@AREdBIvCe@^APG~@El@IfAWl@WNUbA}@jCgC|@a@TGVGlAKVGhBMfCGdBKzBIXEVBlD[|@CbA?NEvAATB|@Ef@Bh@EtAC|BKlEGlAMrDCvBIhB?hAKv@?REjA@`EGVGpAG~DIt@Gd@AREjA@bACNBvDIhB?NBhBEp@BxAErBg@NG`@Wl@i@n@y@\\i@jAaCr@gAb@cAp@gARUVi@^g@~@eBt@gAH[|@cBPUz@cB|@uAZYt@a@fAe@TG|@Cl@Dd@HHHjATlBr@l@Rr@Hh@Ad@Iv@c@b@c@f@m@d@]FMr@m@HEXEd@F`@ZNZZpARvAJb@TzBBl@Hl@FvAZzDHb@PpCLv@@^Nt@JXZn@j@x@VFx@l@n@t@Zb@JTPf@Jl@xAzF|DdQHPb@tBf@rA`AvB|@xAZ^jA~@l@t@Zd@f@z@n@tAn@jB\\z@nA`C|BhDlA~ApDvFvBpCtAtAHPdBdCVd@ZZZVl@\\n@PZ?`AJJ?nAVNH^HPLvAh@bDlAp@Pp@Zt@d@zCdAvBd@zAXR?`@Hf@EN@rB`@p@Hn@Tp@FbAI`AYnAg@rAe@`@ILG`@CdD@PBx@ANCx@H\\HlCtAv@TbCdAtDhBh@T^LnB~@XH|A|@NDv@d@PDpAr@j@NZVjAb@j@^v@^tB~AJJjA`ApA~@tArAjAz@b@f@JHJBr@r@ZRbAbALFt@l@pApAx@l@xBnBNJn@Vp@Lb@P|AXN?l@LnA\\p@`@^JfBv@f@XtAn@|@h@^Nz@h@j@Vf@`@dD`BNDZT|Al@|@f@z@ZdAh@\\VjAp@`@Pp@N\\Tj@Rj@b@fAp@b@Nl@NZNz@X`Cn@^PL@~@X|Bx@~Cz@nB\\n@Xl@NxCxAz@f@nBz@hAr@N?NDbB|@~An@hAl@\\NjC`BHNRFb@f@PBlAdB`A~AtAzBtA`BPDh@b@tA|@zCdCdAjA~ArBjBvBJRrCbDpCdD\\\\dArAj@l@X`@X\\v@r@fBxA`Al@LL~@n@pAx@^\\PFb@ZnCtCt@p@zA~ANVf@\\nAjATJ~@p@|HrHv@~@fBdB`@d@lB~AzDfBbA\\vAX`@LLJp@RNNPB~@b@p@Hr@Lr@TZPND|@f@\\V\\JzB|A`@RNBRHt@b@tAl@hARfAFb@@PEv@DP?RCd@Dd@?b@@hBPnAVn@Xr@R\\P`@L^R`@LbAf@\\HjAb@z@V`@Pp@PnBt@RDz@\\h@NpChAf@PjAf@bAr@n@ZLRh@d@r@hArCnDjBrCh@p@bA~ANNvAtBLLbA~A~AvBd@v@dCdDn@dAr@z@NTbCdDf@h@f@d@PHJLtAp@tAd@PB`@?h@Hh@NjEDv@Cj@DlAC|ALFAXF`Bd@`Ad@v@d@dA~@bApAr@lAXp@d@hATbALZLd@L~@XlDHxBLvA@VJp@HnA?dADrAAlBEpAE|DKzA[|AKx@KR_AzCy@dBOVURe@l@WRSTo@`Aw@r@I\\_@`@]f@QNs@dAMVcAvAiAfBSr@YxAAz@BdAXvATr@^h@x@z@pA`A`Ah@r@VdANlAHpAPr@FTBHDX?b@Jd@Bn@LlANn@PTLb@PjBjAv@z@`@h@pAxBVl@p@tArAjBjBtAjAj@VP~@t@f@h@PTj@fA`@lAPr@v@fEFTN`AFPLn@N\\ZjAXp@^p@DNTd@Zt@~DrHTh@Nh@R~@NvAL~CJhADjBLf@Vj@JLrBbCb@f@RHRXtAzA`AdAj@v@x@|@xAfBd@`@V?\\e@TQX[d@c@l@u@t@o@x@aA`@WpA{A`Ay@jAwA^]x@aAJER[TSFO~@yBFW@YFO|AoDfAuCpAuCf@mANWN_@Zk@^_AL_@h@gAX{@JM^cAFUPUj@wAx@iCHOLIt@gBJo@HQj@qAHM`@kA`@}@Vs@|@kBLe@PYFYlBcEVu@Vq@d@cAj@{AN[HKNe@Ve@Pg@bA{BXy@hAoCH[jBeEVu@|@qBRq@P[vAkDd@uA~AuDDOZw@Xi@To@BQVm@p@iATS\\MJ@ZEvALp@?PBX?nBLdC?RDjAFnAAVClA@lAH\\?|@H|@?j@FN?h@Oj@EJEdBeALGRCh@_@\\a@f@aAd@oALe@P[H_@FKj@o@|@i@NEb@Cz@FpAZl@JX?pCEx@Kn@WZ}@Hc@TsFHgANsCXcBNi@DUv@eCLMTc@f@k@p@eALBr@_ALGJUf@[p@k@JEVQTWLIb@]XKXQJOlAcAb@SVUJGx@o@NGx@s@\\Sj@k@fBkAh@UXSl@ULIXI|A}@xAi@~@Yb@IL@d@EZBJAHDn@Hj@LTBpBf@dALHE\\Dh@IPAFBJAFI\\E^QPE`@SAIRGN?FKH@FCNQF?PUF?ZK~@s@PKVYb@]T[^o@\\cAR}@VqAHq@JeC?gBIoEGoBCcC?wBFw@DQBYViAd@uAJOHUh@_ANa@`AkBT]bA}BHMTUVy@D_@XsAL_AV{@TwAR}@N{@L[VwALa@\\yABk@PmABmAE_AW}BOs@[iAeA_Be@g@YYcAg@i@q@M]U]Ma@e@aA{AeEYaAK]Q]W}@sAuCEYUo@k@qACQOM_@m@a@_A{@wAGUMWSU]k@MKEMIEeAsA_@u@So@_@cAEOA]K_@Is@Wg@?a@O[KiCB_@C_@BQG_AOwAEOGa@[iAKMGMUWO_@Wg@gBgBUQgD}Dk@k@a@i@SYs@iBKa@O_@[eA@e@Ii@GIKsABQGa@Bk@CSCgDES@i@OqBW}AoBmH[y@CQS{@g@kAG]k@mBCWQc@QeA]kAc@iBGm@Og@CYKi@e@cBCUKIOg@CO@SIe@?S_@qC@WMiD@kCF_BHmAz@wIpAeHJyALk@Do@Jk@Rm@NU\\{@\\q@x@}@JYTINK`AgBNa@BSASQc@a@UQEQ@a@LQL[`@a@x@Yb@QNGN[RWLw@Rq@BOFa@Ay@b@YX_@l@MHIR]h@CJGD?TKPALg@jAy@x@CJIF]D_@J_AHY@OAu@Ks@SIMYYMG]Wu@{@_CyC{@oAk@sAYiAU{@EEAOBQG_@GWUqCCo@O}A?Qe@}DS{@?QE_@Cs@Gg@Cw@?s@JaALs@?WEg@MKWe@EM[]k@_Aa@qAi@cC[aAD[AYGs@OcAi@w@k@o@SGWQi@Ii@Hq@RW?WC[DUAgA@WB[JW@oBCgAFQASBa@E_@VqAl@QDMHOBo@Ra@?]GQ?]Ki@[WSa@g@[s@s@qAc@i@i@]y@c@y@WQAm@O{CqAu@Sa@Cw@Bo@NOBc@ESGKBa@?I@GHYLUR]l@Kb@KROJCDMB?NQJ}@G]Ku@a@o@k@G?OE}@[aB}@g@I{@?WCMKWe@CK@IKKUw@OSe@c@Ua@w@aCYsAIa@IaAGwABcBF]@aAAQ@MAaBWyBG}AEQO_Ba@yAKU_A}AaAiAy@a@g@OQAc@CiA?e@D{@JKDQ?i@Ii@S{@c@c@g@_B}AQQq@c@aAg@eAYaASi@Eu@AQBILs@?_@FO?K@GDo@Fe@LaBPi@JGA_BDk@EQ@i@Ei@IeB_@[Ce@IcAWo@K{@SkF{@i@MOAeA]eAo@a@]o@c@w@Yu@_@MKGM[Qs@w@WUc@e@IOIc@@uAWkAo@SQUQO[E[MSAUKUAYMa@Kg@o@MGIMMGGKSk@GEAOKICO@SM}@MGOOKCCOW[cA]c@]_@_@S_A?WCq@SmBWw@E@UQeA_@K@MC_@UYIKMS?OGi@a@OGQKc@s@a@c@K[_@a@u@m@QK}@]i@Oc@Wc@Im@?MAWDiA?k@FYVERY\\Q^Y`@[^YVWBEDYGc@A]QSOOEWSICkBsAsBsAYOaD{B[Ss@m@iCgB_Au@QKc@QUWk@a@WYkC}B}AmA_@Q_@a@m@a@OCsAm@gC}@YOq@Mw@a@eDmAuB}@QCaA]YQSEm@[_AYMI_@Ks@Kq@Ea@?a@BQC{AHsAAqBGOD]@m@Ew@O[AMEM@u@[YEq@Q]We@SWQGKsAo@SGo@Ak@We@Eu@@kALWAiAJoADiARg@P[NONu@h@_B~@IJo@^WL_@L]B_@?_@GOIa@Sa@Yi@o@yAaDc@]W[mAgA}A_AwAaAgBuAqAy@k@e@eBuBo@eAUMKM[UUCyA_@_AEMEOBOCMGyAOy@QOBsCu@OGo@OQ@q@WeAWWOUGw@]YSmAi@g@e@mEqBSEgB}@s@Yo@c@e@Sc@MMKc@Oa@MoBy@UEa@UOMqAgBc@w@aCwCUe@{AsBe@i@aA}AW}@G_AEiDCS@}BEg@Og@ASKe@Oe@Qa@]gAk@wAaAuBwAuBk@cAsAkB[]O]g@o@sBsCaA{AGOY]}@sA[[KQc@m@o@i@k@Yo@Ku@@a@De@C_AFaAVMHo@b@[LWRGJm@^S@m@LKDm@?aAQgA[YEi@UOCIG]GOK_@KaA[_@EOGOCs@Y[Oe@[gAo@iAm@aGsD[Ma@EYK_AIu@KgBMSDuADu@AqAFc@?aCVoARs@Fc@FgAVc@\\mAvBaAfBIT{A`CUd@g@x@Ud@y@tA[n@MNg@jAIXs@jAwApCYLEPMLEH[l@M^S^CRm@dASV}@jBSV_AhBQXYn@mArB}@hBc@dAwA~BSVO^Yd@{@xA]\\]TeCjAq@f@WZq@vAw@zAqCtEg@jAw@lB_@r@i@l@y@`@{DfAm@TQJUPoBz@WHSPULsAn@m@\\k@Tm@f@sAn@UP}@`@SZiBp@cAf@UX[De@TWTm@DqBh@WDUJ[?WDuAl@k@PcATUJU@YRUHY@q@No@PYEo@XiAZo@TeAd@URSZWNSFQRe@p@kAlAQV}AzA_B`A{@n@i@Ti@JSNyAz@{Ar@QJy@ZS@e@^y@b@QNw@^e@\\g@Vu@f@a@RQTg@Rq@^ONq@XOLO@QH_@Za@ROL{@\\a@ZoCjAQJMPq@^c@\\o@r@OXuAnAy@l@g@XUFSLeBr@g@\\g@TsAz@w@~@i@b@kAbBs@lAWz@I^s@vGIlBm@rGKpB?t@Br@Jl@`ApEZ~AHbAA^UrA_@bAQr@EZSf@CPED_@`BCNKfCG|BFvBLjAA\\Fd@JTTVPXT~@D^PDBLFp@ATBz@P~BBfBFXBt@Dx@PtARzC?\\RdBV|@^t@pB~Af@h@\\j@b@hATdAV~@dAnEFRNr@FLf@|B`@tBXfADVLJd@fCBVTv@Pv@Pf@PNNj@r@pAVj@V`@ZZh@b@hAdA`ApA|@jCLTZx@rB|Dh@v@z@fAf@v@\\b@h@v@LPhDpF|@bAV^v@z@JBdChDz@bAr@r@ZPbAVnBVP?r@JZHp@^nAh@L@v@\\\\FvC|AtCjAhA`@LH~@Rx@N^BjAPVC~@BxB`@`@DpAFdAGzBs@^QLA|@Y~@I|@AjABdBGXFXAp@JJFh@Fb@Tl@NhB~@XRh@NfAj@NBd@ZLBn@d@^J`Ad@PCnB|@VPLDVLt@`@TNFP\\HTLLLLDVNR@nB~@j@Z\\LJJhAn@r@l@TXb@b@VRp@\\b@b@ZTbCtBd@\\NFLHLDb@f@JBJHJLf@\\NZXTFLNBJHXZRFVV`Av@LTpB`B~@r@dAd@L@j@PP@j@Pj@Tf@LzAZL?d@JzAp@t@Vv@^JJx@n@NBf@Xx@h@x@`@f@Zf@Rf@ZHH`@J`Af@PDdAf@bAn@XN\\JrAp@XPHJnAr@x@ZbB|@j@TZPNDdB~@lA`@P@nCbALBLAhCz@|Bn@zAd@bBd@V@HHZHl@JnDbBZPh@^PFzAz@jCdAvC|AbAb@~BpAtAdAl@r@t@hALJFNJJT\\zB|Cb@d@lAfAv@f@t@n@jAx@x@x@NJ\\^^Z~EdGPNXb@^`@JRxCjDxBxCjCpCZXhBpAZX`BdAp@f@\\Zt@d@t@j@^b@TLb@b@nClC`CfClB~AxEpElA`Ab@d@f@`@`AjAv@t@XNRPPVtBdBrAz@d@TRB~Aj@xAb@rBr@v@PvAh@jA^xBhArC`Bd@Pl@f@p@`@hAf@x@T|@NdCF|A@x@BRAx@BlAPp@NNFd@F`@L\\R^NL@p@VP@`@HhCfAn@Pn@VNJvAj@jBl@p@XbEzAf@Jp@V~@j@z@n@x@v@pA|AtB|Ch@j@x@fAtA~B|@jAZh@^d@bFjHjBbC|FpIl@v@`@^LRp@b@JNRHx@f@^NbATv@HdBFd@AVFn@CDBdAARDZAP@\\?PGR?^EZDv@@NFvA\\fA`@r@^r@h@~@|@\\`@Zb@x@tAr@bB\\lAZpAb@|DXzDZfDJpB?tBOfIMnBQhBMn@e@dBs@hBq@nA{A`CUTuAhBSLcA|@gAzA]\\g@~@_@d@oAhCUx@E^EdA?^P~AHZXt@|@nAl@f@PFd@^hAl@vBb@fAFf@JpBRdFp@R?b@JTHrAt@hAv@~AjBhAzBh@v@Ff@HPLRNL|@jATPd@d@nBfATTTL|@t@z@z@j@`A^jAPt@B^XrAHZJNNt@TtA`@jBb@fBx@lBp@jANPp@nATf@TZnA|Bf@rATz@L`ADhABzAFl@LdCN|@Tb@b@l@XX`AfApBdCv@x@tAhBXXf@p@d@h@t@t@V`@XVf@~@vClGv@xAn@|APh@nAnCHTHP\\b@P\\`@jANZL@JAZWT[hAeAfBqBbA}@|BgCNKnBoBj@g@PIlCyC|@w@Z]`Aw@f@m@ZUT[OE",
+    "resource_state": 3,
+    "summary_polyline": "hhqzFoi}m`@jo@oo@kBeKpn@wlB|QgAvFu\\fYcUrk@cN`Cyd@fQam@ua@u_AcDoWqOsSyQiaAPu`@zKu`@s`@vRoIgLeDwd@wIaWw[`DyT_OoM|E}MeFiMqn@ehAsOau@}w@mOfDifAml@w`@wF}YnGk\\a\\ev@_W{j@{jAwTdBq^cOsc@gA}iCirBoqDs~@sHdUgeAbS_ShjAedB~fCq]rSuoAbxAx{BlbEpa@e_@`MoZnh@~K~^cLnmB{Eh\\kd@j]qDzZrmArh@dx@bl@nOfWkB`eAjp@djBzu@vcBjbBlwAdd@xj@xs@ra@~HvF`N`Ap`@uU`o@h`@fO`SbUlTxw@`RjTbUkUbcA_dC`a@^zOiOdOCvKya@t]sUra@mGhCue@rP_i@o@cOov@scBsPa_AVca@tKm^yVfRaJkAsIeOsBu`@eIkU{[zBuUmNa\\?}M_p@wgAeOsv@ix@eNdEkdAil@yb@{FgYhGa]g\\gv@oWqMyQyFa\\}Ti[_SnCae@yPaV|Bu_Al~AqxBteAcW~QuEdPqB`u@lFnh@pVpr@|d@jq@|`@hN|f@R~`Afn@fiB~u@vdBnbBpvAvc@zk@`u@z_@~F`H|MtApa@wU`f@RpJn]vK|UtWbTjw@db@tq@p^m^"
+  },
+  "trainer": false,
+  "commute": false,
+  "manual": false,
+  "private": false,
+  "flagged": false,
+  "gear_id": "b448509",
+  "average_speed": 9.106,
+  "max_speed": 18.2,
+  "average_watts": 229.5,
+  "kilojoules": 2862.2,
+  "device_watts": false,
+  "has_heartrate": false,
+  "elev_high": 187.4,
+  "elev_low": 23.8,
+  "total_photo_count": 0,
+  "has_kudoed": false,
+  "workout_type": 0,
+  "description": null,
+  "calories": 3191.4,
+  "segment_efforts": [
+    {
+      "id": 10204418703,
+      "resource_state": 2,
+      "name": "Hinakura Flyer",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 835,
+      "moving_time": 835,
+      "start_date": "2015-10-31T21:05:28Z",
+      "start_date_local": "2015-11-01T10:05:28Z",
+      "distance": 7330.1,
+      "start_index": 308,
+      "end_index": 1135,
+      "device_watts": false,
+      "average_watts": 231.3,
+      "segment": {
+        "id": 6833638,
+        "resource_state": 2,
+        "name": "Hinakura Flyer",
+        "activity_type": "Ride",
+        "distance": 7304.6,
+        "average_grade": 0,
+        "maximum_grade": 16.8,
+        "elevation_high": 86.8,
+        "elevation_low": 40.1,
+        "start_latlng": [
+          -41.231626,
+          175.490096
+        ],
+        "end_latlng": [
+          -41.241633,
+          175.554367
+        ],
+        "start_latitude": -41.231626,
+        "start_longitude": 175.490096,
+        "end_latitude": -41.241633,
+        "end_longitude": 175.554367,
+        "climb_category": 0,
+        "city": "Ponatahi",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": null,
+      "achievements": [],
+      "hidden": false
+    },
+    {
+      "id": 10204418718,
+      "resource_state": 2,
+      "name": "Longbush Road",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 2283,
+      "moving_time": 2283,
+      "start_date": "2015-10-31T21:19:24Z",
+      "start_date_local": "2015-11-01T10:19:24Z",
+      "distance": 20766.3,
+      "start_index": 1136,
+      "end_index": 3405,
+      "device_watts": false,
+      "average_watts": 234.5,
+      "segment": {
+        "id": 5695417,
+        "resource_state": 2,
+        "name": "Longbush Road",
+        "activity_type": "Ride",
+        "distance": 20635,
+        "average_grade": 0.1,
+        "maximum_grade": 14.8,
+        "elevation_high": 141.2,
+        "elevation_low": 70.2,
+        "start_latlng": [
+          -41.24164,
+          175.554498
+        ],
+        "end_latlng": [
+          -41.087008,
+          175.642792
+        ],
+        "start_latitude": -41.24164,
+        "start_longitude": 175.554498,
+        "end_latitude": -41.087008,
+        "end_longitude": 175.642792,
+        "climb_category": 0,
+        "city": "Ponatahi",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 2,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 2
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 13007996137,
+      "resource_state": 2,
+      "name": "Turn around to Finish",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 1319,
+      "moving_time": 1319,
+      "start_date": "2015-10-31T21:34:43Z",
+      "start_date_local": "2015-11-01T10:34:43Z",
+      "distance": 12492.8,
+      "start_index": 2047,
+      "end_index": 3360,
+      "device_watts": false,
+      "average_watts": 205.5,
+      "segment": {
+        "id": 11767834,
+        "resource_state": 2,
+        "name": "Turn around to Finish",
+        "activity_type": "Ride",
+        "distance": 12471.4,
+        "average_grade": -0.2,
+        "maximum_grade": 12.1,
+        "elevation_high": 88.4,
+        "elevation_low": 38.2,
+        "start_latlng": [
+          -41.189592,
+          175.587134
+        ],
+        "end_latlng": [
+          -41.090871,
+          175.641462
+        ],
+        "start_latitude": -41.189592,
+        "start_longitude": 175.587134,
+        "end_latitude": -41.090871,
+        "end_longitude": 175.641462,
+        "climb_category": 0,
+        "city": "Longbush",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": null,
+      "achievements": [],
+      "hidden": false
+    },
+    {
+      "id": 10204418727,
+      "resource_state": 2,
+      "name": "Carter's Climb",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 182,
+      "moving_time": 182,
+      "start_date": "2015-10-31T22:05:23Z",
+      "start_date_local": "2015-11-01T11:05:23Z",
+      "distance": 1192,
+      "start_index": 3881,
+      "end_index": 4063,
+      "device_watts": false,
+      "average_watts": 220.7,
+      "segment": {
+        "id": 10585858,
+        "resource_state": 2,
+        "name": "Carter's Climb",
+        "activity_type": "Ride",
+        "distance": 1197.4,
+        "average_grade": 2.9,
+        "maximum_grade": 7.6,
+        "elevation_high": 103.5,
+        "elevation_low": 67.5,
+        "start_latlng": [
+          -41.058764,
+          175.60779
+        ],
+        "end_latlng": [
+          -41.050502,
+          175.599448
+        ],
+        "start_latitude": -41.058764,
+        "start_longitude": 175.60779,
+        "end_latitude": -41.050502,
+        "end_longitude": 175.599448,
+        "climb_category": 0,
+        "city": "Gladstone",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 2,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 2
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 12417449745,
+      "resource_state": 2,
+      "name": "Ponatahi to Martinborough",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 1142,
+      "moving_time": 1142,
+      "start_date": "2015-10-31T22:34:45Z",
+      "start_date_local": "2015-11-01T11:34:45Z",
+      "distance": 10894,
+      "start_index": 5643,
+      "end_index": 6785,
+      "device_watts": false,
+      "average_watts": 218.8,
+      "segment": {
+        "id": 11565846,
+        "resource_state": 2,
+        "name": "Ponatahi to Martinborough",
+        "activity_type": "Ride",
+        "distance": 10866.9,
+        "average_grade": -0.2,
+        "maximum_grade": 11.6,
+        "elevation_high": 96.2,
+        "elevation_low": 37,
+        "start_latlng": [
+          -41.130139,
+          175.544835
+        ],
+        "end_latlng": [
+          -41.20138,
+          175.479324
+        ],
+        "start_latitude": -41.130139,
+        "start_longitude": 175.544835,
+        "end_latitude": -41.20138,
+        "end_longitude": 175.479324,
+        "climb_category": 0,
+        "city": "Ponatahi",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": null,
+      "achievements": [],
+      "hidden": false
+    },
+    {
+      "id": 10204418751,
+      "resource_state": 2,
+      "name": "MCFR climbing second loop",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 3075,
+      "moving_time": 3075,
+      "start_date": "2015-10-31T22:54:52Z",
+      "start_date_local": "2015-11-01T11:54:52Z",
+      "distance": 26020.8,
+      "start_index": 6850,
+      "end_index": 9902,
+      "device_watts": false,
+      "average_watts": 228.4,
+      "segment": {
+        "id": 2649116,
+        "resource_state": 2,
+        "name": "MCFR climbing second loop",
+        "activity_type": "Ride",
+        "distance": 26148.3,
+        "average_grade": 0.4,
+        "maximum_grade": 18.2,
+        "elevation_high": 134.5,
+        "elevation_low": 24.2,
+        "start_latlng": [
+          -41.20545092,
+          175.47273823
+        ],
+        "end_latlng": [
+          -41.13960188,
+          175.61366989
+        ],
+        "start_latitude": -41.20545092,
+        "start_longitude": 175.47273823,
+        "end_latitude": -41.13960188,
+        "end_longitude": 175.61366989,
+        "climb_category": 0,
+        "city": "Ponatahi",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 2,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 2
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 10204418735,
+      "resource_state": 2,
+      "name": "Hinakura Flyer",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 879,
+      "moving_time": 879,
+      "start_date": "2015-10-31T23:03:28Z",
+      "start_date_local": "2015-11-01T12:03:28Z",
+      "distance": 7351,
+      "start_index": 7366,
+      "end_index": 8235,
+      "device_watts": false,
+      "average_watts": 219.9,
+      "segment": {
+        "id": 6833638,
+        "resource_state": 2,
+        "name": "Hinakura Flyer",
+        "activity_type": "Ride",
+        "distance": 7304.6,
+        "average_grade": 0,
+        "maximum_grade": 16.8,
+        "elevation_high": 86.8,
+        "elevation_low": 40.1,
+        "start_latlng": [
+          -41.231626,
+          175.490096
+        ],
+        "end_latlng": [
+          -41.241633,
+          175.554367
+        ],
+        "start_latitude": -41.231626,
+        "start_longitude": 175.490096,
+        "end_latitude": -41.241633,
+        "end_longitude": 175.554367,
+        "climb_category": 0,
+        "city": "Ponatahi",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": null,
+      "achievements": [],
+      "hidden": false
+    },
+    {
+      "id": 10204418779,
+      "resource_state": 2,
+      "name": "Millars-West",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 233,
+      "moving_time": 233,
+      "start_date": "2015-10-31T23:46:28Z",
+      "start_date_local": "2015-11-01T12:46:28Z",
+      "distance": 1403.2,
+      "start_index": 9923,
+      "end_index": 10149,
+      "device_watts": false,
+      "average_watts": 306.6,
+      "segment": {
+        "id": 1497519,
+        "resource_state": 2,
+        "name": "Millars-West",
+        "activity_type": "Ride",
+        "distance": 1429,
+        "average_grade": 4.7,
+        "maximum_grade": 18.6,
+        "elevation_high": 187.9,
+        "elevation_low": 119.1,
+        "start_latlng": [
+          -41.13807833496631,
+          175.6118700604677
+        ],
+        "end_latlng": [
+          -41.12975851065607,
+          175.5996526999113
+        ],
+        "start_latitude": -41.13807833496631,
+        "start_longitude": 175.6118700604677,
+        "end_latitude": -41.12975851065607,
+        "end_longitude": 175.5996526999113,
+        "climb_category": 0,
+        "city": "Longbush",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 2,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 2
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 10204418769,
+      "resource_state": 2,
+      "name": "millars west actual climb",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 136,
+      "moving_time": 136,
+      "start_date": "2015-10-31T23:48:01Z",
+      "start_date_local": "2015-11-01T12:48:01Z",
+      "distance": 579.1,
+      "start_index": 10013,
+      "end_index": 10145,
+      "device_watts": false,
+      "average_watts": 316.6,
+      "segment": {
+        "id": 3716043,
+        "resource_state": 2,
+        "name": "millars west actual climb",
+        "activity_type": "Ride",
+        "distance": 579.527,
+        "average_grade": 6.4,
+        "maximum_grade": 9.7,
+        "elevation_high": 154,
+        "elevation_low": 117.2,
+        "start_latlng": [
+          -41.13351020962,
+          175.60461840592325
+        ],
+        "end_latlng": [
+          -41.1298527661711,
+          175.59986921958625
+        ],
+        "start_latitude": -41.13351020962,
+        "start_longitude": 175.60461840592325,
+        "end_latitude": -41.1298527661711,
+        "end_longitude": 175.59986921958625,
+        "climb_category": 0,
+        "city": "Longbush",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 2,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 2
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 10204418800,
+      "resource_state": 2,
+      "name": "MCFR downhill first loop",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 2009,
+      "moving_time": 2009,
+      "start_date": "2015-10-31T23:50:13Z",
+      "start_date_local": "2015-11-01T12:50:13Z",
+      "distance": 19877.6,
+      "start_index": 10141,
+      "end_index": 12148,
+      "device_watts": false,
+      "average_watts": 221.2,
+      "segment": {
+        "id": 2649089,
+        "resource_state": 2,
+        "name": "MCFR downhill first loop",
+        "activity_type": "Ride",
+        "distance": 19883.3,
+        "average_grade": -0.8,
+        "maximum_grade": 8.5,
+        "elevation_high": 187.4,
+        "elevation_low": 25.5,
+        "start_latlng": [
+          -41.12995103,
+          175.60010071
+        ],
+        "end_latlng": [
+          -41.20502177,
+          175.47357619
+        ],
+        "start_latitude": -41.12995103,
+        "start_longitude": 175.60010071,
+        "end_latitude": -41.20502177,
+        "end_longitude": 175.47357619,
+        "climb_category": 0,
+        "city": "Longbush",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 2,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 2
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 10204418783,
+      "resource_state": 2,
+      "name": "Millars West Down Hill",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 307,
+      "moving_time": 307,
+      "start_date": "2015-10-31T23:50:43Z",
+      "start_date_local": "2015-11-01T12:50:43Z",
+      "distance": 3744.7,
+      "start_index": 10171,
+      "end_index": 10476,
+      "device_watts": false,
+      "average_watts": 242.1,
+      "segment": {
+        "id": 8731938,
+        "resource_state": 2,
+        "name": "Millars West Down Hill",
+        "activity_type": "Ride",
+        "distance": 3728.8,
+        "average_grade": -2.4,
+        "maximum_grade": 11.8,
+        "elevation_high": 158.8,
+        "elevation_low": 57.6,
+        "start_latlng": [
+          -41.128822,
+          175.598209
+        ],
+        "end_latlng": [
+          -41.104104,
+          175.57457
+        ],
+        "start_latitude": -41.128822,
+        "start_longitude": 175.598209,
+        "end_latitude": -41.104104,
+        "end_longitude": 175.57457,
+        "climb_category": 0,
+        "city": "Longbush",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": 1,
+      "achievements": [
+        {
+          "type_id": 3,
+          "type": "pr",
+          "rank": 1
+        }
+      ],
+      "hidden": false
+    },
+    {
+      "id": 12417449764,
+      "resource_state": 2,
+      "name": "Ponatahi to Martinborough",
+      "activity": {
+        "id": 424029948,
+        "resource_state": 1
+      },
+      "athlete": {
+        "id": 1307167,
+        "resource_state": 1
+      },
+      "elapsed_time": 1137,
+      "moving_time": 1137,
+      "start_date": "2015-11-01T00:03:53Z",
+      "start_date_local": "2015-11-01T13:03:53Z",
+      "distance": 10902,
+      "start_index": 10959,
+      "end_index": 12096,
+      "device_watts": false,
+      "average_watts": 220.5,
+      "segment": {
+        "id": 11565846,
+        "resource_state": 2,
+        "name": "Ponatahi to Martinborough",
+        "activity_type": "Ride",
+        "distance": 10866.9,
+        "average_grade": -0.2,
+        "maximum_grade": 11.6,
+        "elevation_high": 96.2,
+        "elevation_low": 37,
+        "start_latlng": [
+          -41.130139,
+          175.544835
+        ],
+        "end_latlng": [
+          -41.20138,
+          175.479324
+        ],
+        "start_latitude": -41.130139,
+        "start_longitude": 175.544835,
+        "end_latitude": -41.20138,
+        "end_longitude": 175.479324,
+        "climb_category": 0,
+        "city": "Ponatahi",
+        "state": "Wellington",
+        "country": "New Zealand",
+        "private": false,
+        "hazardous": false,
+        "starred": false
+      },
+      "kom_rank": null,
+      "pr_rank": null,
+      "achievements": [],
+      "hidden": false
+    }
+  ],
+  "gear": {
+    "id": "b448509",
+    "primary": true,
+    "name": "Argon 18 Plutonium",
+    "resource_state": 2,
+    "distance": 6738380
+  },
+  "partner_logo_url": null,
+  "photos": {
+    "primary": null,
+    "count": 0
+  },
+  "device_name": "Strava iPhone App",
+  "embed_token": "1282793a476f0b9310e48366b80694a742f2c808"
+}
