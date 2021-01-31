@@ -8,7 +8,6 @@ gem 'sqlite3'
 gem 'puma'
 
 gem 'sass-rails'
-gem 'font-awesome-sass'
 gem 'webpacker'
 
 gem 'draper'

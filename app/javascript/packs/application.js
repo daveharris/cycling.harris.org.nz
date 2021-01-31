@@ -12,3 +12,15 @@ require("@rails/ujs").start()
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import "bootstrap";
+import "@fortawesome/fontawesome-free/js/all";
+
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+$(function() {
+  $('[data-toggle="popover"]').popover();
+});
+console.log('Finished loading app/javascript/packs/application.js')

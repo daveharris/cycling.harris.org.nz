@@ -1,9 +1,13 @@
 <div class="page-header">
   <h2>
     <%= content_tag(:span, "#{current_user.first_name}, ") if signed_in? %>
-    <%= content_tag(:span, signed_in? ? "welcome" : "Welcome") %> to your <%= icon('fas', :bicycle) %> dashboard
+    <%= content_tag(:span, signed_in? ? "welcome" : "Welcome") %> to your <i class="fas fa-bicycle"></i> dashboard
   </h2>
 </div>
+
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+  Tooltip on top
+</button>
 
 <div class="row">
   <% @statistics.each do |label, data| %>
