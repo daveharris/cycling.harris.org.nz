@@ -8,3 +8,32 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+main.container {
+  padding-top: var(--pico-spacing);
+  padding-bottom: var(--pico-spacing);
+}
+
+.grid> :last-child {
+  text-align: right;
+}
+
+button,
+[role="button"] {
+  --pico-form-element-spacing-vertical: 0.25rem;
+
+  &.danger {
+    background-color: indianred;
+  }
+}
+
+
+article {
+  &[data-flash=notice] {
+    background-color: lightgreen;
+  }
+
+  &[data-flash=alert] {
+    background-color: indianred;
+  }
+}
