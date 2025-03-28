@@ -1,0 +1,3 @@
+<% flash.each do |name, msg| %>
+  <%= content_tag :article, msg.html_safe, data: { flash: name } %>
+<% end %>

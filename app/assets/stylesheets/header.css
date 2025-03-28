@@ -1,0 +1,43 @@
+header {
+  border-bottom-color: var(--pico-header-border-color);
+  box-shadow: var(--pico-card-box-shadow);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+
+nav {
+  ul:first-of-type {
+    margin-left: 0;
+  }
+
+  ul:last-of-type {
+    margin-right: 0;
+  }
+
+  li {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+
+    h2 {
+      margin-top: -0.5rem;
+      margin-bottom: 0rem;
+    }
+  }
+}
+
+
+form [type=submit],
+form button {
+  padding: calc(var(--pico-form-element-spacing-vertical)/2) calc(var(--pico-form-element-spacing-horizontal)/2);
+  margin-bottom: 0rem;
+  padding-block: 0rem;
+}
+
+a[role=button] {
+  padding-block: 0rem;
+}
