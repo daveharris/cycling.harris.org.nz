@@ -7,6 +7,7 @@ gem "sqlite3", ">= 2.1"
 gem "puma", ">= 5.0"
 gem "thruster", require: false
 
+gem "bcrypt", "~> 3.1.7"
 gem "importmap-rails"
 gem "propshaft"
 gem "stimulus-rails"

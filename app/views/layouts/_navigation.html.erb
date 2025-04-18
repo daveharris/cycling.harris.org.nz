@@ -3,4 +3,11 @@
     <li><h2><%= link_to 'Cycling', root_path %></h2></li>
     <li>The cycling record of the Harris'</li>
   </ul>
+  <ul>
+    <% if authenticated? %>
+      <li><%= button_to 'Sign out', session_path, method: :delete, class: "outline" %></li>
+    <% else %>
+      <li><%= link_to 'Sign in', new_session_path, role: "button", class: "outline" %></li>
+    <% end %>
+  </ul>
 </nav>

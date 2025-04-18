@@ -1,0 +1,19 @@
+<div class="grid">
+  <div></div>
+
+  <div>
+    <h1>Sign in</h1>
+
+    <%= form_with url: session_path do |form| %>
+      <label>Email</label>
+      <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username" %>
+
+      <label>Password</label>
+      <%= form.password_field :password, required: true, autocomplete: "current-password", maxlength: 72 %>
+
+      <%= form.submit 'Sign in' %>
+    <% end %>
+  </div>
+
+  <div></div>
+</div>

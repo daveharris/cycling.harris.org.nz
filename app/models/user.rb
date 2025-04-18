@@ -1,12 +1,6 @@
-class User < ActiveRecord::Base
-  include Clearance::User
+class User < ApplicationRecord
+  has_secure_password
+  has_many :sessions, dependent: :destroy
 
-  has_many :results
-
-  scope :alphabetical, -> { order(first_name: :asc, last_name: :asc) }
-
-  def to_s
-    "#{first_name} #{last_name}"
-  end
-  alias_method :collection_select_name, :to_s
+  normalizes :email_address, with: ->(e) { e.strip.downcase }
 end
