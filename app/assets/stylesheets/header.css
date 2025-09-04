@@ -27,6 +27,16 @@ nav {
       margin-top: -0.5rem;
       margin-bottom: 0rem;
     }
+
+    form [type=submit], form button {
+      padding: calc(var(--pico-form-element-spacing-vertical)/2) calc(var(--pico-form-element-spacing-horizontal)/2);
+      margin-bottom: 0rem;
+      padding-block: 0rem;
+    }
+
+    a[role=button] {
+      padding-block: 0rem;
+    }
   }
 }
 
