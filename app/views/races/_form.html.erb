@@ -1,0 +1,15 @@
+<%= form_with(model: race) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :distance %>
+    <%= form.number_field :distance %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
