@@ -1,1 +1,5 @@
-<h1>Welcome</h1>
+<% if authenticated? %>
+  <h1>Welcome to your dashboard</h1>
+<% else %>
+  <h1>Welcome</h1>
+<% end %>
