@@ -1,58 +1,26 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby '2.3.3'
+gem "rails", "~> 8.0.2"
 
-gem 'rails', '~> 4.2'
+gem "sqlite3", ">= 2.1"
 
-gem 'uglifier'
-gem 'coffee-rails'
-gem 'jquery-rails'
+gem "puma", ">= 5.0"
+gem "thruster", require: false
 
-gem 'sass-rails'
-gem 'bootstrap-sass'
-gem 'bootstrap_form'
-gem 'bootstrap-datepicker-rails'
-gem 'font-awesome-sass'
-gem 'chartjs-ror'
+gem "importmap-rails"
+gem "propshaft"
+gem "stimulus-rails"
+gem "turbo-rails"
 
-gem 'draper'
-gem 'chronic_duration'
-gem 'smarter_csv'
-gem 'strava-api-v3'
-gem 'nokogiri'
+gem "bootsnap", require: false
 
-gem 'clearance'
-
-gem 'friendly_id'
-
-gem 'thin'
-
-group :development do
-  gem 'spring'
-  gem 'web-console'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'quiet_assets'
-end
+gem "kamal", require: false
 
 group :development, :test do
-  gem 'spring-commands-rspec'
-  gem 'sqlite3'
-  gem 'pry-rails'
+  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "brakeman", require: false
 end
 
-group :test do
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'launchy'
-  gem 'webmock'
-  gem 'factory_girl_rails'
-  gem 'database_cleaner'
-end
-
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-  gem 'newrelic_rpm'
-  gem 'raygun4ruby'
+group :development do
+  gem "web-console"
 end
