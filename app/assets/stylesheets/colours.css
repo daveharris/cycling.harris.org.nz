@@ -1,0 +1,30 @@
+/* See https://picocss.com/docs/colors */
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  /* Standard values taken from https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.css */
+  --pico-color-green-400: #47a417;
+
+  --pico-color-red-600: #af291d;
+  --pico-color-red-550: #c52f21;
+  --pico-color-red-500: #d93526;
+  --pico-color-red-400: #f06048;
+
+  --pico-color-light: #fff;
+  --pico-color-dark: #000;
+
+  /* Set "contrast" as red.
+   * Values taken from the --pico-primary-* properties in  https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.red.css
+   * <button class="contrast" type="submit">Delete</button> is now red!
+   */
+  --pico-contrast: var(--pico-color-red-550);
+  --pico-contrast-background: var(--pico-color-red-550);
+  --pico-contrast-border: var(--pico-contrast-background);
+  --pico-contrast-underline: color-mix(in srgb, var(--pico-contrast) 75%, var(--pico-color-dark)) / 50%;
+  --pico-contrast-hover: var(--pico-color-red-550);
+  --pico-contrast-hover-background: var(--pico-color-red-600);
+  --pico-contrast-hover-border: var(--pico-contrast-hover-background);
+  --pico-contrast-hover-underline: var(--pico-contrast-hover);
+  --pico-contrast-focus: color-mix(in srgb, var(--pico-contrast) 65%, var(--pico-color-light)) / 50%;
+  --pico-contrast-inverse: var(--pico-color-light);
+}

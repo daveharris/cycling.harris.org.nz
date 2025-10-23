@@ -1,3 +1,3 @@
-<% flash.each do |name, msg| %>
-  <%= content_tag :article, msg.html_safe, data: { flash: name } %>
+<% flash.each do |type, content| %>
+  <%= content_tag :article, content.html_safe, class: "flash", data: { type: } %>
 <% end %>

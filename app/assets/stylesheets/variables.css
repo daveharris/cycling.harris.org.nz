@@ -1,0 +1,18 @@
+/* See https://picocss.com/docs/css-variables */
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --pico-form-element-invalid-border-color: var(--pico-color-red-500);
+  --pico-form-element-invalid-active-border-color: var(--pico-color-red-500);
+  --pico-form-element-invalid-focus-color: var(--pico-form-element-invalid-active-border-color);
+
+  input[aria-invalid="true"]+small {
+    --pico-del-color: var(--pico-color-red-500);
+  }
+}
+
+
+button,
+[role="button"] {
+  --pico-form-element-spacing-vertical: 0.25rem;
+}
