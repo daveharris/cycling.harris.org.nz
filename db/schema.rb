@@ -10,12 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_10_050345) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_04_092640) do
   create_table "races", force: :cascade do |t|
     t.string "name"
     t.integer "distance"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "race_id", null: false
+    t.integer "duration"
+    t.date "date"
+    t.text "comment"
+    t.string "url"
+    t.string "wind"
+    t.integer "fastest_duration"
+    t.integer "median_duration"
+    t.integer "position"
+    t.integer "finishers"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["race_id"], name: "index_results_on_race_id"
+    t.index ["user_id"], name: "index_results_on_user_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -35,5 +53,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_10_050345) do
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
 
+  add_foreign_key "results", "races"
+  add_foreign_key "results", "users"
   add_foreign_key "sessions", "users"
 end
