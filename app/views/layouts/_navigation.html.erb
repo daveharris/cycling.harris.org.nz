@@ -1,7 +1,12 @@
 <nav>
   <ul>
     <li><h2><%= link_to 'Cycling', root_path %></h2></li>
-    <li>The cycling record of the Harris'</li>
+    <% if authenticated? %>
+      <li><%= link_to 'Races', races_path %></li>
+    <% end %>
+    <% if authenticated? %>
+      <li><%= link_to 'Results', results_path %></li>
+    <% end %>
   </ul>
   <ul>
     <% if authenticated? %>
