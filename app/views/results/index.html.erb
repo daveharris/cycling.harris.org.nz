@@ -1,0 +1,33 @@
+<div class="grid">
+  <div>
+    <h1>Results</h1>
+  </div>
+  <div>
+    <%= link_to 'Add', new_result_path, role: "button", class: "secondary" %>
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rider</th>
+      <th>Race</th>
+      <th>Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @results.each do |result| %>
+      <tr>
+        <td><%= result.user.email_address %></td>
+        <td><%= result.race.name %></td>
+        <td><%= link_to result.date, result_path(result) %></td>
+        <td class="grid">
+          <%= button_to 'Edit', edit_result_path(result), method: :get %>
+          <%= button_to 'Delete', result, class: "danger", method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
