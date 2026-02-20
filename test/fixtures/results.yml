@@ -1,0 +1,67 @@
+taupo_2010:
+  user: dave
+  race: taupo
+  date: 2010-11-27
+  duration: <%= Result.parse_duration("6:08:20") %>
+  url: https://www.cyclechallenge.com/results
+  comment: First time at Taupo. Perfect conditions
+
+taupo_2011:
+  user: dave
+  race: taupo
+  date: 2011-11-26
+  duration: <%= Result.parse_duration("6:08:55") %>
+  url: https://www.cyclechallenge.com/results
+  comment: Fell off after 120km :(
+
+taupo_2012:
+  user: dave
+  race: taupo
+  date: 2012-11-24
+  duration: <%= Result.parse_duration("5:34:07") %>
+  url: https://www.cyclechallenge.com/results
+  comment: Felt great for first 90km, very tired for the rest due to limited hill training
+
+taupo_2013:
+  user: dave
+  race: taupo
+  date: 2013-11-30
+  duration: <%= Result.parse_duration("5:36:27") %>
+  url: https://www.cyclechallenge.com/results
+  comment: Felt really strong and fast. Weather v windy and pretty wet and cold. Very happy to do same time as last year as early morning training paid off
+
+taupo_2014:
+  user: dave
+  race: taupo
+  date: 2014-11-29
+  duration: <%= Result.parse_duration("5:12:32") %>
+  url: https://www.cyclechallenge.com/results
+  comment: Personal best!
+
+waikanae_75_2010:
+  user: dave
+  race: waikanae_75
+  date: 2010-10-10
+  duration: <%= Result.parse_duration("2:32:55") %>
+  url: https://results.timingsports.com/view/waikanaefunride/2010/0234
+  comment: First race/bunch ride
+
+waikanae_100_2011:
+  user: dave
+  race: waikanae_100
+  date: 2011-10-09
+  duration: <%= Result.parse_duration("3:04:20") %>
+  url: https://results.timingsports.com/view/waikanaefunride/2011/0106
+
+waikanae_100_2013:
+  user: dave
+  race: waikanae_100
+  date: 2013-10-13
+  duration: <%= Result.parse_duration("3:06:17") %>
+  comment: New course, blustery, bright. Stayed with Dad/bunch the whole way. Felt strong
+
+waikanae_100_2014:
+  user: dave
+  race: waikanae_100
+  date: 2014-10-12
+  duration: <%= Result.parse_duration("3:08:19") %>
