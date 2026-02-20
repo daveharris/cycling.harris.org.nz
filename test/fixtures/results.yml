@@ -1,0 +1,167 @@
+taupo_2010:
+  user: dave
+  race: taupo
+  date: 2010-11-27
+  duration: <%= Result.parse_duration("6:08:20") %>
+  url: https://www.cyclechallenge.com/results
+  comment: First time at Taupo. Perfect conditions
+
+taupo_2011:
+  user: dave
+  race: taupo
+  date: 2011-11-26
+  duration: <%= Result.parse_duration("6:08:55") %>
+  url: https://www.cyclechallenge.com/results
+  comment: Fell off after 120km :(
+
+taupo_2012:
+  user: dave
+  race: taupo
+  date: 2012-11-24
+  duration: <%= Result.parse_duration("5:34:07") %>
+  url: https://www.cyclechallenge.com/results
+  comment: Felt great for first 90km, very tired for the rest due to limited hill training
+
+taupo_2013:
+  user: dave
+  race: taupo
+  date: 2013-11-30
+  duration: <%= Result.parse_duration("5:36:27") %>
+  url: https://www.cyclechallenge.com/results
+  comment: Felt really strong and fast. Weather v windy and pretty wet and cold. Very happy to do same time as last year as early morning training paid off
+
+taupo_2014:
+  user: dave
+  race: taupo
+  date: 2014-11-29
+  duration: <%= Result.parse_duration("5:12:32") %>
+  url: https://www.cyclechallenge.com/results
+  comment: Personal best!
+
+waikanae_2010:
+  user: dave
+  race: waikanae_75
+  date: 2010-10-10
+  duration: <%= Result.parse_duration("2:32:55") %>
+  url: https://results.timingsports.com/view/waikanaefunride/2010/0234
+  comment: First race/bunch ride
+
+waikanae_2011:
+  user: dave
+  race: waikanae_100
+  date: 2011-10-09
+  duration: <%= Result.parse_duration("3:04:20") %>
+  url: https://results.timingsports.com/view/waikanaefunride/2011/0106
+
+waikanae_2013:
+  user: dave
+  race: waikanae_100
+  date: 2013-10-13
+  duration: <%= Result.parse_duration("3:06:17") %>
+  comment: New course, blustery, bright. Stayed with Dad/bunch the whole way. Felt strong
+
+waikanae_2014:
+  user: dave
+  race: waikanae_100
+  date: 2014-10-12
+  duration: <%= Result.parse_duration("3:08:19") %>
+
+martinborough_2011:
+  user: dave
+  race: martinborough
+  date: 2011-10-30
+  duration: <%= Result.parse_duration("3:31:48") %>
+  url: "https://results.timingsports.com/view/martinboroughfunride/2011/0354"
+
+martinborough_2012:
+  user: dave
+  race: martinborough
+  date: 2012-10-28
+  duration: <%= Result.parse_duration("3:33:58") %>
+  url: "https://thetimingteamresults.co.nz/pages/result/438381"
+
+martinborough_2013:
+  user: dave
+  race: martinborough
+  date: 2013-11-03
+  duration: <%= Result.parse_duration("3:28:05") %>
+  url: "https://thetimingteamresults.co.nz/pages/result/438728/"
+
+martinborough_2014:
+  user: dave
+  race: martinborough
+  date: 2014-11-02
+  duration: <%= Result.parse_duration("3:52:10") %>
+  url: "https://thetimingteamresults.co.nz/pages/result/439067/"
+  comment: "Gale North-Westerlies"
+
+masterton_2010:
+  user: dave
+  race: masterton
+  date: 2010-11-14
+  duration: <%= Result.parse_duration("4:03:40") %>
+  url: "https://results.timingsports.com/view/tourofthewairarapa/2010/0701"
+  comment: "First 115km'er"
+
+masterton_2011:
+  user: dave
+  race: masterton
+  date: 2011-11-13
+  duration: <%= Result.parse_duration("3:34:06") %>
+  url: "https://www.sportsplits.com/races/6192/events/1/results/individuals/305"
+  comment: "30mins faster than last year!"
+
+masterton_2012:
+  user: dave
+  race: masterton
+  date: 2012-11-11
+  duration: <%= Result.parse_duration("3:42:48") %>
+  url: "https://www.sportsplits.com/races/744/events/1/results/individuals/200"
+  comment: "Wet and windy"
+
+masterton_2013:
+  user: dave
+  race: masterton
+  date: 2013-11-17
+  duration: <%= Result.parse_duration("3:20:33") %>
+  url: "https://www.sportsplits.com/races/2863/events/1/results/individuals/194"
+  comment: "Windy, stayed with group for the first 80km. Fast back - felt great"
+
+masterton_2014:
+  user: dave
+  race: masterton
+  date: 2014-10-05
+  duration: <%= Result.parse_duration("3:41:58") %>
+  url: "https://www.sportsplits.com/races/6373/events/1/results/individuals/338"
+
+featherston_2011:
+  user: dave
+  race: featherston
+  date: 2011-10-02
+  duration: <%= Result.parse_duration("2:18:38") %>
+  url: "https://results.timingsports.com/view/wairarapacyclechallenge/2011/0251"
+  comment: "Stayed with wave all the way around, fastest time ever"
+
+featherston_2012:
+  user: dave
+  race: featherston
+  date: 2012-10-07
+  duration: <%= Result.parse_duration("2:28:00") %>
+  url: ""
+  comment: "First race of season, windy, fell off the back of 3 groups :("
+
+featherston_2013:
+  user: dave
+  race: featherston
+  date: 2013-10-08
+  duration: <%= Result.parse_duration("2:40:02") %>
+  url: ""
+  comment: "First race of season, windy, fell off the back of 3 groups :("
+
+featherston_2014:
+  user: dave
+  race: featherston
+  date: 2014-10-05
+  duration: <%= Result.parse_duration("2:45:09") %>
+  url: ""
+  comment: "Very strong Westerly"
