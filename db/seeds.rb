@@ -3,8 +3,8 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 
-dave = User.create! email_address: "dave@harris.org.nz", password: "password"
-User.create! email_address: "ian@harris.org.nz", password: "password"
+dave = User.create! email_address: "dave@harris.org.nz", name: "Dave", password: "password"
+User.create! email_address: "ian@harris.org.nz", name: "Ian", password: "password"
 puts "Created #{User.count} Users"
 
 featherston = Race.create! name: "Wairarapa Cycle Challenge, Featherston", distance: 80
