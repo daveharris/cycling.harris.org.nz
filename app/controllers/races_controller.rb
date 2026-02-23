@@ -41,7 +41,7 @@ class RacesController < ApplicationController
   private
 
   def set_race
-    @race = Race.find(params.expect(:id))
+    @race = Race.find_by_slug!(params.require(:id))
   end
 
   def race_params

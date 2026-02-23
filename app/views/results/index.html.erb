@@ -21,7 +21,7 @@
     <% @results.each do |result| %>
       <tr>
         <td><%= result.user.name %></td>
-        <td><%= result.race.name %></td>
+        <td><%= link_to result.race.name, race_path(result.race) %></td>
         <td><%= link_to result.date, result_path(result) %></td>
         <td class="grid">
           <%= button_to 'Edit', edit_result_path(result), class: "secondary", method: :get %>
