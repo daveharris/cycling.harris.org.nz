@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_23_001238) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_23_011312) do
   create_table "races", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.integer "distance"
@@ -32,6 +32,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_23_001238) do
     t.string "url"
     t.integer "user_id", null: false
     t.string "wind"
+    t.index "user_id, race_id, strftime('%Y', date)", name: "index_results_on_user_race_year", unique: true, where: "date IS NOT NULL"
     t.index ["race_id"], name: "index_results_on_race_id"
     t.index ["user_id"], name: "index_results_on_user_id"
   end
