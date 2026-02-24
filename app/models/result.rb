@@ -2,6 +2,10 @@ class Result < ApplicationRecord
   include Duration
 
   scope :in_year, ->(dt) { where(date: dt.all_year) }
+  scope :rider, ->(r) { where(user_id: r) }
+  scope :ordered, -> { date_desc }
+  scope :date_desc, -> { order(date: :desc) }
+  scope :date_asc, -> { order(date: :asc) }
 
   belongs_to :user
   belongs_to :race

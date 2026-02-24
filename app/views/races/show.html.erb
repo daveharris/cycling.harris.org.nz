@@ -1,3 +1,3 @@
 <h1><%= @race.to_s %></h1>
 
-<%= render @race %>
+<%= content_tag(:canvas, nil, id: 'result_duration_over_time_chart', data: @chart_data) %>

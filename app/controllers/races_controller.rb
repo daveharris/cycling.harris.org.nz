@@ -6,6 +6,11 @@ class RacesController < ApplicationController
   end
 
   def show
+    @results = @race.results
+      .rider(Current.user)
+      .date_desc.load
+
+    @chart_data = @race.result_duration_over_time(Current.user) if @results.any?
   end
 
   def new
