@@ -44,7 +44,7 @@ class Race < ApplicationRecord
     chart_data = keys.zip(data_by_column).to_h
 
     if chart_data.key?(:date)
-      chart_data[:date] = chart_data[:date].map { it.strftime("%-d %b %Y") } # TODO: .iso8601
+      chart_data[:date] = chart_data[:date].map(&:year)
     end
 
     chart_data
