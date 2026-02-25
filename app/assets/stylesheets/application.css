@@ -16,8 +16,8 @@ main.container {
 }
 
 
-.grid> :last-child {
-  text-align: right;
+.grid.justify-end> :last-child {
+  justify-self: end;
 }
 
 
