@@ -11,36 +11,45 @@ module Duration
   end
 
   def duration_s
-    Result.to_duration(duration) if duration
+    Result.to_clock_time(duration) if duration
   end
 
   def fastest_duration_s
-    Result.to_duration(fastest_duration) if fastest_duration
+    Result.to_clock_time(fastest_duration) if fastest_duration
   end
 
   def median_duration_s
-    Result.to_duration(median_duration) if median_duration
+    Result.to_clock_time(median_duration) if median_duration
   end
 
-  def duration_s=(value)
-    self.duration = Result.parse_duration(value.to_s)
+  def duration_s=(h_mm_ss)
+    self.duration = Result.parse_clock_time(h_mm_ss)
   end
 
-  def fastest_duration_s=(value)
-    self.fastest_duration = Result.parse_duration(value.to_s)
+  def fastest_duration_s=(h_mm_ss)
+    self.fastest_duration = Result.parse_clock_time(h_mm_ss)
   end
 
-  def median_duration_s=(value)
-    self.median_duration = Result.parse_duration(value.to_s)
+  def median_duration_s=(h_mm_ss)
+    self.median_duration = Result.parse_clock_time(h_mm_ss)
   end
 
   class_methods do
-    def parse_duration(h_mm_ss)
-      (Time.strptime(h_mm_ss, "%H:%M:%S") - Time.parse("00:00:00")).to_i
+    def parse_clock_time(h_mm_ss)
+      unless H_MM_SS_FORMAT.match?(h_mm_ss)
+        raise ArgumentError, "Invalid format. #{h_mm_ss.inspect} must match H:MM:SS"
+      end
+
+      hours, minutes, seconds = h_mm_ss.split(":").map(&:to_i)
+      (hours.hours + minutes.minutes + seconds.seconds).to_i
     end
 
-    def to_duration(seconds)
-      Time.at(seconds).utc.strftime("%-H:%M:%S")
+    def to_clock_time(int)
+      hours = int / 3600
+      minutes = (int % 3600) / 60
+      secs = int % 60
+
+      format("%d:%02d:%02d", hours, minutes, secs)
     end
   end
 end
