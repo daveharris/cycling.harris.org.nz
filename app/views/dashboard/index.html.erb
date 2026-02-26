@@ -1,5 +1,29 @@
 <% if authenticated? %>
   <h1>Welcome to your dashboard</h1>
+
+  <section class="grid">
+    <article class="statistic">
+      <p class="value"><%= @statistics.result_count %></p>
+      <p class="label">Results</p>
+    </article>
+
+    <article class="statistic">
+      <p class="value"><%= @statistics.distance %> km</p>
+      <p class="label">Distance</p>
+    </article>
+
+    <article class="statistic">
+      <p class="value"><%= @statistics.hours %> hrs</p>
+      <p class="label">Time</p>
+    </article>
+
+    <% if @statistics.highest_position %>
+      <article class="statistic">
+        <p class="value"><%= @statistics.highest_position %></p>
+        <p class="label">Highest Position</p>
+      </article>
+    <% end %>
+  </section>
 <% else %>
   <h1>Welcome to the cycling record of the Harris'</h1>
 <% end %>

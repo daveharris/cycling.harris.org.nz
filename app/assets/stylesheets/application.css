@@ -32,3 +32,19 @@ article.flash {
     background-color: var(--pico-color-red-400);
   }
 }
+
+
+.statistic {
+  text-align: center;
+  padding: 2rem;
+
+  .value {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .label {
+    opacity: 0.7;
+  }
+}
