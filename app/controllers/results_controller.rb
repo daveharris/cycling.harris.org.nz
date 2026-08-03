@@ -2,10 +2,31 @@ class ResultsController < ApplicationController
   before_action :set_result, only: %i[show edit update destroy]
 
   def index
-    @results = Result.includes(:user, :race).all
+    @results = Result
+      .includes(:user, :race)
+      .date_desc
   end
 
   def show
+    @next = Result
+      .rider(@result.user)
+      .where(race: @result.race)
+      .where("date > ?", @result.date)
+      .date_asc
+      .first
+
+    @previous = Result
+      .rider(@result.user)
+      .where(race: @result.race)
+      .where("date < ?", @result.date)
+      .date_desc
+      .first
+
+    @fastest = Result
+      .rider(@result.user)
+      .where(race: @result.race)
+      .order(duration: :desc)
+      .first
   end
 
   def new

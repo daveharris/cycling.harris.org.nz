@@ -1,57 +1,55 @@
 <div id="<%= dom_id result %>">
   <p>
-    <strong>User:</strong>
-    <%= result.user_id %>
-  </p>
-
-  <p>
-    <strong>Race:</strong>
-    <%= result.race_id %>
-  </p>
-
-  <p>
     <strong>Duration:</strong>
-    <%= result.duration %>
+    <%= result.duration_s %>
   </p>
 
-  <p>
-    <strong>Date:</strong>
-    <%= result.date %>
-  </p>
+  <% if result.position.present? %>
+    <p>
+      <strong>Position:</strong>
+      <%= result.position %>
+    </p>
+  <% end %>
 
-  <p>
-    <strong>Comment:</strong>
-    <%= result.comment %>
-  </p>
+  <% if result.finishers.present? %>
+    <p>
+      <strong>Finishers:</strong>
+      <%= result.finishers %>
+    </p>
+  <% end %>
 
-  <p>
-    <strong>Url:</strong>
-    <%= result.url %>
-  </p>
+  <% if result.comment.present? %>
+    <p>
+      <strong>Comment:</strong>
+      <%= result.comment %>
+    </p>
+  <% end %>
 
-  <p>
-    <strong>Wind:</strong>
-    <%= result.wind %>
-  </p>
+  <% if result.url.present? %>
+    <p>
+      <%= link_to 'More details ...', result.url %>
+    </p>
+  <% end %>
 
-  <p>
-    <strong>Fastest duration:</strong>
-    <%= result.fastest_duration %>
-  </p>
+  <% if result.wind.present? %>
+    <p>
+      <strong>Wind:</strong>
+      <%= result.wind %>
+    </p>
+  <% end %>
 
-  <p>
-    <strong>Median duration:</strong>
-    <%= result.median_duration %>
-  </p>
+  <% if result.fastest_duration.present? %>
+    <p>
+      <strong>Fastest duration:</strong>
+      <%= result.fastest_duration %>
+    </p>
+  <% end %>
 
-  <p>
-    <strong>Position:</strong>
-    <%= result.position %>
-  </p>
-
-  <p>
-    <strong>Finishers:</strong>
-    <%= result.finishers %>
-  </p>
+  <% if result.median_duration.present? %>
+    <p>
+      <strong>Median duration:</strong>
+      <%= result.median_duration %>
+    </p>
+  <% end %>
 
 </div>
