@@ -1,0 +1,23 @@
+featherston:
+  name: Wairarapa Cycle Challenge, Featherston
+  distance: 80
+
+waikanae_75:
+  name: Tour of Waikanae
+  distance: 75
+
+waikanae_100:
+  name: Tour of Waikanae
+  distance: 100
+
+martinborough:
+  name: Martinborough Charity Fun Ride
+  distance: 115
+
+masterton:
+  name: Tour of the Wairarapa, Masterton
+  distance: 115
+
+taupo:
+  name: Taupo Cycle Challenge
+  distance: 160

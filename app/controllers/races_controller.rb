@@ -1,15 +1,16 @@
 class RacesController < ApplicationController
-  before_action :set_race, only: [:show, :edit, :update, :destroy]
-  before_action :require_login, except: [:index, :show]
+  before_action :set_race, only: %i[show edit update destroy]
 
   def index
     @races = Race.alphabetical
   end
 
   def show
-    @results = @race.results.rider(current_user).date_desc
-    @results.load # Explicit loading to reduce DB queries in controller and view
-    @chart_data = @race.result_duration_over_time(current_user) if @results.size > 1
+    @results = @race.results
+      .rider(Current.user)
+      .date_desc.load
+
+    @chart_data = @race.result_duration_over_time(Current.user) if @results.any?
   end
 
   def new
@@ -25,29 +26,30 @@ class RacesController < ApplicationController
     if @race.save
       redirect_to @race, notice: "#{@race} was successfully created."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
   def update
     if @race.update(race_params)
-      redirect_to @race, notice: "#{@race} was successfully updated."
+      redirect_to @race, notice: "#{@race} was successfully updated.", status: :see_other
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
-    @race.destroy
-    redirect_to races_url, notice: "#{@race} was successfully deleted."
+    @race.destroy!
+    redirect_to races_path, notice: "#{@race} was successfully destroyed.", status: :see_other
   end
 
   private
-    def set_race
-      @race = Race.find(params[:id])
-    end
 
-    def race_params
-      params.require(:race).permit(:name, :distance, :url)
-    end
+  def set_race
+    @race = Race.find_by_slug!(params.require(:id))
+  end
+
+  def race_params
+    params.expect(race: [:name, :distance])
+  end
 end

@@ -1,36 +1,63 @@
-<%= bootstrap_form_for(@result, layout: :horizontal, label_col: 'col-md-2', control_col: 'col-md-8') do |f| %>
+<h2 class="pico-color-red-200">pico-color-red-200 Title</h2>
 
-  <div class="row">
-    <div class="col-md-10"><%= f.alert_message "Please fix the errors below." %></div>
+<%= form_with(model: result) do |form| %>
+
+  <div>
+    <%= form.label :user_id %>
+    <%= form.collection_select :user_id, User.all, :id, :email_address, prompt: "Select ..." %>
   </div>
 
-  <%= f.collection_select :user_id, User.alphabetical, :id, :collection_select_name, selected: current_user.id, label: 'Rider' %>
+  <div>
+    <%= form.label :race_id %>
+    <%= form.collection_select :race_id, Race.all, :id, :name, prompt: "Select ..." %>
+  </div>
 
-  <%= f.collection_select :race_id, Race.alphabetical, :id, :collection_select_name, prompt: 'Select Race...' %>
+  <div>
+    <%= form.label :duration %>
+    <%= form.number_field :duration %>
+  </div>
 
-  <%= f.text_field :duration_s, append: icon('clock-o') %>
+  <div>
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </div>
 
-  <%= f.text_field :date, data: {'provide' => 'datepicker', 'date-autoclose' => true, 'date-format' => 'd M yyyy'}, value: @result.date_for_form, append: icon(:calendar) %>
+  <div>
+    <%= form.label :comment %>
+    <%= form.textarea :comment %>
+  </div>
 
-  <%= f.text_field :fastest_duration_s, label: 'Fastest Duration', append: icon('clock-o') %>
+  <div>
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
 
-  <%= f.text_field :median_duration_s, label: 'Median Duration', append: icon('clock-o') %>
+  <div>
+    <%= form.label :wind %>
+    <%= form.text_field :wind %>
+  </div>
 
-  <%= f.text_field :wind, append: icon(:flag) %>
+  <div>
+    <%= form.label :fastest_duration %>
+    <%= form.number_field :fastest_duration %>
+  </div>
 
-  <%= f.text_field :position, append: icon('flag-checkered') %>
+  <div>
+    <%= form.label :median_duration %>
+    <%= form.number_field :median_duration %>
+  </div>
 
-  <%= f.text_field :finishers, append: icon('flag-checkered') %>
+  <div>
+    <%= form.label :position %>
+    <%= form.number_field :position %>
+  </div>
 
-  <%= f.text_field :timing_url, label: 'Timing URL', append: icon(:link) %>
+  <div>
+    <%= form.label :finishers %>
+    <%= form.number_field :finishers %>
+  </div>
 
-  <%= f.text_field :strava_url, label: 'Strava URL', append: icon(:strava) %>
-
-  <%= f.text_area :comment, append: icon(:comment) %>
-
-  <div class="row push-down">
-    <div class="col-md-offset-2 col-md-8">
-      <%= f.submit 'Save', class: "btn btn-success btn-block" %>
-    </div>
+  <div>
+    <%= form.submit %>
   </div>
 <% end %>

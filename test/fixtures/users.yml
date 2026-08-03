@@ -1,0 +1,9 @@
+dave:
+  email_address: dave@harris.org.nz
+  name: Dave
+  password_digest: <%= BCrypt::Password.create("password") %>
+
+ian:
+  email_address: ian@harris.org.nz
+  name: Ian
+  password_digest: <%= BCrypt::Password.create("password") %>

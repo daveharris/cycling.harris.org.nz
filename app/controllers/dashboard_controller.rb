@@ -1,7 +1,9 @@
 class DashboardController < ApplicationController
+  allow_unauthenticated_access
 
   def index
-    @statistics = StatisticsService.generate(current_user)
+    if authenticated?
+      @statistics = Statistics.for(Current.user)
+    end
   end
-
 end

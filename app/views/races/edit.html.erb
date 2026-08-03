@@ -1,3 +1,5 @@
+<% content_for :title, "Editing race" %>
+
 <h1>Edit Race - <%= @race.name %></h1>
 
-<%= render 'form' %>
+<%= render "form", race: @race %>
