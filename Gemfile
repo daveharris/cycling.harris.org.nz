@@ -12,7 +12,7 @@ gem "propshaft"
 gem "stimulus-rails"
 gem "turbo-rails"
 
-gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.22"
 gem "tzinfo-data", platforms: %i[windows jruby]
 
 gem "bootsnap", require: false
